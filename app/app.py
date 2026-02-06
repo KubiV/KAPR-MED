@@ -91,15 +91,18 @@ is_recording = False
 recording_lock = threading.Lock()
 
 # --- DEFINICE KATEGORIÍ A SOUBORŮ ---
-CATEGORY_FILES = {
-    "DrABCDE": "tables/DrABCDE.csv",
-    "Medication": "tables/Medication.csv",
-    "Interventions": "tables/Interventions.csv",
-    "Physical Examination": "tables/Physical Examination.csv",
-    "History": "tables/History.csv",
-    "SBAR": "tables/SBAR.csv",
-    "Other": "tables/Other.csv" 
+CATEGORY_DISPLAY = {
+    "DrABCDE": {"display_name": "DrABCDE", "csv_file": "tables/DrABCDE.csv"},
+    "Medication": {"display_name": "Léčiva", "csv_file": "tables/Medication.csv"},
+    "Interventions": {"display_name": "Intervence", "csv_file": "tables/Interventions.csv"},
+    "Physical Examination": {"display_name": "Fyzikální vyšetření", "csv_file": "tables/Physical Examination.csv"},
+    "History": {"display_name": "Anamnéza", "csv_file": "tables/History.csv"},
+    "SBAR": {"display_name": "SBAR", "csv_file": "tables/SBAR.csv"},
+    "Other": {"display_name": "Ostatní", "csv_file": "tables/Other.csv"}
 }
+
+# Pro zpětnou kompatibilitu - klíč kategorie → soubor
+CATEGORY_FILES = {k: v["csv_file"] for k, v in CATEGORY_DISPLAY.items()}
 
 # Globální úložiště pro tabulky a mapování
 data_tables = {}     # { "DrABCDE": DataFrame, "Medication": DataFrame, ... }
@@ -879,7 +882,11 @@ def generate_html_tables():
     """Generuje HTML pro všech 7 tabulek."""
     tables_html = {}
     for category, df in data_tables.items():
-        tables_html[category] = df.fillna('').to_html(classes="table table-striped table-hover table-sm", border=0)
+        display_info = CATEGORY_DISPLAY.get(category, {"display_name": category})
+        tables_html[category] = {
+            "html": df.fillna('').to_html(classes="table table-striped table-hover table-sm", border=0),
+            "display_name": display_info["display_name"]
+        }
     return tables_html
 
 def emit_table_update(extracted_data=None):
@@ -900,6 +907,7 @@ def index():
     tables_html = generate_html_tables()
     return render_template('index.html', 
                            tables=tables_html,
+                           category_display=CATEGORY_DISPLAY,
                            available_models=AVAILABLE_MODELS,
                            current_settings=CURRENT_SETTINGS,
                            save_audio=SAVE_CONTINUOUS_AUDIO,

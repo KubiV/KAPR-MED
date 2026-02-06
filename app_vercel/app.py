@@ -49,16 +49,19 @@ CURRENT_SETTINGS = {
     "temperature": 0.1
 }
 
-# Kategorie - definice souborů
-CATEGORY_FILES = {
-    "DrABCDE": "DrABCDE.csv",
-    "Medication": "Medication.csv",
-    "Interventions": "Interventions.csv",
-    "Physical Examination": "Physical Examination.csv",
-    "History": "History.csv",
-    "SBAR": "SBAR.csv",
-    "Other": "Other.csv" 
+# Kateg orie - mapování: Interní klíč → {display_name: Česky, csv_file: Soubor}
+CATEGORY_DISPLAY = {
+    "DrABCDE": {"display_name": "DrABCDE", "csv_file": "DrABCDE.csv"},
+    "Medication": {"display_name": "Léčiva", "csv_file": "Medication.csv"},
+    "Interventions": {"display_name": "Intervence", "csv_file": "Interventions.csv"},
+    "Physical Examination": {"display_name": "Fyzické vyšetření", "csv_file": "Physical Examination.csv"},
+    "History": {"display_name": "Anamnéza", "csv_file": "History.csv"},
+    "SBAR": {"display_name": "SBAR", "csv_file": "SBAR.csv"},
+    "Other": {"display_name": "Ostatní", "csv_file": "Other.csv"}
 }
+
+# Pro zpětnou kompatibilitu - klíč kategorie → soubor
+CATEGORY_FILES = {k: v["csv_file"] for k, v in CATEGORY_DISPLAY.items()}
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'vercel-secret'
@@ -232,7 +235,12 @@ def generate_html_tables():
         if cols_to_drop:
             df_display = df_display.drop(columns=cols_to_drop)
 
-        tables_html[category] = df_display.fillna('').to_html(classes="table table-striped table-hover table-sm", border=0)
+        # Vrátit jak obsah tabulky, tak display_name
+        display_info = CATEGORY_DISPLAY.get(category, {"display_name": category})
+        tables_html[category] = {
+            "html": df_display.fillna('').to_html(classes="table table-striped table-hover table-sm", border=0),
+            "display_name": display_info["display_name"]
+        }
     return tables_html
 
 def save_csvs_to_temp():
@@ -252,7 +260,8 @@ def save_csvs_to_temp():
 def index():
     if not data_tables: initialize_data_structures()
     return render_template('index.html', 
-                           tables=generate_html_tables(), 
+                           tables=generate_html_tables(),
+                           category_display=CATEGORY_DISPLAY,
                            current_vitals=current_vitals, 
                            recent_updates=list(recent_updates),
                            available_models=AVAILABLE_MODELS,

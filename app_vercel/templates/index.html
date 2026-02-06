@@ -173,8 +173,10 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="d-flex justify-content-between align-items-center mb-4 pt-2 flex-wrap gap-3">
-            <h2 class="mb-0"><img src="/static/logo.svg" alt="Logo" style="height: 1.5em; width: auto; display: inline-block; margin-right: 8px; vertical-align: middle;"> Lékařský Hlasový Záznamník <small class="text-muted fs-6">online</small></h2>
+        <div class="d-flex justify-content-between align-items-start mb-4 pt-2 flex-wrap gap-3">
+            <div>
+                <h2 class="mb-0"><img src="/static/logo.svg" alt="Logo" style="height: 1.5em; width: auto; display: inline-block; margin-right: 8px; vertical-align: middle;"> MED-Záznam<small class="text-muted fs-6" style="font-size: 0.3rem;"> online</small></h2>
+            </div>
             <button class="btn btn-light border btn-sm text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#settingsCollapse" aria-expanded="true">
                 <i class="bi bi-sliders"></i>
             </button>
@@ -318,18 +320,19 @@
         
         <div id="sectionTables" class="collapse show">
             <div class="row g-4 pb-5" id="tablesContainer">
-                {% for category, html in tables.items() %}
+                {% for category, table_data in tables.items() %}
                 {% set safe_cat = category.split(' ')[0] %}
+                {% set display_name = table_data.display_name %}
                 <div class="col-xl-4 col-md-6">
                     <div class="widget-card card-{{ safe_cat }}">
                         <div class="widget-header" data-bs-toggle="collapse" data-bs-target="#collapse{{ safe_cat }}" aria-expanded="true">
-                            <h5>{{ category }}</h5>
+                            <h5>{{ display_name }}</h5>
                             <i class="bi bi-chevron-down chevron-icon"></i>
                         </div>
                         <div id="collapse{{ safe_cat }}" class="collapse show">
                             <div class="widget-body p-0">
                                 <div class="table-responsive p-3">
-                                    {{ html|safe }}
+                                    {{ table_data.html|safe }}
                                 </div>
                             </div>
                         </div>
@@ -550,10 +553,10 @@
 
             // Tables update
             if (data.tables) {
-                for (const [key, html] of Object.entries(data.tables)) {
+                for (const [key, tableData] of Object.entries(data.tables)) {
                     const safeKey = key.split(' ')[0];
                     const container = document.querySelector(`.card-${safeKey} .table-responsive`);
-                    if (container) container.innerHTML = html;
+                    if (container) container.innerHTML = tableData.html;
                 }
             }
 
