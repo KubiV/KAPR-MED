@@ -90,6 +90,16 @@ Pro generování favicon (ikonky webu a PWA) používáme **RealFaviconGenerator
 
 ---
 
+# Dotazník
+
+
+# Simulační studie
+
+Potvrzení/vyvrácení domněnek - výhody/nevýhody řešení.
+
+
+# Technické detaily
+
 ## 🚀 Rychlý start
 
 ### Instalace Ollama
