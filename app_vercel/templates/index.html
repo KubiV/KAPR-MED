@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
     <link rel="manifest" href="/static/site.webmanifest" />
 
-    <title>AI Záznamník (Multi-Model)</title>
+    <title>MED-Záznam</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -169,6 +169,24 @@
         .github-button:hover img {
             transform: scale(1.05);
         }
+
+        @media (max-width: 576px) {
+            .vitals-panel {
+                padding: 15px 5px !important;
+            }
+            .vitals-value {
+                font-size: 1.8rem !important;
+                font-weight: 700;
+            }
+            .vitals-label {
+                font-size: 0.8rem;
+                margin-bottom: 2px;
+            }
+
+            .col-4.mb-2 {
+                margin-bottom: 0.5rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -275,28 +293,34 @@
 
         <div id="sectionVitals" class="collapse show">
             <div class="vitals-panel">
-                <div class="row text-center">
-                    <div class="col-lg-2 col-md-4 col-6 mb-2">
+                <div class="row text-center gx-1">
+                    
+                    <div class="col-lg-2 col-4 mb-2">
                         <div class="vitals-label">TF</div>
                         <div class="vitals-value color-tf" id="val-TF">{{ current_vitals['TF'] }}</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    
+                    <div class="col-lg-2 col-4 mb-2">
                         <div class="vitals-label">TK</div>
                         <div class="vitals-value color-tk" id="val-TK">{{ current_vitals['TK'] }}</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    
+                    <div class="col-lg-2 col-4 mb-2">
                         <div class="vitals-label">SpO2</div>
                         <div class="vitals-value color-spo2" id="val-SpO2">{{ current_vitals['SpO2'] }}</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    
+                    <div class="col-lg-2 col-4 mb-2">
                         <div class="vitals-label">DF</div>
                         <div class="vitals-value color-df" id="val-DF">{{ current_vitals['DF'] }}</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    
+                    <div class="col-lg-2 col-4 mb-2">
                         <div class="vitals-label">CRT</div>
                         <div class="vitals-value" id="val-CRT">{{ current_vitals['CRT'] }}</div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    
+                    <div class="col-lg-2 col-4 mb-2">
                         <div class="vitals-label">AVPU</div>
                         <div class="vitals-value" id="val-AVPU">{{ current_vitals['AVPU'] }}</div>
                     </div>
@@ -306,10 +330,9 @@
                     <div class="text-start">
                         <h6 class="text-dark mb-2" style="font-size: 1.1rem;">Poslední hodnoty:</h6>
                         <div id="vitalsRecentList" class="recent-vitals-list fs-5 text-dark">
-                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
