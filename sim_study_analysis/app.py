@@ -2,109 +2,106 @@ import sys
 import json
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                              QHBoxLayout, QPushButton, QLabel, QFileDialog, 
-                             QScrollArea, QTextEdit, QSplitter, QMessageBox)
+                             QScrollArea, QTextEdit, QSplitter, QMessageBox, 
+                             QSlider, QComboBox)
 from PyQt6.QtMultimedia import QMediaPlayer, QAudioOutput
 from PyQt6.QtMultimediaWidgets import QVideoWidget
-from PyQt6.QtCore import QUrl, Qt
+from PyQt6.QtCore import QUrl, Qt, QTimer
 
-# --- POMOCNÁ FUNKCE PRO FORMÁTOVÁNÍ ČASU ---
-def format_timestamp(seconds):
-    """Převede sekundy (float) na formát MM:SS"""
-    m, s = divmod(seconds, 60)
+def format_timestamp(ms):
+    """Převede milisekundy na formát HH:MM:SS"""
+    s = ms // 1000
+    m, s = divmod(s, 60)
     h, m = divmod(m, 60)
-    # Zobrazíme hodiny:minuty:sekundy (zaokrouhlené)
     return f"{int(h):02d}:{int(m):02d}:{int(s):02d}"
 
-# --- SIMULACE AI PROCESORU ---
 class AIProcessor:
     @staticmethod
     def process_text(text):
-        print(f"--> AI ZPRACOVÁVÁ: '{text}'")
-        # Zde můžeš napojit skutečné API
         return f"[AI]: {text}"
 
-# --- WIDGET PRO JEDEN ŘÁDEK TITULKU ---
 class SubtitleRow(QWidget):
-    def __init__(self, data_item, player_reference, parent=None):
+    def __init__(self, data_item, player_reference, delete_callback, parent=None):
         super().__init__(parent)
-        self.player = player_reference # Odkaz na přehrávač pro skákání v čase
-        self.original_data = data_item # Uložíme si kompletní data (včetně tokenů atd.)
+        self.player = player_reference
+        self.original_data = data_item
+        self.delete_callback = delete_callback
         
-        # Načtení dat z Whisper JSONu (start/end jsou float sekundy)
+        # Whisper data (v sekundách)
         self.start_sec = data_item.get('start', 0.0)
-        self.end_sec = data_item.get('end', 0.0)
+        self.end_sec = data_item.get('end', self.start_sec + 2.0)
         
+        self.init_ui()
+
+    def init_ui(self):
         self.layout = QHBoxLayout()
-        self.layout.setContentsMargins(0, 5, 0, 5)
+        self.layout.setContentsMargins(2, 2, 2, 2)
         
-        # 1. Tlačítko pro skok v čase (Play ikona)
         self.btn_seek = QPushButton("▶")
         self.btn_seek.setFixedWidth(30)
-        self.btn_seek.setToolTip(f"Skočit na čas {format_timestamp(self.start_sec)}")
         self.btn_seek.clicked.connect(self.seek_video)
         
-        # 2. Časová značka (Label)
-        time_str = f"{format_timestamp(self.start_sec)} - {format_timestamp(self.end_sec)}"
-        self.lbl_time = QLabel(time_str)
-        self.lbl_time.setFixedWidth(90)
-        self.lbl_time.setStyleSheet("color: #555; font-size: 11px; font-weight: bold;")
+        self.lbl_time = QLabel(f"{format_timestamp(self.start_sec*1000)}")
+        self.lbl_time.setFixedWidth(60)
+        self.lbl_time.setStyleSheet("font-weight: bold; color: #2c3e50;")
         
-        # 3. Editovatelný text
         self.txt_content = QTextEdit()
-        # Whisper JSON má text často s mezerou na začátku, tu stripneme pro hezčí editaci
-        initial_text = data_item.get('text', '').strip() 
-        self.txt_content.setPlainText(initial_text)
-        self.txt_content.setFixedHeight(50)
+        self.txt_content.setPlainText(self.original_data.get('text', '').strip())
+        self.txt_content.setFixedHeight(45)
         
-        # 4. Tlačítko pro AI
         self.btn_ai = QPushButton("AI")
-        self.btn_ai.setFixedWidth(40)
-        self.btn_ai.setStyleSheet("background-color: #e0e0e0;")
+        self.btn_ai.setFixedWidth(35)
         self.btn_ai.clicked.connect(self.run_ai_single)
+
+        self.btn_del = QPushButton("✕")
+        self.btn_del.setFixedWidth(25)
+        self.btn_del.setStyleSheet("color: red;")
+        self.btn_del.clicked.connect(lambda: self.delete_callback(self))
         
         self.layout.addWidget(self.btn_seek)
         self.layout.addWidget(self.lbl_time)
         self.layout.addWidget(self.txt_content)
         self.layout.addWidget(self.btn_ai)
-        
+        self.layout.addWidget(self.btn_del)
         self.setLayout(self.layout)
 
     def seek_video(self):
-        """Přesune video na začátek tohoto titulku"""
-        # QMediaPlayer očekává milisekundy (int), v JSONu jsou sekundy (float)
-        position_ms = int(self.start_sec * 1000)
-        self.player.setPosition(position_ms)
+        self.player.setPosition(int(self.start_sec * 1000))
         self.player.play()
 
     def run_ai_single(self):
-        current_text = self.txt_content.toPlainText()
-        result = AIProcessor.process_text(current_text)
-        print(f"Výsledek: {result}")
+        res = AIProcessor.process_text(self.txt_content.toPlainText())
+        self.txt_content.setPlainText(res)
 
     def get_updated_data(self):
-        """Vrátí původní objekt s aktualizovaným textem"""
-        # Do původních dat (kde jsou tokens, seek, atd.) vložíme nový text
-        # Whisper texty často začínají mezerou, přidáme ji zpět pro konzistenci, pokud chceš
-        updated_text = " " + self.txt_content.toPlainText().strip()
-        self.original_data['text'] = updated_text
+        self.original_data['text'] = " " + self.txt_content.toPlainText().strip()
+        self.original_data['start'] = self.start_sec
+        self.original_data['end'] = self.end_sec
         return self.original_data
 
-# --- HLAVNÍ OKNO ---
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Whisper Subtitle Editor")
-        self.resize(1200, 800)
+        self.setWindowTitle("Whisper Editor & Timeline")
+        self.resize(1300, 850)
         
-        self.subtitle_rows = [] 
+        self.subtitle_rows = []
+        self.init_ui()
+        
+        # Timer pro aktualizaci slideru
+        self.timer = QTimer()
+        self.timer.setInterval(200)
+        self.timer.timeout.connect(self.update_slider_position)
+        self.timer.start()
 
+    def init_ui(self):
         main_widget = QWidget()
         self.setCentralWidget(main_widget)
         main_layout = QVBoxLayout(main_widget)
         
         splitter = QSplitter(Qt.Orientation.Horizontal)
         
-        # --- VIDEO ČÁST ---
+        # --- LEVÁ STRANA: VIDEO ---
         video_container = QWidget()
         video_layout = QVBoxLayout(video_container)
         
@@ -114,33 +111,66 @@ class MainWindow(QMainWindow):
         self.player.setAudioOutput(self.audio_output)
         self.player.setVideoOutput(self.video_widget)
         
+        # Slider ovládání
+        self.slider = QSlider(Qt.Orientation.Horizontal)
+        self.slider.sliderMoved.connect(self.set_video_position)
+        self.slider.sliderPressed.connect(lambda: self.player.pause())
+        
+        # Kontrolky pod videem
         controls = QHBoxLayout()
-        self.btn_open_video = QPushButton("Načíst Video")
-        self.btn_open_video.clicked.connect(self.open_video)
         self.btn_play = QPushButton("Play/Pause")
         self.btn_play.clicked.connect(self.toggle_play)
         
-        controls.addWidget(self.btn_open_video)
-        controls.addWidget(self.btn_play)
+        self.btn_back = QPushButton("-1s")
+        self.btn_back.clicked.connect(lambda: self.seek_relative(-1000))
+        self.btn_fwd = QPushButton("+1s")
+        self.btn_fwd.clicked.connect(lambda: self.seek_relative(1000))
         
-        video_layout.addWidget(self.video_widget)
+        self.speed_combo = QComboBox()
+        self.speed_combo.addItems(["0.5x", "1.0x", "1.25x", "1.5x", "2.0x"])
+        self.speed_combo.setCurrentIndex(1)
+        self.speed_combo.currentIndexChanged.connect(self.change_speed)
+        
+        self.lbl_current_time = QLabel("00:00:00")
+        
+        controls.addWidget(self.btn_play)
+        controls.addWidget(self.btn_back)
+        controls.addWidget(self.btn_fwd)
+        controls.addWidget(QLabel("Rychlost:"))
+        controls.addWidget(self.speed_combo)
+        controls.addStretch()
+        controls.addWidget(self.lbl_current_time)
+
+        video_layout.addWidget(self.video_widget, stretch=5)
+        video_layout.addWidget(self.slider)
         video_layout.addLayout(controls)
         
-        # --- TITULKY ČÁST ---
+        # --- PRAVÁ STRANA: TIMELINE ---
         right_container = QWidget()
         right_layout = QVBoxLayout(right_container)
         
-        top_panel = QHBoxLayout()
-        self.btn_load = QPushButton("📂 Načíst JSON")
-        self.btn_load.clicked.connect(self.load_json)
-        self.btn_save = QPushButton("💾 Uložit JSON")
-        self.btn_save.clicked.connect(self.save_json)
+        top_menu = QHBoxLayout()
+        btn_open_v = QPushButton("🎥 Video")
+        btn_open_v.clicked.connect(self.open_video)
+        btn_load_j = QPushButton("📂 JSON")
+        btn_load_j.clicked.connect(self.load_json)
+        btn_save_j = QPushButton("💾 Uložit")
+        btn_save_j.clicked.connect(self.save_json)
+        
+        top_menu.addWidget(btn_open_v)
+        top_menu.addWidget(btn_load_j)
+        top_menu.addWidget(btn_save_j)
+
+        # Akční lišta pro titulky
+        subtitle_actions = QHBoxLayout()
+        self.btn_add_sub = QPushButton("+ Přidat titulek na aktuální čas")
+        self.btn_add_sub.setStyleSheet("background-color: #d4edda; font-weight: bold;")
+        self.btn_add_sub.clicked.connect(self.add_subtitle_at_current)
         self.btn_ai_all = QPushButton("🤖 AI Vše")
         self.btn_ai_all.clicked.connect(self.process_all)
         
-        top_panel.addWidget(self.btn_load)
-        top_panel.addWidget(self.btn_save)
-        top_panel.addWidget(self.btn_ai_all)
+        subtitle_actions.addWidget(self.btn_add_sub)
+        subtitle_actions.addWidget(self.btn_ai_all)
         
         self.scroll = QScrollArea()
         self.scroll.setWidgetResizable(True)
@@ -149,20 +179,21 @@ class MainWindow(QMainWindow):
         self.scroll_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.scroll.setWidget(self.scroll_content)
         
-        right_layout.addLayout(top_panel)
+        right_layout.addLayout(top_menu)
+        right_layout.addLayout(subtitle_actions)
         right_layout.addWidget(self.scroll)
         
         splitter.addWidget(video_container)
         splitter.addWidget(right_container)
-        splitter.setSizes([700, 500])
-        
+        splitter.setSizes([600, 700])
         main_layout.addWidget(splitter)
 
+    # --- LOGIKA VIDEA ---
     def open_video(self):
         fname, _ = QFileDialog.getOpenFileName(self, "Vybrat Video")
         if fname:
             self.player.setSource(QUrl.fromLocalFile(fname))
-            self.btn_play.setText("Play")
+            self.player.setPlaybackRate(1.0)
 
     def toggle_play(self):
         if self.player.playbackState() == QMediaPlayer.PlaybackState.PlayingState:
@@ -170,11 +201,53 @@ class MainWindow(QMainWindow):
         else:
             self.player.play()
 
+    def update_slider_position(self):
+        if self.player.duration() > 0:
+            pos = self.player.position()
+            dur = self.player.duration()
+            self.slider.setMaximum(dur)
+            self.slider.setValue(pos)
+            self.lbl_current_time.setText(format_timestamp(pos))
+
+    def set_video_position(self, position):
+        self.player.setPosition(position)
+
+    def seek_relative(self, ms):
+        self.player.setPosition(self.player.position() + ms)
+
+    def change_speed(self):
+        speed = float(self.speed_combo.currentText().replace('x', ''))
+        self.player.setPlaybackRate(speed)
+
+    # --- LOGIKA TITULKŮ ---
+    def add_subtitle_at_current(self):
+        curr_ms = self.player.position()
+        new_item = {
+            "start": curr_ms / 1000.0,
+            "end": (curr_ms / 1000.0) + 2.0,
+            "text": "Nový titulek"
+        }
+        row = SubtitleRow(new_item, self.player, self.delete_row)
+        # Najít správnou pozici v timeline (podle času)
+        insert_idx = 0
+        for i, r in enumerate(self.subtitle_rows):
+            if r.start_sec > new_item['start']:
+                insert_idx = i
+                break
+            insert_idx = i + 1
+        
+        self.scroll_layout.insertWidget(insert_idx, row)
+        self.subtitle_rows.insert(insert_idx, row)
+
+    def delete_row(self, row_widget):
+        self.subtitle_rows.remove(row_widget)
+        row_widget.setParent(None)
+        row_widget.deleteLater()
+
     def load_json(self):
         fname, _ = QFileDialog.getOpenFileName(self, "Vybrat JSON", filter="JSON (*.json)")
         if not fname: return
-
-        # Vyčistit staré
+        
         while self.scroll_layout.count():
             item = self.scroll_layout.takeAt(0)
             if item.widget(): item.widget().deleteLater()
@@ -183,40 +256,23 @@ class MainWindow(QMainWindow):
         try:
             with open(fname, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                
-            # Pokud je JSON list (tvůj případ), projdeme ho
-            if isinstance(data, list):
-                for item in data:
-                    # Předáváme 'self.player' pro možnost seekování
-                    row = SubtitleRow(item, self.player)
-                    self.scroll_layout.addWidget(row)
-                    self.subtitle_rows.append(row)
-            else:
-                 # Pokud by to byl jiný formát (např. dict s klíčem 'segments')
-                 segments = data.get('segments', [])
-                 for item in segments:
-                    row = SubtitleRow(item, self.player)
-                    self.scroll_layout.addWidget(row)
-                    self.subtitle_rows.append(row)
-                
+            
+            segments = data if isinstance(data, list) else data.get('segments', [])
+            for item in segments:
+                row = SubtitleRow(item, self.player, self.delete_row)
+                self.scroll_layout.addWidget(row)
+                self.subtitle_rows.append(row)
         except Exception as e:
-            print(f"Chyba JSON: {e}")
-            QMessageBox.critical(self, "Chyba", str(e))
+            QMessageBox.critical(self, "Chyba", f"Nepodařilo se načíst JSON: {e}")
 
     def save_json(self):
-        if not self.subtitle_rows: return
         fname, _ = QFileDialog.getSaveFileName(self, "Uložit JSON", filter="JSON (*.json)")
         if not fname: return
-            
-        output_data = []
-        for row in self.subtitle_rows:
-            # Získáme kompletní data včetně upraveného textu
-            output_data.append(row.get_updated_data())
-            
+        output = [row.get_updated_data() for row in self.subtitle_rows]
         try:
             with open(fname, 'w', encoding='utf-8') as f:
-                json.dump(output_data, f, indent=2, ensure_ascii=False)
-            QMessageBox.information(self, "Hotovo", "Uloženo!")
+                json.dump(output, f, indent=2, ensure_ascii=False)
+            QMessageBox.information(self, "Uloženo", "Soubor byl úspěšně uložen.")
         except Exception as e:
             QMessageBox.critical(self, "Chyba", str(e))
 
@@ -226,6 +282,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    app.setStyle("Fusion") # Modernější vzhled
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
