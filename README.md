@@ -97,6 +97,9 @@ Pro generování favicon (ikonky webu a PWA) používáme **RealFaviconGenerator
 
 Potvrzení/vyvrácení domněnek - výhody/nevýhody řešení.
 
+Byl vytvořen program pro zpětnou analýzu videa. Program dokáže vytvářet titulky - nabízí prostředí, kde pohodně člověk manuálně přepisuje ze záznamu a získáním referenčního přepisu můžemě srovnat s AI přepisem. Dále nabízí i analýzu pomocí AI a extrakci dat z přepisu (jako hlavní program). Dovoluje nám to testovat různé přepisy pro extrakci dat do tabulek. 
+
+![Program pro titulkování](./photo/sim_study_program.png)
 
 # Technické detaily
 

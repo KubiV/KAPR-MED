@@ -11,11 +11,9 @@ from PyQt6.QtMultimediaWidgets import QVideoWidget
 from PyQt6.QtCore import QUrl, Qt, QTimer, QThread, pyqtSignal
 
 # --- IMPORT AI LOGIKY ---
-# Předpokládá existenci souboru ai_logic.py ve stejné složce
 try:
     import ai_logic
 except ImportError:
-    # Fallback pro případ, že ai_logic chybí (aby program nespadl hned)
     print("VAROVÁNÍ: Soubor 'ai_logic.py' nebyl nalezen. AI funkce nebudou fungovat.")
     class MockAIService:
         @staticmethod
@@ -27,15 +25,14 @@ except ImportError:
     ai_logic = type('obj', (object,), {'AIService': MockAIService, 'SessionManager': MockSessionManager})
 
 def format_timestamp(ms):
-    """Převede milisekundy na formát HH:MM:SS"""
     s = ms // 1000
     m, s = divmod(s, 60)
     h, m = divmod(m, 60)
     return f"{int(h):02d}:{int(m):02d}:{int(s):02d}"
 
-# --- WORKER PRO AI (Aby nezamrzalo okno) ---
+# --- WORKER PRO AI ---
 class AIWorker(QThread):
-    finished = pyqtSignal(object, str, object) # row_widget, result_text, json_data
+    finished = pyqtSignal(object, str, object)
 
     def __init__(self, text, row_widget):
         super().__init__()
@@ -44,9 +41,7 @@ class AIWorker(QThread):
 
     def run(self):
         try:
-            # Volání funkce ze separátního souboru
             result_json = ai_logic.AIService.query_llm(self.text)
-            
             if result_json:
                 pretty_text = json.dumps(result_json.get('polozky', {}), ensure_ascii=False, indent=2)
                 self.finished.emit(self.row_widget, pretty_text, result_json)
@@ -92,7 +87,6 @@ class SubtitleRow(QWidget):
         self.txt_content.setFixedHeight(60)
         self.txt_content.setStyleSheet("background-color: #ffffff; color: #000000; border: 1px solid #ccc; border-radius: 4px;")
         
-        # --- POLE PRO AI VÝSTUP ---
         self.txt_ai_result = QTextEdit()
         self.txt_ai_result.setPlaceholderText("AI Analýza...")
         if self.analysis_json:
@@ -154,14 +148,17 @@ class SubtitleRow(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Whisper Editor & AI Medical Analyzer (Merged Ultimate)")
+        self.setWindowTitle("Whisper Editor & AI Medical Analyzer (Stable)")
         self.resize(1400, 850)
         
         self.subtitle_rows = []
         self.video_start_time = datetime.now()
         self.last_active_row = None
         
-        # Inicializace Session Manageru
+        # --- BEZPEČNOSTNÍ VLAJKA ---
+        self.is_processing = False 
+        self._current_worker = None # Reference na aktuální thread
+        
         self.session_manager = ai_logic.SessionManager()
         
         self.init_ui()
@@ -179,10 +176,9 @@ class MainWindow(QMainWindow):
         main_layout = QVBoxLayout(main_widget)
         splitter = QSplitter(Qt.Orientation.Horizontal)
         
-        # --- VIDEO PANEL (Levá strana) ---
+        # VIDEO (Zjednodušeno pro přehlednost, logika zůstává stejná)
         video_container = QWidget()
         video_layout = QVBoxLayout(video_container)
-        
         self.video_widget = QVideoWidget()
         self.player = QMediaPlayer()
         self.audio_output = QAudioOutput()
@@ -193,24 +189,17 @@ class MainWindow(QMainWindow):
         self.slider.sliderMoved.connect(self.set_video_position)
         self.slider.sliderPressed.connect(lambda: self.player.pause())
         
-        # Ovládací prvky videa (Play, Seek, Speed)
         controls = QHBoxLayout()
-        
         self.btn_play = QPushButton("Play/Pause")
         self.btn_play.clicked.connect(self.toggle_play)
-        
-        # -- Obnovené funkce: Seek -1s/+1s --
         self.btn_back = QPushButton("-1s")
         self.btn_back.clicked.connect(lambda: self.seek_relative(-1000))
         self.btn_fwd = QPushButton("+1s")
         self.btn_fwd.clicked.connect(lambda: self.seek_relative(1000))
-        
-        # -- Obnovená funkce: Rychlost --
         self.speed_combo = QComboBox()
         self.speed_combo.addItems(["0.5x", "1.0x", "1.25x", "1.5x", "2.0x"])
         self.speed_combo.setCurrentIndex(1)
         self.speed_combo.currentIndexChanged.connect(self.change_speed)
-        
         self.lbl_current_time = QLabel("00:00:00")
         
         controls.addWidget(self.btn_play)
@@ -225,7 +214,7 @@ class MainWindow(QMainWindow):
         video_layout.addWidget(self.slider)
         video_layout.addLayout(controls)
         
-        # --- TIMELINE PANEL (Pravá strana) ---
+        # TIMELINE
         right_container = QWidget()
         right_layout = QVBoxLayout(right_container)
         
@@ -236,7 +225,6 @@ class MainWindow(QMainWindow):
         btn_load_j.clicked.connect(self.load_json)
         btn_save_j = QPushButton("💾 Uložit Projekt")
         btn_save_j.clicked.connect(self.save_json)
-        
         top_menu.addWidget(btn_open_v)
         top_menu.addWidget(btn_load_j)
         top_menu.addWidget(btn_save_j)
@@ -284,71 +272,101 @@ class MainWindow(QMainWindow):
     # --- OBSLUHA AI ---
 
     def handle_single_ai_request(self, row_widget, text):
-        """Spustí thread pro analýzu jednoho řádku"""
-        self.worker = AIWorker(text, row_widget)
-        self.worker.finished.connect(self.on_single_ai_finished)
-        self.worker.start()
+        # Jednorázové spuštění - zde není třeba složité blokování, 
+        # ale je dobré používat deleteLater
+        worker = AIWorker(text, row_widget)
+        worker.finished.connect(self.on_single_ai_finished)
+        worker.finished.connect(worker.deleteLater) # DŮLEŽITÉ: Úklid
+        self._current_worker = worker # Udržení reference
+        worker.start()
 
     def on_single_ai_finished(self, row_widget, text, json_data):
         row_widget.update_ai_result(text, json_data)
 
     def process_all_and_save(self):
-        """Proces pro dávkové zpracování"""
+        """Proces pro dávkové zpracování s kontrolou stavu"""
+        
+        # 1. Kontrola, zda už proces neběží
+        if self.is_processing:
+            print("[DEBUG] Pokus o spuštění, ale proces již běží.")
+            QMessageBox.warning(self, "Zpracování běží", "Počkejte prosím na dokončení aktuálního zpracování.")
+            return
+
         if not self.subtitle_rows:
             QMessageBox.warning(self, "Chyba", "Žádné titulky ke zpracování.")
             return
 
+        print("[DEBUG] Spouštím hromadné zpracování...")
+        self.is_processing = True # ZAMKNOUT
+        self.btn_ai_all.setEnabled(False)
         self.progress_bar.setVisible(True)
         self.progress_bar.setMaximum(len(self.subtitle_rows))
         self.progress_bar.setValue(0)
-        self.btn_ai_all.setEnabled(False)
         
-        # Resetovat tabulky v session manageru před novým průchodem
+        # Resetovat tabulky
         self.session_manager.reset_tables()
         
-        # Spustíme rekurzivní zpracování
+        # Spustit rekurzi
         self.process_next_row(0)
 
     def process_next_row(self, index):
         if index >= len(self.subtitle_rows):
+            print("[DEBUG] Všechny řádky zpracovány. Finalizuji.")
             self.finalize_processing()
             return
 
         row = self.subtitle_rows[index]
         text = row.txt_content.toPlainText()
         
+        print(f"[DEBUG] Zpracovávám řádek {index + 1}/{len(self.subtitle_rows)}")
         self.progress_bar.setValue(index + 1)
         
-        # Worker pro daný řádek
-        self.worker = AIWorker(text, row)
-        self.worker.finished.connect(lambda r, t, j: self.on_row_processed(r, t, j, index))
-        self.worker.start()
+        # Vytvoření lokálního workera
+        worker = AIWorker(text, row)
+        
+        # Napojení signálů
+        # Používáme lambda pro předání kontextu
+        worker.finished.connect(lambda r, t, j: self.on_row_processed(r, t, j, index))
+        
+        # KRITICKÉ: Zajistit vymazání objektu po skončení
+        worker.finished.connect(worker.deleteLater) 
+        
+        # Uložíme referenci, aby garbage collector workera nesmazal předčasně
+        self._current_worker = worker
+        
+        worker.start()
 
     def on_row_processed(self, row_widget, text, json_data, index):
-        # 1. Update GUI prvku
+        # 1. Update GUI
         row_widget.update_ai_result(text, json_data)
         
-        # 2. Předání dat do SessionManageru (pro CSV)
+        # 2. Data do manageru
         if json_data:
             timestamp = format_timestamp(row_widget.start_sec * 1000)
-            self.session_manager.process_data_into_tables(json_data, timestamp)
+            try:
+                self.session_manager.process_data_into_tables(json_data, timestamp)
+            except Exception as e:
+                print(f"[DEBUG] Chyba při process_data_into_tables: {e}")
 
         # 3. Další řádek
         self.process_next_row(index + 1)
 
     def finalize_processing(self):
+        print("[DEBUG] Finalizace a ukládání...")
         self.progress_bar.setVisible(False)
         self.btn_ai_all.setEnabled(True)
+        self.is_processing = False # ODEMKNOUT
+        self._current_worker = None
         
         try:
-            # Uložení CSV přes manager
             folder, files = self.session_manager.save_session()
             files_str = "\n".join(files)
             QMessageBox.information(self, "Hotovo", f"Analýza dokončena.\n\nUloženo do:\n{folder}\n\nSoubory:\n{files_str}")
         except Exception as e:
+            print(f"[DEBUG] Chyba při ukládání: {e}")
             QMessageBox.critical(self, "Chyba při ukládání", str(e))
 
-    # --- STANDARDNÍ METODY (Sloučeno) ---
+    # --- STANDARDNÍ METODY (Zbytek beze změn) ---
     def toggle_autoscroll_label(self):
         if self.btn_autoscroll.isChecked():
             self.btn_autoscroll.setText("⬇ Auto-Scroll: ZAP")
@@ -360,7 +378,6 @@ class MainWindow(QMainWindow):
             pos = self.player.position()
             current_sec = pos / 1000.0
             dur = self.player.duration()
-            
             if not self.slider.isSliderDown():
                 self.slider.setMaximum(dur)
                 self.slider.setValue(pos)
@@ -370,16 +387,12 @@ class MainWindow(QMainWindow):
     def highlight_subtitles(self, current_sec):
         active_row = None
         for row in self.subtitle_rows:
-            # Logika z prvního skriptu (lepší pro čtení)
             if row.start_sec <= current_sec:
                 active_row = row
             else:
                 break
-        
         for row in self.subtitle_rows:
-            # Použijeme barvení, ale zároveň zkontrolujeme, jestli sedí v autoscrollu
             row.set_highlight(row == active_row)
-
         if active_row and active_row != self.last_active_row:
             if self.btn_autoscroll.isChecked():
                 self.scroll.verticalScrollBar().setValue(active_row.y())
@@ -389,11 +402,8 @@ class MainWindow(QMainWindow):
         fname, _ = QFileDialog.getOpenFileName(self, "Vybrat Video")
         if fname:
             self.player.setSource(QUrl.fromLocalFile(fname))
-            # Reset rychlosti při načtení nového videa
             self.player.setPlaybackRate(1.0)
             self.speed_combo.setCurrentIndex(1)
-            
-            # Načtení reálného času (z druhého skriptu)
             try:
                 self.video_start_time = datetime.fromtimestamp(os.path.getmtime(fname))
             except:
@@ -410,7 +420,6 @@ class MainWindow(QMainWindow):
         self.lbl_current_time.setText(format_timestamp(position))
         self.highlight_subtitles(position / 1000.0)
     
-    # -- Obnovené metody pro ovládání --
     def seek_relative(self, ms):
         self.player.setPosition(self.player.position() + ms)
 
@@ -427,13 +436,11 @@ class MainWindow(QMainWindow):
         curr_sec = curr_ms / 1000.0
         new_item = { "start": curr_sec, "end": curr_sec + 2.0, "text": "Nový záznam" }
         row = SubtitleRow(new_item, self.player, self.delete_row, self.handle_single_ai_request)
-        
         insert_idx = len(self.subtitle_rows)
         for i, r in enumerate(self.subtitle_rows):
             if r.start_sec > new_item['start']:
                 insert_idx = i
                 break
-        
         self.scroll_layout.insertWidget(insert_idx, row)
         self.subtitle_rows.insert(insert_idx, row)
         self.subtitle_rows.sort(key=lambda x: x.start_sec)
@@ -447,21 +454,16 @@ class MainWindow(QMainWindow):
     def load_json(self):
         fname, _ = QFileDialog.getOpenFileName(self, "Vybrat JSON", filter="JSON (*.json)")
         if not fname: return
-        
         while self.scroll_layout.count():
             item = self.scroll_layout.takeAt(0)
             if item.widget(): item.widget().deleteLater()
         self.subtitle_rows = []
-
         try:
             with open(fname, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            
             segments = data if isinstance(data, list) else data.get('segments', [])
             segments.sort(key=lambda x: x.get('start', 0))
-
             for item in segments:
-                # Zde musíme předat i callback pro AI
                 row = SubtitleRow(item, self.player, self.delete_row, self.handle_single_ai_request)
                 self.scroll_layout.addWidget(row)
                 self.subtitle_rows.append(row)
@@ -471,21 +473,16 @@ class MainWindow(QMainWindow):
     def save_json(self):
         fname, _ = QFileDialog.getSaveFileName(self, "Uložit JSON", filter="JSON (*.json)")
         if not fname: return
-        
         output = []
         for row in self.subtitle_rows:
             data = row.get_updated_data()
-            
-            # -- Obnovená logika: výpočet reálného času (exact_world_time) --
             try:
                 offset = timedelta(seconds=data['start'])
                 world_time = self.video_start_time + offset
                 data['exact_world_time'] = world_time.strftime("%Y-%m-%d %H:%M:%S.%f")
             except Exception:
                 data['exact_world_time'] = "N/A"
-            
             output.append(data)
-
         try:
             with open(fname, 'w', encoding='utf-8') as f:
                 json.dump(output, f, indent=2, ensure_ascii=False)
