@@ -1,0 +1,219 @@
+2026-02-15 00:55:25,767 - INFO - ai_logic - ✓ Groq klient úspěšně inicializován
+2026-02-15 00:55:25,767 - WARNING - ai_logic - ⚠ GOOGLE_API_KEY není nastaven
+2026-02-15 00:55:25,899 - INFO - ai_logic - ✓ SessionManager úspěšně inicializován
+2026-02-15 01:01:08,549 - INFO - ai_logic - ✓ Vytvořen adresář relace: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/sim_study_analysis/sessions/Session_20260215_010108
+2026-02-15 01:01:08,550 - WARNING - ai_logic - ⚠ Žádné soubory nebyly uloženy (možná nejsou data)
+2026-02-15 01:04:33,602 - INFO - ai_logic - ✓ Vytvořen adresář relace: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/sim_study_analysis/sessions/Session_20260215_010433
+2026-02-15 01:04:33,604 - WARNING - ai_logic - ⚠ Žádné soubory nebyly uloženy (možná nejsou data)
+2026-02-15 01:04:46,298 - INFO - ai_logic - ✓ Groq klient úspěšně inicializován
+2026-02-15 01:04:46,298 - WARNING - ai_logic - ⚠ GOOGLE_API_KEY není nastaven
+2026-02-15 01:04:46,454 - INFO - ai_logic - ✓ SessionManager úspěšně inicializován
+2026-02-15 01:07:34,899 - INFO - ai_logic - ✓ Groq klient úspěšně inicializován
+2026-02-15 01:07:34,899 - WARNING - ai_logic - ⚠ GOOGLE_API_KEY není nastaven
+2026-02-15 01:07:35,011 - INFO - ai_logic - ✓ SessionManager úspěšně inicializován
+2026-02-15 01:07:43,594 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:07:44,057 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:07:44,078 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:07:48,571 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:07:48,888 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:07:48,889 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:07:56,060 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:07:56,495 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:07:56,498 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:07:59,419 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:07:59,708 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:07:59,709 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:07:59,709 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:07:59,710 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:07:59,952 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:07:59,954 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:07:59,955 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:07:59,956 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:00,237 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:00,238 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:00,239 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:00,241 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:00,504 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:00,508 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:00,509 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:00,511 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:00,879 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:00,880 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:00,881 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:00,883 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:01,169 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:01,172 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:01,173 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:01,175 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:01,501 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:01,504 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:01,505 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:01,506 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:01,895 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:01,898 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:01,899 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:01,900 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:02,316 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:02,319 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:02,320 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:02,323 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:02,741 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:02,742 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:02,742 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:02,745 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:03,141 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:03,144 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:03,154 - INFO - ai_logic - ✓ Zpracováno 1 položek do tabulek
+2026-02-15 01:08:03,158 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:03,877 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:03,879 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:03,882 - INFO - ai_logic - ✓ Zpracováno 1 položek do tabulek
+2026-02-15 01:08:03,885 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:04,129 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:04,131 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:04,135 - INFO - ai_logic - ✓ Zpracováno 1 položek do tabulek
+2026-02-15 01:08:04,139 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:04,382 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:04,385 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:04,386 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:04,389 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:04,841 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:04,842 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:04,843 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:04,844 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:05,115 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:05,116 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:05,116 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:15,635 - INFO - ai_logic - ✓ Groq klient úspěšně inicializován
+2026-02-15 01:08:15,635 - WARNING - ai_logic - ⚠ GOOGLE_API_KEY není nastaven
+2026-02-15 01:08:15,752 - INFO - ai_logic - ✓ SessionManager úspěšně inicializován
+2026-02-15 01:08:27,113 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:27,480 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:27,498 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:27,499 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:27,501 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:27,814 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:27,816 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:27,816 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:27,819 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:28,220 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:28,222 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:28,223 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:28,225 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:28,492 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:28,495 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:28,496 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:28,500 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:28,538 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:28,539 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-02-15 01:08:31,846 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:31,851 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:31,853 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:31,855 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:31,935 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:31,937 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2026-02-15 01:08:38,463 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:38,465 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:38,466 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:38,468 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:38,526 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:38,527 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-02-15 01:08:43,946 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:43,948 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:43,949 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:43,952 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:44,065 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:44,066 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:08:46,296 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:46,297 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:46,298 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:46,299 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:46,386 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:46,386 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:08:49,420 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:49,423 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:49,424 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:49,427 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:49,508 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:49,509 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-02-15 01:08:51,158 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:51,162 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:51,163 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:51,166 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:51,200 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:51,200 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-02-15 01:08:54,529 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:54,532 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:54,539 - INFO - ai_logic - ✓ Zpracováno 1 položek do tabulek
+2026-02-15 01:08:54,544 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:54,644 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:54,645 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:08:57,008 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:57,011 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:57,013 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:08:57,019 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:57,052 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:57,053 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:08:59,361 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:08:59,363 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:08:59,367 - INFO - ai_logic - ✓ Zpracováno 1 položek do tabulek
+2026-02-15 01:08:59,371 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:08:59,441 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:08:59,441 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-02-15 01:09:04,777 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:09:04,780 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:09:04,780 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:09:04,788 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:09:04,892 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:09:04,893 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:09:07,227 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:09:07,229 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:09:07,230 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:09:07,232 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:09:07,279 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:09:07,279 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:09:09,692 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:09:09,695 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:09:09,697 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:09:09,699 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:09:09,753 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:09:09,754 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:09:12,135 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:09:12,138 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:09:12,144 - INFO - ai_logic - ✓ Zpracováno 1 položek do tabulek
+2026-02-15 01:09:12,148 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:09:12,286 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:09:12,287 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:09:14,611 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:09:14,614 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:09:14,616 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:09:14,619 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:09:14,658 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-15 01:09:14,659 - INFO - groq._base_client - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-02-15 01:09:16,967 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:09:16,969 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:09:16,970 - INFO - ai_logic - ✓ Zpracováno 0 položek do tabulek
+2026-02-15 01:09:54,357 - INFO - ai_logic - ✓ Groq klient úspěšně inicializován
+2026-02-15 01:09:54,357 - WARNING - ai_logic - ⚠ GOOGLE_API_KEY není nastaven
+2026-02-15 01:09:54,476 - INFO - ai_logic - ✓ SessionManager úspěšně inicializován
+2026-02-15 01:11:20,033 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:20,476 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:20,493 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:11:28,168 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:28,603 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:28,605 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:11:32,176 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:32,450 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:32,453 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:11:38,987 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:39,460 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:39,462 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:11:45,220 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:45,858 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:45,860 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:11:53,613 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:53,940 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:53,943 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný
+2026-02-15 01:11:58,288 - INFO - ai_logic - 💡 Inicializace LLM dotazu s modelem: openai/gpt-oss-120b
+2026-02-15 01:11:58,822 - INFO - httpx - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-15 01:11:58,823 - INFO - ai_logic - ✓ Groq dotaz s openai/gpt-oss-120b úspěšný

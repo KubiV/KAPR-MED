@@ -1,6 +1,8 @@
 recordings
 logs
 venv
+venv312
+venv_sim_study
 tests/vosk/audio files
 app/.env
 .env
