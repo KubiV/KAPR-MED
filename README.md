@@ -86,7 +86,7 @@ PWA využívá moderní webové technologie, jako jsou **Service Workers** a **W
 - rychlé načítání a lepší výkon,
 - jednotné chování napříč platformami (desktop i mobil).
 
-Pro generování favicon (ikonky webu a PWA) používáme **RealFaviconGenerator** – online nástroj, který vytvoří všechny potřebné ikony pro různé prohlížeče, platformy a zařízení z jednoho vstupního obrázku 📱💻.  [oai_citation:0‡Real Favicon Generator](https://realfavicongenerator.net/?utm_source=chatgpt.com)
+Pro generování favicon (ikonky webu a PWA) používáme **RealFaviconGenerator** – online nástroj, který vytvoří všechny potřebné ikony pro různé prohlížeče, platformy a zařízení z jednoho vstupního obrázku 📱💻. [Real Favicon Generator](https://realfavicongenerator.net/)
 
 ---
 

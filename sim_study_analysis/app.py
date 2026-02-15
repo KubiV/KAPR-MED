@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                              QHBoxLayout, QPushButton, QLabel, QFileDialog, 
                              QScrollArea, QTextEdit, QSplitter, QMessageBox, 
-                             QSlider, QComboBox, QProgressBar)
+                             QSlider, QComboBox, QProgressBar, QLineEdit)
 from PyQt6.QtMultimedia import QMediaPlayer, QAudioOutput
 from PyQt6.QtMultimediaWidgets import QVideoWidget
 from PyQt6.QtCore import QUrl, Qt, QTimer, QThread, pyqtSignal
@@ -29,6 +29,17 @@ def format_timestamp(ms):
     m, s = divmod(s, 60)
     h, m = divmod(m, 60)
     return f"{int(h):02d}:{int(m):02d}:{int(s):02d}"
+
+def parse_timestamp(time_str):
+    try:
+        parts = time_str.split(':')
+        if len(parts) != 3:
+            return None
+        h, m, s = map(int, parts)
+        total_seconds = h * 3600 + m * 60 + s
+        return float(total_seconds)
+    except ValueError:
+        return None
 
 # --- WORKER PRO AI ---
 class AIWorker(QThread):
@@ -78,9 +89,12 @@ class SubtitleRow(QWidget):
         self.btn_seek.clicked.connect(self.seek_video)
         
         time_str = format_timestamp(self.start_sec * 1000)
-        self.lbl_time = QLabel(time_str)
-        self.lbl_time.setFixedWidth(65)
-        self.lbl_time.setStyleSheet("font-family: monospace; font-weight: bold; color: #000000;")
+        
+        self.txt_time = QLineEdit(time_str)
+        self.txt_time.setFixedWidth(65)
+        self.txt_time.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.txt_time.setStyleSheet("font-family: monospace; font-weight: bold; color: #000000; border: 1px solid #ccc; border-radius: 3px;")
+        self.txt_time.editingFinished.connect(self.on_time_edited)
         
         self.txt_content = QTextEdit()
         self.txt_content.setPlainText(self.original_data.get('text', '').strip())
@@ -106,12 +120,23 @@ class SubtitleRow(QWidget):
         self.btn_del.clicked.connect(lambda: self.delete_callback(self))
         
         self.layout.addWidget(self.btn_seek)
-        self.layout.addWidget(self.lbl_time)
+        self.layout.addWidget(self.txt_time)
         self.layout.addWidget(self.txt_content, stretch=2)   
         self.layout.addWidget(self.txt_ai_result, stretch=1) 
         self.layout.addWidget(self.btn_ai)
         self.layout.addWidget(self.btn_del)
         self.setLayout(self.layout)
+
+    def on_time_edited(self):
+        text = self.txt_time.text()
+        new_seconds = parse_timestamp(text)
+        
+        if new_seconds is not None:
+            self.start_sec = new_seconds
+            self.end_sec = self.start_sec + 2.0 
+            print(f"Čas změněn na: {self.start_sec}s")
+        else:
+            self.txt_time.setText(format_timestamp(self.start_sec * 1000))
 
     def set_highlight(self, active):
         if self.is_highlighted == active: return 
@@ -120,9 +145,9 @@ class SubtitleRow(QWidget):
 
     def update_style(self):
         if self.is_highlighted:
-            self.setStyleSheet("SubtitleRow { background-color: #fffacd; border: 2px solid #ffd700; border-radius: 6px; } QLabel { color: black; }")
+            self.setStyleSheet("SubtitleRow { background-color: #fffacd; border: 2px solid #ffd700; border-radius: 6px; } QLineEdit { background-color: #ffffff; }")
         else:
-            self.setStyleSheet("SubtitleRow { background-color: #f9f9f9; border-bottom: 1px solid #e0e0e0; border-radius: 4px; } QLabel { color: black; }")
+            self.setStyleSheet("SubtitleRow { background-color: #f9f9f9; border-bottom: 1px solid #e0e0e0; border-radius: 4px; } QLineEdit { background-color: #ffffff; }")
 
     def seek_video(self):
         self.player.setPosition(int(self.start_sec * 1000))
@@ -148,16 +173,15 @@ class SubtitleRow(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Whisper Editor & AI Medical Analyzer (Stable)")
+        self.setWindowTitle("Tittles Editor")
         self.resize(1400, 850)
         
         self.subtitle_rows = []
         self.video_start_time = datetime.now()
         self.last_active_row = None
         
-        # --- BEZPEČNOSTNÍ VLAJKA ---
         self.is_processing = False 
-        self._current_worker = None # Reference na aktuální thread
+        self._current_worker = None
         
         self.session_manager = ai_logic.SessionManager()
         
@@ -176,7 +200,7 @@ class MainWindow(QMainWindow):
         main_layout = QVBoxLayout(main_widget)
         splitter = QSplitter(Qt.Orientation.Horizontal)
         
-        # VIDEO (Zjednodušeno pro přehlednost, logika zůstává stejná)
+        # VIDEO
         video_container = QWidget()
         video_layout = QVBoxLayout(video_container)
         self.video_widget = QVideoWidget()
@@ -185,6 +209,9 @@ class MainWindow(QMainWindow):
         self.player.setAudioOutput(self.audio_output)
         self.player.setVideoOutput(self.video_widget)
         
+        # Nastavení výchozí hlasitosti
+        self.audio_output.setVolume(0.7) 
+        
         self.slider = QSlider(Qt.Orientation.Horizontal)
         self.slider.sliderMoved.connect(self.set_video_position)
         self.slider.sliderPressed.connect(lambda: self.player.pause())
@@ -192,22 +219,38 @@ class MainWindow(QMainWindow):
         controls = QHBoxLayout()
         self.btn_play = QPushButton("Play/Pause")
         self.btn_play.clicked.connect(self.toggle_play)
+        
         self.btn_back = QPushButton("-1s")
         self.btn_back.clicked.connect(lambda: self.seek_relative(-1000))
+        
         self.btn_fwd = QPushButton("+1s")
         self.btn_fwd.clicked.connect(lambda: self.seek_relative(1000))
+        
         self.speed_combo = QComboBox()
         self.speed_combo.addItems(["0.5x", "1.0x", "1.25x", "1.5x", "2.0x"])
         self.speed_combo.setCurrentIndex(1)
         self.speed_combo.currentIndexChanged.connect(self.change_speed)
+        
         self.lbl_current_time = QLabel("00:00:00")
+        
+        # --- OVLÁDÁNÍ HLASITOSTI ---
+        self.volume_slider = QSlider(Qt.Orientation.Horizontal)
+        self.volume_slider.setRange(0, 100) # 0 až 100 %
+        self.volume_slider.setValue(70)
+        self.volume_slider.setFixedWidth(100)
+        self.volume_slider.valueChanged.connect(self.set_volume)
         
         controls.addWidget(self.btn_play)
         controls.addWidget(self.btn_back)
         controls.addWidget(self.btn_fwd)
         controls.addWidget(QLabel("Rychlost:"))
         controls.addWidget(self.speed_combo)
+        
+        # Přidání hlasitosti do layoutu
         controls.addStretch()
+        controls.addWidget(QLabel("🔊"))
+        controls.addWidget(self.volume_slider)
+        controls.addSpacing(10)
         controls.addWidget(self.lbl_current_time)
 
         video_layout.addWidget(self.video_widget, stretch=5)
@@ -269,26 +312,25 @@ class MainWindow(QMainWindow):
         splitter.setSizes([600, 800])
         main_layout.addWidget(splitter)
 
-    # --- OBSLUHA AI ---
+    # --- NOVÁ METODA HLASITOSTI ---
+    def set_volume(self, value):
+        # PyQt6 AudioOutput bere hodnotu 0.0 až 1.0
+        volume_float = value / 100.0
+        self.audio_output.setVolume(volume_float)
 
+    # --- OBSLUHA AI ---
     def handle_single_ai_request(self, row_widget, text):
-        # Jednorázové spuštění - zde není třeba složité blokování, 
-        # ale je dobré používat deleteLater
         worker = AIWorker(text, row_widget)
         worker.finished.connect(self.on_single_ai_finished)
-        worker.finished.connect(worker.deleteLater) # DŮLEŽITÉ: Úklid
-        self._current_worker = worker # Udržení reference
+        worker.finished.connect(worker.deleteLater) 
+        self._current_worker = worker 
         worker.start()
 
     def on_single_ai_finished(self, row_widget, text, json_data):
         row_widget.update_ai_result(text, json_data)
 
     def process_all_and_save(self):
-        """Proces pro dávkové zpracování s kontrolou stavu"""
-        
-        # 1. Kontrola, zda už proces neběží
         if self.is_processing:
-            print("[DEBUG] Pokus o spuštění, ale proces již běží.")
             QMessageBox.warning(self, "Zpracování běží", "Počkejte prosím na dokončení aktuálního zpracování.")
             return
 
@@ -297,16 +339,12 @@ class MainWindow(QMainWindow):
             return
 
         print("[DEBUG] Spouštím hromadné zpracování...")
-        self.is_processing = True # ZAMKNOUT
+        self.is_processing = True 
         self.btn_ai_all.setEnabled(False)
         self.progress_bar.setVisible(True)
         self.progress_bar.setMaximum(len(self.subtitle_rows))
         self.progress_bar.setValue(0)
-        
-        # Resetovat tabulky
         self.session_manager.reset_tables()
-        
-        # Spustit rekurzi
         self.process_next_row(0)
 
     def process_next_row(self, index):
@@ -321,41 +359,27 @@ class MainWindow(QMainWindow):
         print(f"[DEBUG] Zpracovávám řádek {index + 1}/{len(self.subtitle_rows)}")
         self.progress_bar.setValue(index + 1)
         
-        # Vytvoření lokálního workera
         worker = AIWorker(text, row)
-        
-        # Napojení signálů
-        # Používáme lambda pro předání kontextu
         worker.finished.connect(lambda r, t, j: self.on_row_processed(r, t, j, index))
-        
-        # KRITICKÉ: Zajistit vymazání objektu po skončení
         worker.finished.connect(worker.deleteLater) 
-        
-        # Uložíme referenci, aby garbage collector workera nesmazal předčasně
         self._current_worker = worker
-        
         worker.start()
 
     def on_row_processed(self, row_widget, text, json_data, index):
-        # 1. Update GUI
         row_widget.update_ai_result(text, json_data)
-        
-        # 2. Data do manageru
         if json_data:
             timestamp = format_timestamp(row_widget.start_sec * 1000)
             try:
                 self.session_manager.process_data_into_tables(json_data, timestamp)
             except Exception as e:
                 print(f"[DEBUG] Chyba při process_data_into_tables: {e}")
-
-        # 3. Další řádek
         self.process_next_row(index + 1)
 
     def finalize_processing(self):
         print("[DEBUG] Finalizace a ukládání...")
         self.progress_bar.setVisible(False)
         self.btn_ai_all.setEnabled(True)
-        self.is_processing = False # ODEMKNOUT
+        self.is_processing = False 
         self._current_worker = None
         
         try:
@@ -366,7 +390,6 @@ class MainWindow(QMainWindow):
             print(f"[DEBUG] Chyba při ukládání: {e}")
             QMessageBox.critical(self, "Chyba při ukládání", str(e))
 
-    # --- STANDARDNÍ METODY (Zbytek beze změn) ---
     def toggle_autoscroll_label(self):
         if self.btn_autoscroll.isChecked():
             self.btn_autoscroll.setText("⬇ Auto-Scroll: ZAP")
