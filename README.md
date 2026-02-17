@@ -29,46 +29,59 @@ Současně je projekt koncipovaný jako modulární a flexibilní: existuje „p
 
 Detailnější popis
 ```
-[🎤 Mikrofon] - detekce ukončení řeči/uplynutý maximální čas pro jeden příkaz
-      ↓ (WAV)
+[🎤 Mikrofon] - (detekce řeči / ukončení)
+      ↓ (WAV soubor)
 [Flask API /api/process_audio]
       ↓
 ---------------------------------------------------------
-| 1. TRANSKRIPCE (Groq Cloud)                           |
-|     ↙                        ↘                        |
-| [☁️ONLINE:Groq-Whisper]     [💻LOKÁLNÍ: vosk]         |
-|     ↘                           ↙                     |
-|   [📄 TEXTOVÝ PŘEPIS] "Pacient má tep 80...            |
+| 1. TRANSKRIPCE (STT Model)                            |
+|     ↙                                     ↘           |
+| [☁️ ONLINE: Groq-Whisper]       [💻 LOKÁLNÍ: Whisper] |
+|     ↘                                     ↙           |
+|   [📄 TEXTOVÝ PŘEPIS] "Pacient má tep 80, podána ASA" |
 ---------------------------------------------------------
       ↓
 ---------------------------------------------------------
-| 2. LLM ROUTER (Výběr modelu dle nastavení)            |
-|     ↙                   ↘                             |
-| [☁️ONLINE:Groq/GEMINI]    [💻LOKÁLNÍ: Ollama]         |
-|     ↘                   ↙                             |
-|      [📦 JSON: {"tep": "80"}]                         |
+| 2. LLM ROUTER (Extrakce dat do JSON)                  |
+|     ↙                                     ↘           |
+| [☁️ ONLINE: Groq/Gemini]        [💻 LOKÁLNÍ: Ollama]  |
+|     ↘                                     ↙           |
+|       [📦 RAW JSON] {"tep": "80", "asa": "ano"}       |
 ---------------------------------------------------------
       ↓
 ---------------------------------------------------------
-| 3. PYTHON BACKEND (Logika)                            |
-| [🔄Normalizace] "tep" -> "Srdeční frekvence"          |
-|      ↓                                                |
-| [📂Kategorizace]: DrABCDE, Medication, Other...       |
-|      ↓                                                |
-| [Rozdělení dat]                                       |
-|  ├─> [❤️ Vitální funkce] (pro horní lištu)            |
-|  └─> [📂 Tabulky DrABCDE] (pro hlavní zobrazení)      |
+| 3. PYTHON BACKEND (Logika & Normalizace)              |
+|                                                       |
+|   [📖 SLOVNÍK SYNONYM & NORMALIZACE] (ITEM_SYNONYMS)  |
+|   (Převod hovorových výrazů na oficiální názvy)       |
+|    • "tep" / "sf"       ──→  "Srdeční frekvence"      |
+|    • "tlak"             ──→  "Krevní tlak"            |
+|    • "asa" / "aspirin"  ──→  "Aspirin (ASA)"          |
+|    • "isoket"           ──→  "Nitroglycerin (Isoket)" |
+|                                                       |
+|             ↓ (Normalizovaná data)                    |
+|                                                       |
+|   [🔀 ROUTING & MAPPING] (Rozdělení dle typu)         |
+|     ↙                                     ↘           |
+| [❤️ VITÁLNÍ FUNKCE]                 [📂 TABULKY KATEGORIÍ]|
+| (VITALS_MAPPING)                    (item_mapping)        |
+| "Srdeční frekvence" -> "TF"         "Aspirin" -> Medication|
+| "Krevní tlak" -> "TK"               "SBAR" -> SBAR.csv    |
+| (Update: current_vitals)            (Update: DataFrames)  |
 ---------------------------------------------------------
       ↓
 ---------------------------------------------------------
-| 4. UKLÁDÁNÍ   (pouze Vercel verze)                    |
-| [RAM: Pandas DataFrame] -> [Disk: CSV soubory v /tmp] |
+| 4. UKLÁDÁNÍ & PERSISTENCE                             |
+| [RAM: Pandas DataFrame] ──→ [Disk: CSV v /tmp]        |
+| (DrABCDE, Medication, History, atd.)                  |
 ---------------------------------------------------------
-    ↓                                     ↓
-[💾 Uložení CSV do /sessions]     [🌐 SocketIO Push]
-                                          ↓
-                                 [🖥️ WEB DASHBOARD]
- 
+      ↓                                     ↓
+[💾 ZIP Export /sessions]           [🌐 Frontend Update]
+(Data + Logy + Debug info)                  ↓
+                                   [🖥️ WEB DASHBOARD]
+                                   1. Horní lišta (TF, TK...)
+                                   2. Hlavní tabulky (Léky...)
+                                   3. Log transkripce
  
 ```
 
@@ -100,6 +113,14 @@ Potvrzení/vyvrácení domněnek - výhody/nevýhody řešení.
 Byl vytvořen program pro zpětnou analýzu videa. Program dokáže vytvářet titulky - nabízí prostředí, kde pohodně člověk manuálně přepisuje ze záznamu a získáním referenčního přepisu můžemě srovnat s AI přepisem. Dále nabízí i analýzu pomocí AI a extrakci dat z přepisu (jako hlavní program). Dovoluje nám to testovat různé přepisy pro extrakci dat do tabulek. 
 
 ![Program pro titulkování](./photo/sim_study_program.png)
+
+## Pomocné skripty
+
+- csv_from_log.py - udělá tabulku z logu, kde je čas, text a extrahovaná data programem
+- json_sum_merging.py - spojování json souborů z online přepisu pomocí shisperu, možnost i json očistit 
+- json_text_reduction.py - slučování kažých n-tých titulků v jsonu pro snížení jejich počtu
+- wav_split.py - rozdělí wav soubor do více flac souborů, zachová délku původního souboru a vyplní tónem zybtek, kde není audio - kvůli snížení velikosti souborů rozdělením do více flac, ale při zachování času od začátku časové nahrávku kvůli AI přepisu
+- csv_json_combine.py - přidá položky z jsonu do csv tabulky a srovná podle času z csv tabulky
 
 # Technické detaily
 

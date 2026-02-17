@@ -11,3 +11,4 @@ __pycache__/
 app/sessions
 .vercel
 ai_logic.log
+survey_analysis/survey_data.csv
