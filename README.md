@@ -1,4 +1,4 @@
-# 🏥 Automonitoring with AI
+# 🏥 KAPR - KPR-Automatický Přepis v Reálném čase
 
 Inteligentní monitorovací systém se zpracováním hlasu pomocí AI.
 
@@ -118,7 +118,7 @@ Byl vytvořen program pro zpětnou analýzu videa. Program dokáže vytvářet t
 
 - csv_from_log.py - udělá tabulku z logu, kde je čas, text a extrahovaná data programem
 - json_sum_merging.py - spojování json souborů z online přepisu pomocí shisperu, možnost i json očistit 
-- json_text_reduction.py - slučování kažých n-tých titulků v jsonu pro snížení jejich počtu
+- json_item_reduction.py - slučování kažých n-tých titulků v jsonu pro snížení jejich počtu
 - wav_split.py - rozdělí wav soubor do více flac souborů, zachová délku původního souboru a vyplní tónem zybtek, kde není audio - kvůli snížení velikosti souborů rozdělením do více flac, ale při zachování času od začátku časové nahrávku kvůli AI přepisu
 - csv_json_combine.py - přidá položky z jsonu do csv tabulky a srovná podle času z csv tabulky
 
