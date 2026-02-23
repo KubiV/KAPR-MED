@@ -54,7 +54,7 @@ CATEGORY_DISPLAY = {
     "DrABCDE": {"display_name": "DrABCDE", "csv_file": "DrABCDE.csv"},
     "Medication": {"display_name": "Léčiva", "csv_file": "Medication.csv"},
     "Interventions": {"display_name": "Intervence", "csv_file": "Interventions.csv"},
-    "Physical Examination": {"display_name": "Fyzické vyšetření", "csv_file": "Physical Examination.csv"},
+    "Physical Examination": {"display_name": "Fyzikální vyšetření", "csv_file": "Physical Examination.csv"},
     "History": {"display_name": "Anamnéza", "csv_file": "History.csv"},
     "SBAR": {"display_name": "SBAR", "csv_file": "SBAR.csv"},
     "Other": {"display_name": "Ostatní", "csv_file": "Other.csv"}
