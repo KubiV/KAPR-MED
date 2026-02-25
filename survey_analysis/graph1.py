@@ -10,6 +10,7 @@ OUTPUT_FILE = "likert_graf.png"
 DPI = 300
 
 # ========= STYL PRO POSTER =========
+rcParams["font.family"] = "sans-serif"
 rcParams["font.size"] = 14
 rcParams["axes.titlesize"] = 20
 rcParams["axes.labelsize"] = 16

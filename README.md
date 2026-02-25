@@ -87,6 +87,8 @@ Detailnější popis
 
 ![Diagram](./photo/Diagram.svg)
 
+![Popis UI](./photo/dashboard_description.jpg)
+
 ---
 
 ## Progresivní Webová Aplikace (PWA)

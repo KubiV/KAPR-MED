@@ -68,7 +68,7 @@ wedges, texts, autotexts = ax.pie(
     wedgeprops={
         "edgecolor": "white",
         "linewidth": 3,
-        "width": 0.5 # Změna na DONUT graf (šířka prstence)
+        "width": 1 # Změna na DONUT graf (šířka prstence)
     },
     textprops={'fontsize': 16, 'fontweight': 'bold'} # Základní styl pro vnější popisky
 )
