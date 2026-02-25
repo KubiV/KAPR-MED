@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patheffects as pe
 from matplotlib import rcParams
 
 # ========= NASTAVENÍ =========
@@ -126,10 +127,42 @@ for i, col in enumerate(existing_cols):
 # Skryjeme původní osu Y (názvy jsme přesunuli nad pruhy)
 ax.set_yticks([])
 
-# Nastavení osy X
+# ==============================================================
+# VYLEPŠENÁ OSA X (Skrytí 0, zarovnání, barvy a dynamické obrysy)
+# ==============================================================
 ax.set_xlim(0, 100)
-ax.set_xticks(np.arange(0, 101, 10)) 
-ax.set_xticklabels(['', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'])
+
+# Osa začne od 10 do 100 (krok 10), tím se zbavíme nuly
+ax.set_xticks(np.arange(10, 101, 10)) 
+ax.set_xticklabels(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'])
+
+# Skryje samotné "čárky" na ose X, nechá pouze zarovnaný text
+ax.tick_params(axis='x', length=0) 
+
+# Projdeme popisky a obarvíme je + přidáme dynamický outline
+for i, label in enumerate(ax.get_xticklabels()):
+    # Index 'i' jde 0 až 9, odpovídá číslům 1-10 a barvám v poli 'colors'
+    label.set_color(colors[i])
+    label.set_fontweight('bold')
+    
+    # Podmínka pro barvu outline - stejná logika jako máte pro čísla v grafu
+    # Indexy 3 až 6 (odpovídá číslům 4, 5, 6, 7 na škále) dostanou černý outline, zbytek bílý
+    #outline_color = "black" if 4 <= i <= 8 else "white"
+    outline_color = "black"
+    
+    label.set_path_effects([pe.withStroke(linewidth=1, foreground=outline_color)])
+
+ax.set_xlabel("Škála hodnocení", labelpad=15)
+ax.set_title("Očekávaný přínos AI systému", pad=30)
+
+# ==============================================================
+# NOVÉ: Obarvení čísel 1 až 10 na ose X dle barev z grafu
+# ==============================================================
+for i, label in enumerate(ax.get_xticklabels()):
+    # Index 0 je prázdný řetězec (''), čísla 1-10 jsou na indexech 1 až 10
+    if i > 0 and i <= len(colors):
+        label.set_color(colors[i - 1])
+        label.set_fontweight('bold') # Přidáme tučné písmo pro lepší čitelnost
 
 ax.set_xlabel("Škála hodnocení", labelpad=10)
 ax.set_title("Očekávaný přínos AI systému", pad=30) # Větší odstup nadpisu
