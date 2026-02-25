@@ -15,7 +15,7 @@ rcParams["figure.figsize"] = (8, 8)
 # ========= NAČTENÍ DAT =========
 df = pd.read_csv(CSV_PATH)
 
-column = "Vidíte praktický přínos takového systému ve své práci?"
+column = "Vidíte praktický přínos takového systému ve své práci?" #Vidí zdravotníci praktický přínos systému?
 
 order = ["Ano", "Spíše ano", "Spíše ne", "Ne"]
 counts = df[column].value_counts(normalize=True).reindex(order).fillna(0)
