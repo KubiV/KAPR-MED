@@ -1,0 +1,887 @@
+2026-01-14 14:45:30,690 - INFO - --- LOGOVÁNÍ NASTAVENO DO: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530/session_log.log ---
+2026-01-14 14:45:30,691 - INFO - ============================================================
+2026-01-14 14:45:30,691 - INFO - INICIALIZACE APLIKACE - PARAMETRY SPUŠTĚNÍ
+2026-01-14 14:45:30,691 - INFO - ============================================================
+2026-01-14 14:45:30,691 - INFO - --- AUDIO PARAMETRY ---
+2026-01-14 14:45:30,691 - INFO - RATE: 16000 Hz, CHUNK: 1024, CHANNELS: 1
+2026-01-14 14:45:30,691 - INFO - --- NASTAVENÍ AI MODELŮ ---
+2026-01-14 14:45:30,691 - INFO - STT Model: whisper-large-v3
+2026-01-14 14:45:30,691 - INFO - LLM Model: openai/gpt-oss-120b
+2026-01-14 14:45:30,691 - INFO - --- CESTY ---
+2026-01-14 14:45:30,691 - INFO - BASE_DIR: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app
+2026-01-14 14:45:30,691 - INFO - --- API KLÍČE ---
+2026-01-14 14:45:30,691 - INFO - GROQ_API_KEY nastaveno: True
+2026-01-14 14:45:30,691 - INFO - GOOGLE_API_KEY nastaveno: True
+2026-01-14 14:45:30,691 - INFO - ============================================================
+2026-01-14 14:45:30,695 - INFO - Načtena kategorie DrABCDE ze souboru tables/DrABCDE.csv (35 položek).
+2026-01-14 14:45:30,698 - INFO - Načtena kategorie Medication ze souboru tables/Medication.csv (27 položek).
+2026-01-14 14:45:30,700 - INFO - Načtena kategorie Interventions ze souboru tables/Interventions.csv (12 položek).
+2026-01-14 14:45:30,702 - INFO - Načtena kategorie Physical Examination ze souboru tables/Physical Examination.csv (12 položek).
+2026-01-14 14:45:30,704 - INFO - Načtena kategorie History ze souboru tables/History.csv (11 položek).
+2026-01-14 14:45:30,705 - INFO - Načtena kategorie SBAR ze souboru tables/SBAR.csv (4 položek).
+2026-01-14 14:45:30,705 - INFO - Info: Vytvářím prázdnou tabulku pro kategorii Other.
+2026-01-14 14:45:30,709 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:45:30,710 - INFO - Session resetována. Nová složka: Session_20260114_144530
+2026-01-14 14:45:56,153 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "GET / HTTP/1.1" 200 -
+2026-01-14 14:45:56,159 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "GET /socket.io/?EIO=4&transport=websocket&sid=MT9CZl30k_ruERnqAAAE HTTP/1.1" 200 -
+2026-01-14 14:45:56,180 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "GET /static/manifest.json HTTP/1.1" 200 -
+2026-01-14 14:45:56,213 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "GET /socket.io/?EIO=4&transport=polling&t=PkymNxn HTTP/1.1" 200 -
+2026-01-14 14:45:56,226 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "POST /socket.io/?EIO=4&transport=polling&t=PkymNxz&sid=mHd6AlusAV3BLyNyAAAG HTTP/1.1" 200 -
+2026-01-14 14:45:56,227 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "GET /socket.io/?EIO=4&transport=polling&t=PkymNx-&sid=mHd6AlusAV3BLyNyAAAG HTTP/1.1" 200 -
+2026-01-14 14:45:56,231 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "GET /socket.io/?EIO=4&transport=polling&t=PkymNy4&sid=mHd6AlusAV3BLyNyAAAG HTTP/1.1" 200 -
+2026-01-14 14:45:56,234 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:56] "POST /socket.io/?EIO=4&transport=polling&t=PkymNy5&sid=mHd6AlusAV3BLyNyAAAG HTTP/1.1" 200 -
+2026-01-14 14:45:57,167 - INFO - 127.0.0.1 - - [14/Jan/2026 14:45:57] "GET /sw.js HTTP/1.1" 200 -
+2026-01-14 14:50:41,161 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "GET / HTTP/1.1" 200 -
+2026-01-14 14:50:41,170 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "GET /socket.io/?EIO=4&transport=websocket&sid=mHd6AlusAV3BLyNyAAAG HTTP/1.1" 200 -
+2026-01-14 14:50:41,190 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "GET /static/manifest.json HTTP/1.1" 200 -
+2026-01-14 14:50:41,604 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "GET /socket.io/?EIO=4&transport=polling&t=PkynTd0 HTTP/1.1" 200 -
+2026-01-14 14:50:41,621 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "POST /socket.io/?EIO=4&transport=polling&t=PkynTdF&sid=vhkP2XWCt4BZcsHsAAAI HTTP/1.1" 200 -
+2026-01-14 14:50:41,625 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "GET /socket.io/?EIO=4&transport=polling&t=PkynTdH&sid=vhkP2XWCt4BZcsHsAAAI HTTP/1.1" 200 -
+2026-01-14 14:50:41,630 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:41] "GET /socket.io/?EIO=4&transport=polling&t=PkynTdQ&sid=vhkP2XWCt4BZcsHsAAAI HTTP/1.1" 200 -
+2026-01-14 14:50:42,175 - INFO - 127.0.0.1 - - [14/Jan/2026 14:50:42] "GET /sw.js HTTP/1.1" 200 -
+2026-01-14 14:50:44,574 - INFO - Otevírám audio stream na zařízení index: 0 (RØDE VideoMic GO II)
+2026-01-14 14:50:44,574 - INFO - Nahrávání spuštěno klientem.
+2026-01-14 14:50:44,734 - INFO - Audio stream inicializován
+2026-01-14 14:50:44,735 - INFO - Zahájeno nahrávání do souboru: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530/recording_145044.wav
+2026-01-14 14:50:44,735 - INFO - Zahajuji nahrávací smyčku...
+2026-01-14 14:50:54,809 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:50:54,810 - INFO - Finalizuji segment řeči...
+2026-01-14 14:50:55,484 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:50:55,485 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 14:50:55,486 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí openai/gpt-oss-120b
+2026-01-14 14:50:57,032 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:50:57,034 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:51:02,937 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:02,939 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:03,320 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:03,321 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 14:51:03,321 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:03,625 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:03,626 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:51:11,058 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:11,063 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:11,462 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:11,465 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 14:51:11,466 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:11,768 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:11,769 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:51:19,187 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:19,190 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:19,603 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:19,604 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 14:51:19,605 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:20,268 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:20,272 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:51:27,320 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:27,321 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:27,850 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:27,851 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Přistupujeme, koukáme se, jestli někde nějaký nebezpečí můžeme přijít.
+2026-01-14 14:51:27,852 - INFO - Zpracovávám text: ' Přistupujeme, koukáme se, jestli někde nějaký nebezpečí můžeme přijít.' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:29,606 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:29,608 - INFO - LLM extrahoval data: {'polozky': {'Nebezpečí': 'Kontrola'}}
+2026-01-14 14:51:29,615 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:51:29,620 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:51:35,443 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:35,443 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:35,890 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:35,895 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  že někde nějaký nebezpečí můžeme přijít. Tak jsme v rukavicích, nandáváme si rukavice. Dobrý den pane, slyšíte mě? Jsme záhradná spousta. Pane?
+2026-01-14 14:51:35,897 - INFO - Zpracovávám text: ' že někde nějaký nebezpečí můžeme přijít. Tak jsme v rukavicích, nandáváme si rukavice. Dobrý den pane, slyšíte mě? Jsme záhradná spousta. Pane?' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:36,714 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:36,715 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:51:43,568 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:43,569 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:44,139 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:44,142 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pane, slyšíte mě? Zkouším bolestivý podměr. OK, reaguje. Má zavřený oči.
+2026-01-14 14:51:44,146 - INFO - Zpracovávám text: ' Pane, slyšíte mě? Zkouším bolestivý podměr. OK, reaguje. Má zavřený oči.' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:45,888 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:45,890 - INFO - LLM extrahoval data: {'polozky': {'AVPU': 'Pain'}}
+2026-01-14 14:51:45,890 - INFO - Synonymum nahrazeno: AVPU -> AVPU
+2026-01-14 14:51:45,898 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:51:45,902 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:51:51,699 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:51,699 - INFO - Finalizuji segment řeči...
+2026-01-14 14:51:52,486 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:51:52,488 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Má zavřený oči. Hele, dalo bych ho... Může teď kopřené ostrovce vypoložit? Pane, slyšíte mě? Zatřesu za ramena.
+2026-01-14 14:51:52,488 - INFO - Zpracovávám text: ' Má zavřený oči. Hele, dalo bych ho... Může teď kopřené ostrovce vypoložit? Pane, slyšíte mě? Zatřesu za ramena.' pomocí openai/gpt-oss-120b
+2026-01-14 14:51:53,931 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:51:53,934 - INFO - LLM extrahoval data: {'polozky': {'Hlava - Oči': 'Zavřené'}}
+2026-01-14 14:51:53,942 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:51:53,946 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:51:59,824 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:51:59,828 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:00,322 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:00,325 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zatřesu za ramena. Pane, halo, slyšíte mě? Nic. Za ty ramena, bolestivý podnět na ramena. OK, takže na bolestivý podnět reaguje, ale...
+2026-01-14 14:52:00,325 - INFO - Zpracovávám text: ' Zatřesu za ramena. Pane, halo, slyšíte mě? Nic. Za ty ramena, bolestivý podnět na ramena. OK, takže na bolestivý podnět reaguje, ale...' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:01,146 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:01,149 - INFO - LLM extrahoval data: {'polozky': {'Bolest (VAS/NRS)': 'Bolest na ramena'}}
+2026-01-14 14:52:01,158 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:52:01,162 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:52:07,952 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:07,953 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:08,395 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:08,397 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  že na můj svět ne reaguje, ale jinak to vedli. Tak, je to úplná s těma těma.
+2026-01-14 14:52:08,397 - INFO - Zpracovávám text: ' že na můj svět ne reaguje, ale jinak to vedli. Tak, je to úplná s těma těma.' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:08,979 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:08,983 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:52:16,077 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:16,079 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:16,514 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:16,515 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak když se koukám na hlavu, pohlad hlavy, nějaké traumahlavy vidím,
+2026-01-14 14:52:16,515 - INFO - Zpracovávám text: ' Tak když se koukám na hlavu, pohlad hlavy, nějaké traumahlavy vidím,' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:18,257 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:18,258 - INFO - LLM extrahoval data: {'polozky': {'Nynější onemocnění (NO)': 'Trauma hlavy'}}
+2026-01-14 14:52:18,267 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:52:18,271 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:52:24,208 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:24,208 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:24,751 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:24,753 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Nějaké traumahlavy vidím? Nic nevidím. Hele má tlak 74 na 50. Kolik má? 74 na 50. Dobře.
+2026-01-14 14:52:24,753 - INFO - Zpracovávám text: ' Nějaké traumahlavy vidím? Nic nevidím. Hele má tlak 74 na 50. Kolik má? 74 na 50. Dobře.' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:25,255 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:25,256 - INFO - LLM extrahoval data: {'polozky': {'Krevní tlak': '74/50'}}
+2026-01-14 14:52:25,262 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:52:25,265 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:52:32,332 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:32,336 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:32,894 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:32,897 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dobře, nasazujeme elektrody, dáme se tu rádku.
+2026-01-14 14:52:32,897 - INFO - Zpracovávám text: ' Dobře, nasazujeme elektrody, dáme se tu rádku.' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:33,926 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:33,928 - INFO - LLM extrahoval data: {'polozky': {'EKG': 'Nasazení elektrod'}}
+2026-01-14 14:52:33,938 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:52:33,942 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:52:40,463 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:40,465 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:40,832 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:40,837 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Chceš ho z toho stromu dát? Protože sedí. Určitě. Já bych ho asi položila.
+2026-01-14 14:52:40,838 - INFO - Zpracovávám text: ' Chceš ho z toho stromu dát? Protože sedí. Určitě. Já bych ho asi položila.' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:41,657 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:41,658 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:52:48,590 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:48,590 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:48,976 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:48,979 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak to tady teďka za to. Tak koukám se, jestli...
+2026-01-14 14:52:48,980 - INFO - Zpracovávám text: ' Tak to tady teďka za to. Tak koukám se, jestli...' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:49,294 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:49,297 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:52:56,714 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:52:56,716 - INFO - Finalizuji segment řeči...
+2026-01-14 14:52:57,223 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:52:57,231 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Koukám se, jestli... Já se tím zjistím, že půjde. Slyšela jsi mě? Já si ťákuji.
+2026-01-14 14:52:57,231 - INFO - Zpracovávám text: ' Koukám se, jestli... Já se tím zjistím, že půjde. Slyšela jsi mě? Já si ťákuji.' pomocí openai/gpt-oss-120b
+2026-01-14 14:52:58,054 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:52:58,061 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:53:04,846 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:04,847 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:05,412 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:05,414 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Slyšel jsi mě? Mě slyšel? Eee, zjistil jsem. Ano, jasný. Poslouchám srdce, nevím jestli slyším na tvým úrovni, ale jsem na tvém slyšel.
+2026-01-14 14:53:05,415 - INFO - Zpracovávám text: ' Slyšel jsi mě? Mě slyšel? Eee, zjistil jsem. Ano, jasný. Poslouchám srdce, nevím jestli slyším na tvým úrovni, ale jsem na tvém slyšel.' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:05,880 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:05,881 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:53:12,974 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:12,976 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:13,411 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:13,413 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  můžeme tady výborně do teda dvanou sesion.
+2026-01-14 14:53:13,413 - INFO - Zpracovávám text: ' můžeme tady výborně do teda dvanou sesion.' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:15,157 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:15,160 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:53:21,097 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:21,102 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:21,447 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:21,449 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zatím se vám představíme, že se vám představíme, že se vám představíme.
+2026-01-14 14:53:21,450 - INFO - Zpracovávám text: ' Zatím se vám představíme, že se vám představíme, že se vám představíme.' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:22,273 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:22,275 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:53:29,230 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:29,230 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:29,711 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:29,714 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Mám zavědano tady? OK, super. Tady bude centrálně? Jo, protože to tady nasečení.
+2026-01-14 14:53:29,715 - INFO - Zpracovávám text: ' Mám zavědano tady? OK, super. Tady bude centrálně? Jo, protože to tady nasečení.' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:30,226 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:30,227 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:53:37,354 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:37,357 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:37,745 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:37,748 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže pacientu peccentrálně. Tenhle pět, z toho ještě slabej. Z toho ještě udělám ty genetika, můžu poprosit?
+2026-01-14 14:53:37,748 - INFO - Zpracovávám text: ' Takže pacientu peccentrálně. Tenhle pět, z toho ještě slabej. Z toho ještě udělám ty genetika, můžu poprosit?' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:38,871 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:38,874 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:53:45,480 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:45,481 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:45,876 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:45,879 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžu poprosit? Osm a půl. Osm a půl. Necháte mi zvukat? Jste pověděli, jak to je? Počkejte, že ještě. Poslouchám plíce.
+2026-01-14 14:53:45,879 - INFO - Zpracovávám text: ' Můžu poprosit? Osm a půl. Osm a půl. Necháte mi zvukat? Jste pověděli, jak to je? Počkejte, že ještě. Poslouchám plíce.' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:46,912 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:46,913 - INFO - LLM extrahoval data: {'polozky': {'Poslech – plíce': ''}}
+2026-01-14 14:53:46,924 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:53:46,929 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:53:53,608 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:53:53,610 - INFO - Finalizuji segment řeči...
+2026-01-14 14:53:54,021 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:53:54,023 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak poslouchám plíce. Čistý skrypkový dýchání. Všude? Všude. Všude čistý skrypkový dýchání, dobře.
+2026-01-14 14:53:54,024 - INFO - Zpracovávám text: ' Tak poslouchám plíce. Čistý skrypkový dýchání. Všude? Všude. Všude čistý skrypkový dýchání, dobře.' pomocí openai/gpt-oss-120b
+2026-01-14 14:53:54,640 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:53:54,643 - INFO - LLM extrahoval data: {'polozky': {'Poslech – plíce': 'Čistý skrypkový dýchání'}}
+2026-01-14 14:53:54,653 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:53:54,657 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:54:01,737 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:01,738 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:02,576 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:02,585 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dobře. Hrudník se mi zvedá symetricky. Dobře. Dýchací frekvence, tak jak to je nastavení? Můžu poprosit dvanáctku?
+2026-01-14 14:54:02,585 - INFO - Zpracovávám text: ' Dobře. Hrudník se mi zvedá symetricky. Dobře. Dýchací frekvence, tak jak to je nastavení? Můžu poprosit dvanáctku?' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:03,815 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:03,817 - INFO - LLM extrahoval data: {'polozky': {'Symetrie dýchání': 'Symetrické', 'EKG': 'Požadována'}}
+2026-01-14 14:54:03,829 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:54:03,834 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:54:09,865 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:09,866 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:10,312 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:10,314 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžu poprosit dvanáctku? Máme elektrody, tak... Máme elektrody? Eee... Mám rozpyknout nebo? Tak, jak to vypadá?
+2026-01-14 14:54:10,314 - INFO - Zpracovávám text: ' Můžu poprosit dvanáctku? Máme elektrody, tak... Máme elektrody? Eee... Mám rozpyknout nebo? Tak, jak to vypadá?' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:12,780 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:12,781 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:54:17,991 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:17,992 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:18,763 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:18,765 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, jak to vyfará teda? Co teda se tady máme? OK, tohle je EKG, jo? OK, tohle je natáčenové.
+2026-01-14 14:54:18,765 - INFO - Zpracovávám text: ' Tak, jak to vyfará teda? Co teda se tady máme? OK, tohle je EKG, jo? OK, tohle je natáčenové.' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:19,384 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:19,387 - INFO - LLM extrahoval data: {'polozky': {'EKG': 'Prováděno'}}
+2026-01-14 14:54:19,399 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:54:19,404 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:54:26,117 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:26,118 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:26,701 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:26,704 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Máme tak jednou. Mítiš něco extra, co ti bude do očí? Ne, ne, ne, jsem tady nebojena. Tady je to nějaký, vidíš to?
+2026-01-14 14:54:26,704 - INFO - Zpracovávám text: ' Máme tak jednou. Mítiš něco extra, co ti bude do očí? Ne, ne, ne, jsem tady nebojena. Tady je to nějaký, vidíš to?' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:27,525 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:27,530 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:54:34,246 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:34,247 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:34,746 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:34,747 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže jako vidíš to? Tohle není úplně... Chcem si ho položit, protože opět mám do této typologie. Chcem si ho položit.
+2026-01-14 14:54:34,748 - INFO - Zpracovávám text: ' Takže jako vidíš to? Tohle není úplně... Chcem si ho položit, protože opět mám do této typologie. Chcem si ho položit.' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:35,563 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:35,568 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:54:42,370 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:42,371 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:42,987 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:42,992 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Neuděláme objekt do školy, položíme. 93, dáme kyslík. Dobře, dáme různý kovo masku.
+2026-01-14 14:54:42,993 - INFO - Zpracovávám text: ' Neuděláme objekt do školy, položíme. 93, dáme kyslík. Dobře, dáme různý kovo masku.' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:44,327 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:44,330 - INFO - LLM extrahoval data: {'polozky': {'SpO2': '93', 'Oxygenoterapie': 'dána'}}
+2026-01-14 14:54:44,331 - INFO - Synonymum nahrazeno: SpO2 -> SpO2
+2026-01-14 14:54:44,343 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:54:44,348 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:54:50,496 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:50,499 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:50,944 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:50,946 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zavádím kistíkovou masku. Prutoxerum. Vykapat něco? Klaštou. Kolik má?
+2026-01-14 14:54:50,947 - INFO - Zpracovávám text: ' Zavádím kistíkovou masku. Prutoxerum. Vykapat něco? Klaštou. Kolik má?' pomocí openai/gpt-oss-120b
+2026-01-14 14:54:52,778 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:54:52,780 - INFO - LLM extrahoval data: {'polozky': {'Oxygenoterapie': 'Zaváděna'}}
+2026-01-14 14:54:52,793 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:54:52,797 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:54:58,624 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:54:58,625 - INFO - Finalizuji segment řeči...
+2026-01-14 14:54:59,068 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:54:59,070 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Kolik má? 45? Jo určitě, vykapa. Mně ještě chceme podat infuzi sloznové v dvěstěpade. Zatím.
+2026-01-14 14:54:59,071 - INFO - Zpracovávám text: ' Kolik má? 45? Jo určitě, vykapa. Mně ještě chceme podat infuzi sloznové v dvěstěpade. Zatím.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:00,727 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:00,729 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:55:06,753 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:06,755 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:07,111 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:07,117 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  250 nechci žádný tistovku. Já si trošku bojím, ale ty... Dobře, tak dáváme 250 kapat infuzi. To děláme.
+2026-01-14 14:55:07,117 - INFO - Zpracovávám text: ' 250 nechci žádný tistovku. Já si trošku bojím, ale ty... Dobře, tak dáváme 250 kapat infuzi. To děláme.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:07,733 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:07,735 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:55:14,884 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:14,885 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:15,353 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:15,356 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  To děláme. Střední prouz. Asi bych ho položila takhle, tak bych si to musela nějak odhledat. Pane, slyšíte mě? Zkouším balestí výpodně znova.
+2026-01-14 14:55:15,356 - INFO - Zpracovávám text: ' To děláme. Střední prouz. Asi bych ho položila takhle, tak bych si to musela nějak odhledat. Pane, slyšíte mě? Zkouším balestí výpodně znova.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:15,969 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:15,971 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:55:23,073 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:23,074 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:23,392 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:23,400 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zkouším balistivý podně, znova hrubý kost. Nereaguje. Tep centrálně. Má chod. OK, 45 až 44.
+2026-01-14 14:55:23,401 - INFO - Zpracovávám text: ' Zkouším balistivý podně, znova hrubý kost. Nereaguje. Tep centrálně. Má chod. OK, 45 až 44.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:25,314 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:25,315 - INFO - LLM extrahoval data: {'polozky': {'Centrální pulz (a. carotis)': ''}}
+2026-01-14 14:55:25,323 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:55:25,327 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:55:31,201 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:31,202 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:31,599 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:31,605 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  OK, 45 a 44. Chci si ho dát do... ...počkej si zatnout. Tak.
+2026-01-14 14:55:31,605 - INFO - Zpracovávám text: ' OK, 45 a 44. Chci si ho dát do... ...počkej si zatnout. Tak.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:32,013 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:32,015 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:55:39,331 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:39,332 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:40,159 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:40,166 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, má periferní nejverifernitát. Můžeš prosím ještě jednou zpáčkat na ten tlak?
+2026-01-14 14:55:40,167 - INFO - Zpracovávám text: ' Tak, má periferní nejverifernitát. Můžeš prosím ještě jednou zpáčkat na ten tlak?' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:40,776 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:40,782 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:55:47,458 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:47,459 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:47,889 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:47,892 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžeš prosím ještě jednou odvážet na ten dvar? Ne, to tady. Tak tady. Já ještě tady.
+2026-01-14 14:55:47,893 - INFO - Zpracovávám text: ' Můžeš prosím ještě jednou odvážet na ten dvar? Ne, to tady. Tak tady. Já ještě tady.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:48,507 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:48,509 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:55:55,580 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:55:55,581 - INFO - Finalizuji segment řeči...
+2026-01-14 14:55:56,137 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:55:56,139 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžu to přemýšlet? No, když tak něco cítím. Dobře, zahájíme resuscitaci, protože tlak máme. Pojď, pojď.
+2026-01-14 14:55:56,140 - INFO - Zpracovávám text: ' Můžu to přemýšlet? No, když tak něco cítím. Dobře, zahájíme resuscitaci, protože tlak máme. Pojď, pojď.' pomocí openai/gpt-oss-120b
+2026-01-14 14:55:56,958 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:55:56,959 - INFO - LLM extrahoval data: {'polozky': {'KPR (Resuscitace)': 'Zahájeno'}}
+2026-01-14 14:55:56,968 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:55:56,971 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:56:03,712 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:03,713 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:04,386 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:04,388 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ne, piči. Dobře, potřebuju monitorace, abych vám zjistila, jak jsme na tom. Zase jsme na lepení. Ehm, co máme? Dobře, tak se na bohno.
+2026-01-14 14:56:04,388 - INFO - Zpracovávám text: ' Ne, piči. Dobře, potřebuju monitorace, abych vám zjistila, jak jsme na tom. Zase jsme na lepení. Ehm, co máme? Dobře, tak se na bohno.' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:04,897 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:04,899 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:56:11,837 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:11,838 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:12,420 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:12,423 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dobře, teď chceme buchnout. Chceme zjistit, jaký má reprůz. Teď máme daleko na reprůdy. Jo, máme daleko. Můžeme tři květ buchnout teďka.
+2026-01-14 14:56:12,423 - INFO - Zpracovávám text: ' Dobře, teď chceme buchnout. Chceme zjistit, jaký má reprůz. Teď máme daleko na reprůdy. Jo, máme daleko. Můžeme tři květ buchnout teďka.' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:12,730 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:12,737 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:56:19,968 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:19,969 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:20,771 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:20,775 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžeme tři ptá dvou. OK, dobře, tak jo. Budeme podávat mačky. Chceme podat, Libo, teda... 200. 250.
+2026-01-14 14:56:20,776 - INFO - Zpracovávám text: ' Můžeme tři ptá dvou. OK, dobře, tak jo. Budeme podávat mačky. Chceme podat, Libo, teda... 200. 250.' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:21,187 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:21,188 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:56:28,094 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:28,095 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:28,609 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:28,611 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Všechno udělat. Mám to nastavit? Tak jak je? Je to opravdu ideálně. Dobře.
+2026-01-14 14:56:28,612 - INFO - Zpracovávám text: ' Všechno udělat. Mám to nastavit? Tak jak je? Je to opravdu ideálně. Dobře.' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:29,015 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:29,016 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:56:36,219 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:36,219 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:36,630 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:36,632 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  tak nastavujeme teda defibrilátor na 200 a chceme blokit třikrát zase.
+2026-01-14 14:56:36,632 - INFO - Zpracovávám text: ' tak nastavujeme teda defibrilátor na 200 a chceme blokit třikrát zase.' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:37,572 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:37,574 - INFO - LLM extrahoval data: {'polozky': {'Elektrická terapie': '200 J, 3 šoky'}}
+2026-01-14 14:56:37,587 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:56:37,591 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:56:44,346 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:44,348 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:44,893 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:44,898 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Je to ochranovený. Už si boukle, řekni až pak boukneš, až pak podnikně počkej. Já to snížím teda na...
+2026-01-14 14:56:44,898 - INFO - Zpracovávám text: ' Je to ochranovený. Už si boukle, řekni až pak boukneš, až pak podnikně počkej. Já to snížím teda na...' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:45,308 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:45,311 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:56:52,473 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:56:52,474 - INFO - Finalizuji segment řeči...
+2026-01-14 14:56:52,834 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:56:52,839 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 14:56:52,840 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí openai/gpt-oss-120b
+2026-01-14 14:56:53,140 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:56:53,142 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:57:00,600 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:00,601 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:00,971 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:00,973 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Kusy pryč, kyslí pryč.
+2026-01-14 14:57:00,973 - INFO - Zpracovávám text: ' Kusy pryč, kyslí pryč.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:02,417 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:02,422 - INFO - LLM extrahoval data: {'polozky': {'Oxygenoterapie': 'off'}}
+2026-01-14 14:57:02,436 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:57:02,442 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:57:08,728 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:08,729 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:09,221 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:09,224 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Prus je kryš, kyslý kryš. Tady tady. Udávám klipový. Klinitopřilož. Tak.
+2026-01-14 14:57:09,225 - INFO - Zpracovávám text: ' Prus je kryš, kyslý kryš. Tady tady. Udávám klipový. Klinitopřilož. Tak.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:09,634 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:09,636 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:57:16,855 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:16,856 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:17,265 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:17,268 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak. Tak. Tak, jo, tak vybuj ho, Dan. To byl druhej, podávám třetí.
+2026-01-14 14:57:17,269 - INFO - Zpracovávám text: ' Tak. Tak. Tak, jo, tak vybuj ho, Dan. To byl druhej, podávám třetí.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:17,674 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:17,677 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:57:24,988 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:24,990 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:25,404 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:25,409 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dávám třetí. Třetí výboj.
+2026-01-14 14:57:25,410 - INFO - Zpracovávám text: ' Dávám třetí. Třetí výboj.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:26,125 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:26,129 - INFO - LLM extrahoval data: {'polozky': {'KPR (Resuscitace)': 'Třetí výboj'}}
+2026-01-14 14:57:26,144 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:57:26,148 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:57:33,113 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:33,113 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:33,655 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:33,658 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Představují výboj. Tak můžeme pokračovat? Chceme pak ambuvak.
+2026-01-14 14:57:33,658 - INFO - Zpracovávám text: ' Představují výboj. Tak můžeme pokračovat? Chceme pak ambuvak.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:34,169 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:34,170 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:57:41,241 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:41,242 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:41,692 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:41,699 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  A začátek času. Nevíme, jaký máme čas do těch vývojů. Ano, jenom mrknu.
+2026-01-14 14:57:41,699 - INFO - Zpracovávám text: ' A začátek času. Nevíme, jaký máme čas do těch vývojů. Ano, jenom mrknu.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:42,309 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:42,314 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:57:49,366 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:49,366 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:50,250 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:50,253 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  I hned mrknu. Padesát sedm teďka. Čtrnáct padesát sedm dvě minuty. Tak porážíme za dvě dny.
+2026-01-14 14:57:50,253 - INFO - Zpracovávám text: ' I hned mrknu. Padesát sedm teďka. Čtrnáct padesát sedm dvě minuty. Tak porážíme za dvě dny.' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:50,967 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:50,969 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:57:57,497 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:57:57,498 - INFO - Finalizuji segment řeči...
+2026-01-14 14:57:57,985 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:57:57,989 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Přepnu ten kyslíček teďka na ambovách, na masku. Tak polštař by byl pryč, dejme tomu, že by tam neměl,
+2026-01-14 14:57:57,990 - INFO - Zpracovávám text: ' Přepnu ten kyslíček teďka na ambovách, na masku. Tak polštař by byl pryč, dejme tomu, že by tam neměl,' pomocí openai/gpt-oss-120b
+2026-01-14 14:57:59,629 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:57:59,632 - INFO - LLM extrahoval data: {'polozky': {'Oxygenoterapie': 'na masku (ambu)', 'Umělá plicní ventilace (UPV)': 'použito'}}
+2026-01-14 14:57:59,644 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:57:59,648 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:58:05,626 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:05,626 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:06,122 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:06,127 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dejme tomu, že ho tam neměl, protože byl u stromu, takže s tím nepočítáme. Zachovat hlavu. Tak dvakrát, pojď. Dvakrát prodech a vůbec pokračujeme.
+2026-01-14 14:58:06,127 - INFO - Zpracovávám text: ' Dejme tomu, že ho tam neměl, protože byl u stromu, takže s tím nepočítáme. Zachovat hlavu. Tak dvakrát, pojď. Dvakrát prodech a vůbec pokračujeme.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:06,854 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:06,858 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:58:13,753 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:13,753 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:14,371 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:14,373 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dvakrát prodech a vůbec jen pokračujeme. Máme tady někoho, kdo vedle? Tady někdo? Nějakej svědek? Nikoho nemáme? OK.
+2026-01-14 14:58:14,373 - INFO - Zpracovávám text: ' Dvakrát prodech a vůbec jen pokračujeme. Máme tady někoho, kdo vedle? Tady někdo? Nějakej svědek? Nikoho nemáme? OK.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:14,679 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:14,681 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:58:21,879 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:21,883 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:22,305 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:22,308 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak to máme, OK.
+2026-01-14 14:58:22,309 - INFO - Zpracovávám text: ' Tak to máme, OK.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:22,720 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:22,722 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:58:30,012 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:30,013 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:30,454 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:30,457 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pojď teď dvakrát ten adrenalin až po nějakém tomu. To neníště teďka. Jo. Ty se snažím doplnit.
+2026-01-14 14:58:30,457 - INFO - Zpracovávám text: ' Pojď teď dvakrát ten adrenalin až po nějakém tomu. To neníště teďka. Jo. Ty se snažím doplnit.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:33,233 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:33,234 - INFO - LLM extrahoval data: {'polozky': {'Adrenalin': '2 dávky'}}
+2026-01-14 14:58:33,234 - INFO - Synonymum nahrazeno: Adrenalin -> Adrenalin
+2026-01-14 14:58:33,244 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:58:33,247 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:58:38,130 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:38,133 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:38,421 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:38,424 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ty se snažím vypovědět, jaké peníze budeme podávat a nebezpečně.
+2026-01-14 14:58:38,424 - INFO - Zpracovávám text: ' Ty se snažím vypovědět, jaké peníze budeme podávat a nebezpečně.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:38,717 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:38,719 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:58:46,262 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:46,265 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:46,841 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:46,843 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pojď ještě jednou a pak si vystřídáme.
+2026-01-14 14:58:46,843 - INFO - Zpracovávám text: ' Pojď ještě jednou a pak si vystřídáme.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:47,154 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:47,158 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:58:54,390 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:58:54,390 - INFO - Finalizuji segment řeči...
+2026-01-14 14:58:55,092 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:58:55,094 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pojď ještě jednou a pak si vystřídáme. Teď jsme po první minutě. Za minutku uděláme ještě jednu analýzu rytmu a vedečně budeme zase boufat.
+2026-01-14 14:58:55,094 - INFO - Zpracovávám text: ' Pojď ještě jednou a pak si vystřídáme. Teď jsme po první minutě. Za minutku uděláme ještě jednu analýzu rytmu a vedečně budeme zase boufat.' pomocí openai/gpt-oss-120b
+2026-01-14 14:58:55,910 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:58:55,913 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:59:02,518 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:02,519 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:03,128 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:03,133 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  a konečně budeme zase bouchbats. Ty vole, že... Ať kaže až po druhém beatboy spolu, až... Ten se dává do Tamaris a Miodarona.
+2026-01-14 14:59:03,134 - INFO - Zpracovávám text: ' a konečně budeme zase bouchbats. Ty vole, že... Ať kaže až po druhém beatboy spolu, až... Ten se dává do Tamaris a Miodarona.' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:04,163 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:04,165 - INFO - LLM extrahoval data: {'polozky': {'Amiodaron': ''}}
+2026-01-14 14:59:04,165 - INFO - Synonymum nahrazeno: Amiodaron -> Amiodaron
+2026-01-14 14:59:04,170 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:59:04,172 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:59:10,641 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:10,642 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:11,067 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:11,070 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak to je doznamená Amiodarona. A necháme si podrým nebo pod třetím. Teďka prodecháme a potom si to přidáme. Tak.
+2026-01-14 14:59:11,070 - INFO - Zpracovávám text: ' Tak to je doznamená Amiodarona. A necháme si podrým nebo pod třetím. Teďka prodecháme a potom si to přidáme. Tak.' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:12,107 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:12,109 - INFO - LLM extrahoval data: {'polozky': {'Amiodarone': ''}}
+2026-01-14 14:59:12,109 - WARNING - Položka 'Amiodarone' nebyla nalezena. Přidávám ji do 'Other'.
+2026-01-14 14:59:12,116 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 14:59:12,119 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 14:59:18,773 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:18,773 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:19,107 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:19,120 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, střídání, pokračujeme. Počkej, počkej, musím jít do analýzu, už je na čase. 59, už je na čase.
+2026-01-14 14:59:19,121 - INFO - Zpracovávám text: ' Tak, střídání, pokračujeme. Počkej, počkej, musím jít do analýzu, už je na čase. 59, už je na čase.' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:19,521 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:19,523 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:59:26,897 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:26,898 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:27,254 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:27,256 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Prostá nevěp, už je načase. Tak já ho přeji. Tak, zvlášť.
+2026-01-14 14:59:27,256 - INFO - Zpracovávám text: ' Prostá nevěp, už je načase. Tak já ho přeji. Tak, zvlášť.' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:27,558 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:27,561 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:59:35,029 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:35,029 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:35,601 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:35,604 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, zelení. Počkej, už? Už? Ok, jeden analýz rytmu. Máme připomený, že... Tohle je například.
+2026-01-14 14:59:35,604 - INFO - Zpracovávám text: ' Tak, zelení. Počkej, už? Už? Ok, jeden analýz rytmu. Máme připomený, že... Tohle je například.' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:36,018 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:36,019 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:59:43,153 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:43,155 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:43,640 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:43,643 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže, Helena, tři. Nebo chceš rovnou? No, jako můžem rovnou. Můžeš jen ty. Chceš to?
+2026-01-14 14:59:43,643 - INFO - Zpracovávám text: ' Takže, Helena, tři. Nebo chceš rovnou? No, jako můžem rovnou. Můžeš jen ty. Chceš to?' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:44,569 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:44,571 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:59:51,281 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:51,281 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:51,786 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:51,788 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Seš to o úvěru urbomenu tak. Dobře, tak já. Tak, konec. Dobře. Pět let kontrolu urbomenu tak. Nabím. Nabím. Tak.
+2026-01-14 14:59:51,789 - INFO - Zpracovávám text: ' Seš to o úvěru urbomenu tak. Dobře, tak já. Tak, konec. Dobře. Pět let kontrolu urbomenu tak. Nabím. Nabím. Tak.' pomocí openai/gpt-oss-120b
+2026-01-14 14:59:53,021 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:59:53,027 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 14:59:59,411 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 14:59:59,413 - INFO - Finalizuji segment řeči...
+2026-01-14 14:59:59,824 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 14:59:59,828 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Mlidý. Tak. Kysel klír. Výboj. Tak, pokračujeme rezultatou.
+2026-01-14 14:59:59,829 - INFO - Zpracovávám text: ' Mlidý. Tak. Kysel klír. Výboj. Tak, pokračujeme rezultatou.' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:00,168 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:00,172 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:07,536 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:07,536 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:07,938 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:07,940 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  ...
+2026-01-14 15:00:07,940 - INFO - Zpracovávám text: ' ...' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:08,572 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:08,573 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:15,667 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:15,669 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:16,423 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:16,424 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak zuby, tak zuby. Můžu se teď vychovat? Ty nevyhledá teďka v neanedálném. Ale podrobně. Jo, ale podrobně nebo po třetím výběru.
+2026-01-14 15:00:16,425 - INFO - Zpracovávám text: ' Tak zuby, tak zuby. Můžu se teď vychovat? Ty nevyhledá teďka v neanedálném. Ale podrobně. Jo, ale podrobně nebo po třetím výběru.' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:17,552 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:17,553 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:23,788 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:23,793 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:24,467 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:24,469 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  nebo po třetím dýbeli a neventilovat. Po třetím. Ale i po třetím. Prodechuj. Prodechuj. Jedna, dva, po tři. Ty tři dýbole už nebudou se počítat
+2026-01-14 15:00:24,469 - INFO - Zpracovávám text: ' nebo po třetím dýbeli a neventilovat. Po třetím. Ale i po třetím. Prodechuj. Prodechuj. Jedna, dva, po tři. Ty tři dýbole už nebudou se počítat' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:24,873 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:24,883 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:31,921 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:31,922 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:32,505 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:32,509 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ty tři výbory už na Webona se počítaj jako jeden, takže jsme teď to podíli. No jasný, teď je po třetí. Tak řekni a já to pak podám. Jo, přesně tak.
+2026-01-14 15:00:32,509 - INFO - Zpracovávám text: ' Ty tři výbory už na Webona se počítaj jako jeden, takže jsme teď to podíli. No jasný, teď je po třetí. Tak řekni a já to pak podám. Jo, přesně tak.' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:32,918 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:32,922 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:40,044 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:40,044 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:40,437 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:40,440 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 15:00:40,440 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:40,751 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:40,754 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:48,174 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:48,174 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:48,897 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:48,901 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, 1, 2, 3, 1, 2, pokračují resuscitaci, připravu si, pík mu si, připravu.
+2026-01-14 15:00:48,902 - INFO - Zpracovávám text: ' Tak, 1, 2, 3, 1, 2, pokračují resuscitaci, připravu si, pík mu si, připravu.' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:49,405 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:49,406 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:00:56,302 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:00:56,304 - INFO - Finalizuji segment řeči...
+2026-01-14 15:00:56,828 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:00:56,829 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Píchnu si, připravuji si. Píchnu si, připravuju si. 1 gram adrenalinu a vší z toho. Ano, dole. Tak, přesně tak.
+2026-01-14 15:00:56,829 - INFO - Zpracovávám text: ' Píchnu si, připravuji si. Píchnu si, připravuju si. 1 gram adrenalinu a vší z toho. Ano, dole. Tak, přesně tak.' pomocí openai/gpt-oss-120b
+2026-01-14 15:00:58,170 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:00:58,171 - INFO - LLM extrahoval data: {'polozky': {'Adrenalin': '1 gram'}}
+2026-01-14 15:00:58,172 - INFO - Synonymum nahrazeno: Adrenalin -> Adrenalin
+2026-01-14 15:00:58,184 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:00:58,190 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:01:04,431 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:04,433 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:04,980 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:04,981 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Kdo jině chce, píchnu to bolusem a trošku to propáhu s bízákem. Připravuji si další vnitřní stříkačku a myl danou.
+2026-01-14 15:01:04,982 - INFO - Zpracovávám text: ' Kdo jině chce, píchnu to bolusem a trošku to propáhu s bízákem. Připravuji si další vnitřní stříkačku a myl danou.' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:07,247 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:07,249 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:01:12,561 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:12,569 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:13,222 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:13,225 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Máme tříkačku a myl dávám 350. 350. Neupadlí mi taky, kvůli sem do žíly, trochla to nejšlo jenom ty záhny.
+2026-01-14 15:01:13,225 - INFO - Zpracovávám text: ' Máme tříkačku a myl dávám 350. 350. Neupadlí mi taky, kvůli sem do žíly, trochla to nejšlo jenom ty záhny.' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:14,042 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:14,044 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:01:20,687 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:20,688 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:22,606 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:22,608 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  tak a teď prosím tě prodechni, co dáš. Jo, řekni, mám dva dvětmi. Pojď. Jedna, dva, tři, dva.
+2026-01-14 15:01:22,608 - INFO - Zpracovávám text: ' tak a teď prosím tě prodechni, co dáš. Jo, řekni, mám dva dvětmi. Pojď. Jedna, dva, tři, dva.' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:26,210 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:26,213 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:01:28,809 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:28,816 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:29,403 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:29,404 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Jaké jsme minutě? Chci se vystřídat. Teďka asi... Víc do hloubky ještě, víc do hloubky a víc na střed. Udělej pak asi kontrolu.
+2026-01-14 15:01:29,404 - INFO - Zpracovávám text: ' Jaké jsme minutě? Chci se vystřídat. Teďka asi... Víc do hloubky ještě, víc do hloubky a víc na střed. Udělej pak asi kontrolu.' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:29,820 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:29,822 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:01:36,937 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:36,938 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:37,448 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:37,450 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Udělej pak asi kontrolu a pak si můžeš vystřídat. No jako tak kontrolu a to. A... pepež. Bouknout asi.
+2026-01-14 15:01:37,451 - INFO - Zpracovávám text: ' Udělej pak asi kontrolu a pak si můžeš vystřídat. No jako tak kontrolu a to. A... pepež. Bouknout asi.' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:37,855 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:37,856 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:01:45,070 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:45,071 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:45,590 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:45,592 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Když se koukám, má něco na břišeň? Nějaký úrazy?
+2026-01-14 15:01:45,592 - INFO - Zpracovávám text: ' Když se koukám, má něco na břišeň? Nějaký úrazy?' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:46,930 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:46,936 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:01:53,196 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:01:53,201 - INFO - Finalizuji segment řeči...
+2026-01-14 15:01:53,814 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:01:53,816 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Nějaký úrazy? Úrazy na... Počkej, počkej, teďka budeme prodechovat. Teďka budeme prodechovat.
+2026-01-14 15:01:53,817 - INFO - Zpracovávám text: ' Nějaký úrazy? Úrazy na... Počkej, počkej, teďka budeme prodechovat. Teďka budeme prodechovat.' pomocí openai/gpt-oss-120b
+2026-01-14 15:01:55,282 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:01:55,284 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:01,321 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:01,322 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:01,981 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:01,983 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ok. Jedna, dva, vymíním se? Ano, ať. Raz, dva, tři.
+2026-01-14 15:02:01,984 - INFO - Zpracovávám text: ' Ok. Jedna, dva, vymíním se? Ano, ať. Raz, dva, tři.' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:02,288 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:02,291 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:09,452 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:09,454 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:10,028 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:10,029 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tři. Nabíjem. Už jsme na první. No a tři. Tak.
+2026-01-14 15:02:10,030 - INFO - Zpracovávám text: ' Tři. Nabíjem. Už jsme na první. No a tři. Tak.' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:10,332 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:10,334 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:17,574 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:17,578 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:18,372 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:18,374 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak. Jdeme za pryč, český pryč. Tak, ano, je západ.
+2026-01-14 15:02:18,375 - INFO - Zpracovávám text: ' Tak. Jdeme za pryč, český pryč. Tak, ano, je západ.' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:18,996 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:19,001 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:25,705 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:25,708 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:26,204 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:26,208 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, jedeme dál. Musíme teď ještě něco dělat? Pojďme to rychle zepíchnout.
+2026-01-14 15:02:26,209 - INFO - Zpracovávám text: ' Tak, jedeme dál. Musíme teď ještě něco dělat? Pojďme to rychle zepíchnout.' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:26,821 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:26,822 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:33,830 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:33,832 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:34,554 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:34,555 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžeme tady chustepíchnout. Typovověme asi ne. Tipoxy ryšíme. Typerkeleme tyhle věci. Neuděláme teďka.
+2026-01-14 15:02:34,555 - INFO - Zpracovávám text: ' Můžeme tady chustepíchnout. Typovověme asi ne. Tipoxy ryšíme. Typerkeleme tyhle věci. Neuděláme teďka.' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:34,971 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:34,971 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:41,964 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:41,966 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:42,697 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:42,700 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak to neuděláme teďka. Co je to poslední? 30. Pojď, jedna, dva. Co se tady nakazuje? Hotovo, pojď. Jo. Můžeme vlastně?
+2026-01-14 15:02:42,700 - INFO - Zpracovávám text: ' Tak to neuděláme teďka. Co je to poslední? 30. Pojď, jedna, dva. Co se tady nakazuje? Hotovo, pojď. Jo. Můžeme vlastně?' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:43,106 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:43,107 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:50,088 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:50,089 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:50,515 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:50,517 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Mimozně. A že by už... Cítím centrálně. Cítím super.
+2026-01-14 15:02:50,517 - INFO - Zpracovávám text: ' Mimozně. A že by už... Cítím centrálně. Cítím super.' pomocí openai/gpt-oss-120b
+2026-01-14 15:02:51,152 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:02:51,155 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:02:58,216 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:02:58,220 - INFO - Finalizuji segment řeči...
+2026-01-14 15:02:58,682 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:02:58,684 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pane, sedíme se. Periferně nic. Balestivý podnět na hrudní kost?
+2026-01-14 15:02:58,684 - INFO - Zpracovávám text: ' Pane, sedíme se. Periferně nic. Balestivý podnět na hrudní kost?' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:00,120 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:00,123 - INFO - LLM extrahoval data: {'polozky': {'Mechanismus úrazu': 'Balistický podnět na hrudní kost', 'Periferní pulz (a. radialis)': 'žádný'}}
+2026-01-14 15:03:00,139 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:03:00,143 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:03:06,339 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:06,340 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:06,921 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:06,923 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ne? Prodejcháváme ještě víc. Super, nám se píše i setorace krása. Zase jednu maločebu. Kopnu se na...
+2026-01-14 15:03:06,923 - INFO - Zpracovávám text: ' Ne? Prodejcháváme ještě víc. Super, nám se píše i setorace krása. Zase jednu maločebu. Kopnu se na...' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:07,433 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:07,434 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:03:14,471 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:14,473 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:15,305 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:15,310 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Kouknu se na zorníčky pána, zkontrolu zorníčky, jaké jsou? Isochorické reagující na světlo. Jedeme tady, abyste... Zase, znovu. Jmenuji 60 stepov kouknu.
+2026-01-14 15:03:15,310 - INFO - Zpracovávám text: ' Kouknu se na zorníčky pána, zkontrolu zorníčky, jaké jsou? Isochorické reagující na světlo. Jedeme tady, abyste... Zase, znovu. Jmenuji 60 stepov kouknu.' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:16,241 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:16,245 - INFO - LLM extrahoval data: {'polozky': {'Zornice (Velikost/Symetrie)': 'Isochorické', 'Fotoreakce': 'Reaguje na světlo'}}
+2026-01-14 15:03:16,260 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:03:16,266 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:03:22,599 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:22,602 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:23,027 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:23,033 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ima 60 trepovku, nepotřebujeme. Ne, ne, ne, poslední postrost pětde. Ne, ne, ne, postrost ABC. Jo, ještě jsem... Podpořád, podpořád.
+2026-01-14 15:03:23,034 - INFO - Zpracovávám text: ' Ima 60 trepovku, nepotřebujeme. Ne, ne, ne, poslední postrost pětde. Ne, ne, ne, postrost ABC. Jo, ještě jsem... Podpořád, podpořád.' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:23,480 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:23,482 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:03:30,728 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:30,729 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:31,249 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:31,251 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já jsem pořád to pořád pořád pořád. Ok, jaký má frekvenci dechu? Tak jak dechám já. Ok, dobře, poslední je číslo svýrkový.
+2026-01-14 15:03:31,251 - INFO - Zpracovávám text: ' Já jsem pořád to pořád pořád pořád. Ok, jaký má frekvenci dechu? Tak jak dechám já. Ok, dobře, poslední je číslo svýrkový.' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:32,079 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:32,082 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:03:38,855 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:38,856 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:39,290 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:39,296 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak poslechnu si pacienta, co slyším na sledeční akci.
+2026-01-14 15:03:39,300 - INFO - Zpracovávám text: ' Tak poslechnu si pacienta, co slyším na sledeční akci.' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:39,708 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:39,709 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:03:46,981 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:46,981 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:47,332 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:47,334 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ok, ok, ok.
+2026-01-14 15:03:47,335 - INFO - Zpracovávám text: ' Ok, ok, ok.' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:48,025 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:48,025 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:03:55,105 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:03:55,106 - INFO - Finalizuji segment řeči...
+2026-01-14 15:03:55,579 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:03:55,581 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Změříme si rozhlad. Tak, 17,81 stále prodechujeme.
+2026-01-14 15:03:55,581 - INFO - Zpracovávám text: ' Změříme si rozhlad. Tak, 17,81 stále prodechujeme.' pomocí openai/gpt-oss-120b
+2026-01-14 15:03:56,506 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:03:56,510 - INFO - LLM extrahoval data: {'polozky': {'Dechová frekvence': '17,81'}}
+2026-01-14 15:03:56,526 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:03:56,531 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:04:03,235 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:03,236 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:03,620 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:03,624 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak má bilaterální dnířání stejně hluboký po ovou stranu. Dobře, zvedá se symetricky.
+2026-01-14 15:04:03,624 - INFO - Zpracovávám text: ' Tak má bilaterální dnířání stejně hluboký po ovou stranu. Dobře, zvedá se symetricky.' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:05,373 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:05,375 - INFO - LLM extrahoval data: {'polozky': {'Symetrie dýchání': 'Symetrické', 'Hloubka dýchání': 'Stejně hluboká'}}
+2026-01-14 15:04:05,390 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:04:05,396 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:04:11,362 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:11,363 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:11,968 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:11,972 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zvedal se symetricky. Cčko, jsme. Už nám dokáhla ta infuzka. Ještě na dobrý. Co tam nedáváte?
+2026-01-14 15:04:11,973 - INFO - Zpracovávám text: ' Zvedal se symetricky. Cčko, jsme. Už nám dokáhla ta infuzka. Ještě na dobrý. Co tam nedáváte?' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:12,901 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:12,902 - INFO - LLM extrahoval data: {'polozky': {'Symetrie dýchání': 'Symetrické'}}
+2026-01-14 15:04:12,918 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:04:12,922 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:04:19,487 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:19,490 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:19,806 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:19,814 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dáváme termofoli, kterou zavádíme pod pána, kterýho si potřebujeme.
+2026-01-14 15:04:19,814 - INFO - Zpracovávám text: ' Dáváme termofoli, kterou zavádíme pod pána, kterýho si potřebujeme.' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:20,936 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:20,938 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:04:27,614 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:27,615 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:28,050 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:28,053 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Na kterého si potřebuji ještě 79. Tak to mám dvě leži. Dívně se na zádech.
+2026-01-14 15:04:28,054 - INFO - Zpracovávám text: ' Na kterého si potřebuji ještě 79. Tak to mám dvě leži. Dívně se na zádech.' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:28,668 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:28,672 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:04:35,743 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:35,749 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:36,505 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:36,508 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dám vám ThermoPoly a překládáme na zpátek. Pokračujeme v AmbuVacu. Heart rate 56.
+2026-01-14 15:04:36,508 - INFO - Zpracovávám text: ' Dám vám ThermoPoly a překládáme na zpátek. Pokračujeme v AmbuVacu. Heart rate 56.' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:37,324 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:37,325 - INFO - LLM extrahoval data: {'polozky': {'Srdeční frekvence': '56'}}
+2026-01-14 15:04:37,337 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:04:37,341 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:04:43,877 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:43,877 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:44,648 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:44,650 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Heart rate 56. Jsem s tím spokojena. Nelíbí se mi moc ta... 72 na 41. Zrychlíme kapání infuze.
+2026-01-14 15:04:44,651 - INFO - Zpracovávám text: ' Heart rate 56. Jsem s tím spokojena. Nelíbí se mi moc ta... 72 na 41. Zrychlíme kapání infuze.' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:45,267 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:45,269 - INFO - LLM extrahoval data: {'polozky': {'Srdeční frekvence': '56', 'Krevní tlak': '72/41'}}
+2026-01-14 15:04:45,285 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:04:45,289 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:04:52,006 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:04:52,006 - INFO - Finalizuji segment řeči...
+2026-01-14 15:04:52,480 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:04:52,485 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dělání infuze. Ok. Nápad. Až si teďka nic už neuděláme. Já bych se teďka chystála na transport, takže teď bych zatlubila a zavarmila.
+2026-01-14 15:04:52,485 - INFO - Zpracovávám text: ' Dělání infuze. Ok. Nápad. Až si teďka nic už neuděláme. Já bych se teďka chystála na transport, takže teď bych zatlubila a zavarmila.' pomocí openai/gpt-oss-120b
+2026-01-14 15:04:53,000 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:04:53,002 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:05:00,126 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:05:00,129 - INFO - Finalizuji segment řeči...
+2026-01-14 15:05:00,930 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:05:00,930 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já bych zatlubila a zavarmila a něco vykapat. Musíme zatlubit. Nevadí, my jsme byli jenom ve dvou. Stane se. Neměli jsme ruce jeho klubit.
+2026-01-14 15:05:00,930 - INFO - Zpracovávám text: ' Já bych zatlubila a zavarmila a něco vykapat. Musíme zatlubit. Nevadí, my jsme byli jenom ve dvou. Stane se. Neměli jsme ruce jeho klubit.' pomocí openai/gpt-oss-120b
+2026-01-14 15:05:01,245 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:05:01,248 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:05:08,252 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:05:08,253 - INFO - Finalizuji segment řeči...
+2026-01-14 15:05:08,697 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:05:08,699 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Neněli jsme ruce, jeho vůbec. Po vodě, po vodě. Hartality 54. Jsem s tím spokojná, nevím, jestli bysme saturace, takže teď bych jako... Ne, jsem ale jistá třátka, asi umím jednou.
+2026-01-14 15:05:08,699 - INFO - Zpracovávám text: ' Neněli jsme ruce, jeho vůbec. Po vodě, po vodě. Hartality 54. Jsem s tím spokojná, nevím, jestli bysme saturace, takže teď bych jako... Ne, jsem ale jistá třátka, asi umím jednou.' pomocí openai/gpt-oss-120b
+2026-01-14 15:05:10,930 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:05:10,932 - INFO - LLM extrahoval data: {'polozky': {'Srdeční frekvence': '54'}}
+2026-01-14 15:05:10,949 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 15:05:10,953 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_144530
+2026-01-14 15:05:16,385 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:05:16,386 - INFO - Finalizuji segment řeči...
+2026-01-14 15:05:16,912 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:05:16,914 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já jsem chtěla třeba kalcium hydrochlorid. Zatím jako přímě nevidím důvod na to prostě. Dobře, chceš hlenu, takhle a ještě hlenu.
+2026-01-14 15:05:16,914 - INFO - Zpracovávám text: ' Já jsem chtěla třeba kalcium hydrochlorid. Zatím jako přímě nevidím důvod na to prostě. Dobře, chceš hlenu, takhle a ještě hlenu.' pomocí openai/gpt-oss-120b
+2026-01-14 15:05:18,352 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:05:18,353 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:05:24,507 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:05:24,507 - INFO - Finalizuji segment řeči...
+2026-01-14 15:05:25,262 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:05:25,263 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takhle ještě nevím. Protože teďka v třeba minulu děláme nic. Teď jsme udělali všechno, co jsme mohli, vydělali jsme postrost, takže teď... OK, dala bych ho na lammu a dala bych ho za...
+2026-01-14 15:05:25,264 - INFO - Zpracovávám text: ' Takhle ještě nevím. Protože teďka v třeba minulu děláme nic. Teď jsme udělali všechno, co jsme mohli, vydělali jsme postrost, takže teď... OK, dala bych ho na lammu a dala bych ho za...' pomocí openai/gpt-oss-120b
+2026-01-14 15:05:25,777 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:05:25,781 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:05:32,641 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 15:05:32,643 - INFO - Finalizuji segment řeči...
+2026-01-14 15:05:33,200 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:05:33,204 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  a dala bych ho za... za to, za... no, zamonitrovala bych ho. Končíme? Dáváme LAMu,
+2026-01-14 15:05:33,205 - INFO - Zpracovávám text: ' a dala bych ho za... za to, za... no, zamonitrovala bych ho. Končíme? Dáváme LAMu,' pomocí openai/gpt-oss-120b
+2026-01-14 15:05:33,609 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:05:33,620 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:05:34,738 - INFO - Finalizuji segment řeči...
+2026-01-14 15:05:34,739 - INFO - Nahrávání zastaveno klientem.
+2026-01-14 15:05:34,875 - INFO - Soubor s nahrávkou uzavřen.
+2026-01-14 15:05:34,875 - INFO - Audio resources uvolněny
+2026-01-14 15:05:35,065 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 15:05:35,067 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dáváme lamu, pacienti třeba, že nechopšíme.
+2026-01-14 15:05:35,068 - INFO - Zpracovávám text: ' Dáváme lamu, pacienti třeba, že nechopšíme.' pomocí openai/gpt-oss-120b
+2026-01-14 15:05:35,467 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 15:05:35,471 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 15:05:38,965 - INFO - Požadavek na reset session.

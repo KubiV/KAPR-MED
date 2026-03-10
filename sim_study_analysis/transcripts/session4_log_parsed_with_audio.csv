@@ -1,0 +1,86 @@
+Čas;Přepsaný text;Extrahovaná data;JSON Text
+2026-01-14 17:54:07;Titulky vytvořil JohnyX.;;
+2026-01-14 17:54:16;Ahojte.;;
+2026-01-14 17:54:24;...;;
+2026-01-14 17:54:32;... Dobrý den! Dobrý den! Pan hlavně odpovídá?;;Dobrý den.
+2026-01-14 17:54:40;Nevidím žádný nebezpečí.;{'polozky': {'Nebezpečí': 'Žádné'}};Pán nám neopovídá? Ne. Vidím nějaké lidi okolo. Ne
+2026-01-14 17:54:47;tím tady žádný nebezpečí. Páne, teď to...;{'polozky': {'Nebezpečí': 'Žádný'}};Tady to prostředí, teda pán je na zemi. Jo, nevidím tady žádný nebezpečí. Ne Pán mi dejchá
+2026-01-14 17:54:55;Nějaký. Nějaký. A na bolestivý podmět.;;Nějak rozumně.
+2026-01-14 17:55:03;Nebolestivý podměr. Tak jo, tak si napojíme. Napojíme si na monitor.;;A na bolestivý podnět? Reaguje, dobře Tak jo, tak si napojíme. Napojíme si na monitor.
+2026-01-14 17:55:12;Titulky vytvořil JohnyX.;;
+2026-01-14 17:55:20;Naseďme tlakovou vnžetu. Splech se. Splech se jede. Tak pan nám saturnuje.;;Nasadíme tlakovou manžetu
+2026-01-14 17:55:28;Tak, pan nám saturuje 93. Pan má barvu normální, předpokládám.;{'polozky': {'SpO2': '93', 'Barva kůže': 'normální'}};Tak, pán nám saturuje 93. Pán má barvu normální, předpokládám.
+2026-01-14 17:55:36;Děkujeme.;;Nevidíme na něm žádný nějaký...
+2026-01-14 17:55:44;je... Srdční frekvenci máme 53,;{'polozky': {'Srdeční frekvence': '53'}};Asi, že něco má. Tak, srdeční frekvenci máme 53 a 54.
+2026-01-14 17:55:52;Tady si máme 53 a 54. Na periferii... Na periferii.;{'polozky': {'Periferní pulz (a. radialis)': '53/54'}};Na periferii nehmatný, centrálně hmatný.
+2026-01-14 17:56:00;Na prvej chvíli nehmatný. Centrálně hmatný. Dobře, to je pravda. Tak a pár má tlak 70.;{'polozky': {'Periferní pulz (a. radialis)': 'nehmatný', 'Centrální pulz (a. carotis)': 'hmatný', 'Krevní tlak': '70'}};
+2026-01-14 17:56:08;Tak a pán má tlak 74 na 52. Pán asi odtáhneme z toho stromu. Můžeme se teda položit ve služko.;{'polozky': {'Krevní tlak': '74/52'}};Tak a pán má tlak 74 na 52. Pán asi odtáhneme z toho stromu.
+2026-01-14 17:56:17;a pak se tady položíme službou.;;Můžeme se teda položit.
+2026-01-14 17:56:25;Schválíme to nábožskému objevu a Rigy clásů v dobu musíme dopisovat k nim.;;Taháme od stromu.
+2026-01-14 17:56:33;Já mám jistý. Já jistý, jestli žijou.;;Dáme pánovi kyslík. Dáme kyslík Zajistíme si žílu.
+2026-01-14 17:56:41;Zde je pouštíme kyslý maskou a ohulujeme.;{'polozky': {'Oxygenoterapie': 'kyslíková maska'}};Takže pouštíme kyslík maskou.
+2026-01-14 17:56:49;A ohulil bych to plyně naplno na 92 saturaci, takže ohulíme kyslík naplno na nějakých 14 litrů.;{'polozky': {'SpO2': '92', 'Oxygenoterapie': '14 l/min'}};A ohulil bych to klidně naplno má 92 saturaci takže ohulíme kyslík naplno na 14 litrů
+2026-01-14 17:56:57;14 litrů. Dobře, rychle mi žílu, když mě půjčíš.;;Dobře, píchneme žílu, když mi půjčíš.
+2026-01-14 17:57:05;Zmíř. Zmířme panu teplotu. Glikémy.;{'polozky': {'Tělesná teplota (TT)': '', 'Glykémie': ''}};Změřme pánovi teplotu v glykémii.
+2026-01-14 17:57:14;Díké mi. Teplotu je podchlazený třeba pan? Ne, přijde fin. Píškám žílu. Beru si rukavice.;{'polozky': {'Tělesná teplota (TT)': 'Podchlazený', 'Zajištění cévního vstupu': 'Žíla'}};Teplotu je podchladzený třeba pán? Píchám žílu, beru si rukaduce, dala mi smarcha, píchám žílu, mám uvidím návrat krve, dávám dětský set, propláchnu. Jsem tam?
+2026-01-14 17:57:22;Beru si rukaduce, tříkám, dáláme smarcha, píchám žílu, mám uvidím návrat krve, dávám dětskej set, propláchnu, co tam?;{'polozky': {'Zajištění cévního vstupu': 'IV přístup (dětský set)'}};
+2026-01-14 17:57:30;Propláchnu. Jsem tam? Jsi tam. Dobře. Klikně mi měřím. Mám 5,6. 8,5. 8,5.;;Jsi tam. Dobře. Glykemii měřím? Mám 5,6? 8,5.
+2026-01-14 17:57:39;Osm a půl. Osm a půl. OK, když pána promáháme, cítím někde nějaký;;8,5. OK. Když pána promátneme,
+2026-01-14 17:57:46;Cítím někde nějaký... necítím nic, nemám na rukavicích krev. Měli bychom si pána otočili.;{'polozky': {'Krvácení (masivní)': 'Žádné'}};cítím někde nějaký... necítím nic, nemám na rukavicích krev. Kdybychom si pána otočili...
+2026-01-14 17:57:54;Taky nic. Taky nic. A hlava? Vzpomínáme na zornice. Zokreslí.;{'polozky': {'Zornice (Velikost/Symetrie)': 'Zokreslené'}};Taky nic. Taky nic. A hlava?
+2026-01-14 17:58:02;Dámy a pánové, dál. Reakce na obsud. Dámy a pánové, skápnou. Litr rychlé.;;Koukneme na zornice. Izokorický. Reakce na osvit. Dáme panu skápnout litr, rychlej.
+2026-01-14 17:58:10;Litr rychlejc. Nechci si dělat dvanáctku ještě. Máme možnost udělat dvanáctku s monitorem, tak si uděláme dvanáctku.;;Já chci si udělat dvanáctku ještě. Máme možnost udělat dvanáctku, tak si uděláme dvanáctku.
+2026-01-14 17:58:19;Tak si uděláme dvanáctku. Tak letíme dvanáctku. A dáváme dvanáctku.;;Tak lepíme ten dvanáctku a dáváme dvanáctku.
+2026-01-14 17:58:27;Titulky vytvořil JohnyX.;;
+2026-01-14 17:58:35;Titulky vytvořil JohnyX.;;Můžu si nalepit zadní svody?
+2026-01-14 17:58:43;Můžu si dohodit na zadní slony? A viděla bych tam, jestli je ona celá. Ne, tak to je dohodit nějak.;;A vidím ST elevace v těch zadních svodech? Ne.
+2026-01-14 17:58:52;než jsme viděli SOLYT;;Ne, to je jen jedna, jaká by byla ok.
+2026-01-14 17:58:59;Titulky vytvořil JohnyX.;;
+2026-01-14 17:59:08;A? Saturace nalepíše. Takže ten liter rychle nefunguje. Takže ten liter rychle nefunguje.;;Takže ten litr rychle nefunguje.
+2026-01-14 17:59:16;A hele, jde nám do stimulace. Dobře, centrálně cítím nic. Tak jo. Pacienta moc nebejká.;{'polozky': {'Centrální pulz (a. carotis)': 'nepalpovatelný'}};A, hele, jde nám do fibrilace. Dobře, centrálně necítím nic. Tak jo.
+2026-01-14 17:59:24;Tak jo, tak začne mačkát.;;Tak jo, tak začneme mačkát.
+2026-01-14 17:59:32;Můžu i kupovat na loupámi malou? Co chcete? Můžu i kupovat na loupámi malou? Co chcete?;;
+2026-01-14 17:59:40;Tak to je všechno. Tak já bych na tím mluval. A budeme dovolávat druhou posádku, která? Máme ukazat.;;Můžu intubovat? Můžeš, co chceš. Tak já budu intubovat
+2026-01-14 17:59:48;Mám rukasa? Ááá... Můžela bych si levinkoskou...;;Budem dovolávat druhou posádku teda.
+2026-01-14 17:59:56;Já bych to dneska zaintubovala, mám tam zpátu a mám dobra veřej. To máme zaintubováno.;{'polozky': {'Zajištění dýchacích cest (Advanced)': 'Intubováno'}};Dívám se vezmu laryngoskop. Zaintubovala bych.
+2026-01-14 18:00:04;Máš za to Beno? Jo.;;Máme zaintubováno? Ještě tak půl minuty.
+2026-01-14 18:00:12;Tak já se poslechnu, jestli dejte a zároveň se můžete vejmout.;;Máme zatubeno? Jo. Tak já si poslechnu, jestli dejchá a zároveň rytmus.
+2026-01-14 18:00:20;...;;No počítáme. Já si pořád nepočítám. Tři ráno. Hm. Taky jsem se poslechnu, jestli dejchá.
+2026-01-14 18:00:29;Necháme se dělat. Necháme se dělat. Necháme se dělat. Ok.;;Tak? Dejchám. Dejchám. Ok.
+2026-01-14 18:00:37;Titulky vytvořil JohnyX.;;Nabíjím, podáme třikrát tři výboje.
+2026-01-14 18:00:45;Nabídíme, podáme třikrát při výboje.;;
+2026-01-14 18:00:53;Podáme třikrát tři vývoje. Jak moc máme ten se? Rytmus je tento, no? Členi jenom na karotidy? Ne.;;Rytmus máme ten co je pořád vidět? Šáhl jsi mu na karotidy?
+2026-01-14 18:01:01;Ne. Ustupte, poda... Chystí pryč. Je. Kabum. Analizujeme rytmus. Furt to stejný.;;Ne. Ustupte. Pryč Je. Kabum, analyzuju rytmus, furt stejný.
+2026-01-14 18:01:10;To odejpersonální výstup over支持;;Kabum, furt stejný.
+2026-01-14 18:01:18;Kabum. Furt stejný. Tak, nabíjeme ještě.;;Nabíjme ještě.
+2026-01-14 18:01:26;Pryč! Kabum! Dobrý, pokračujeme.;;Pryč, kabum. Dobrý, pokračujeme.
+2026-01-14 18:01:34;Takže máme první den, první bojovice do stopky.;;Takže máme první ten Chce to stopky
+2026-01-14 18:01:42;Přeji, že bude za dvě minuty.;;Jo, hodinky Asi 50 minut.
+2026-01-14 18:01:50;Takže budeme za 2 minuty dělat další návrh.;;Dobrý. Takže budeme za 2 minuty dělat další analýzu jo. Máme venťas s sebou, takže to si můžeme dát na venťas.
+2026-01-14 18:01:58;Máme večer sebou, takže to si můžeme navítat. Máme ventilátor, dáme ventilátor, pol. Nastavu na půl litru, 12 litrů za minutu.;{'polozky': {'Umělá plicní ventilace (UPV)': '0.5\u202fL, 12\u202fL/min'}};Ventilátor, dáme ventilátor,
+2026-01-14 18:02:06;pětrů 12 nebo za měsíc.. Až teď zrakovorujeme. Ok!;;Nastavu na půl litru, dvanáct dechů za minutu, s nějakým PEEPem, tři.
+2026-01-14 18:02:14;OK. A chceš nějak dostřídat? No, tak další, já tam nejdu. Dobře.;;Kapno píše 8 Chces se nějak vystřídat?
+2026-01-14 18:02:23;Dobře. Já se tím natáhnu amiodarona, adrenalin. Dvě minuty jsou odpouštění defektu, jo? Jo.;{'polozky': {'Amiodarone': '', 'Adrenalin': ''}};No, tak s další analýzou. Dobře. Já zatím natáhnu amiodaron, adrenalin. Dvě minuty jsou od puštění defiku, jo?
+2026-01-14 18:02:31;Jo. Takže ve třetí minutě byste měli to. Na tehu si jeden miligram.;;Jo. Tak, takže ve třetí minutě. Natahuju si jeden miligram adrenalinu a natahuju tři sta miligramu amiodaronu
+2026-01-14 18:02:39;1 mg adrenaline a na tohle 300 mg amiodarona.;{'polozky': {'Adrenalin': '1 mg', 'Amiodaron': '300 mg'}};
+2026-01-14 18:02:47;Co, kapno? Osm. Kapno pořád.;{'polozky': {'EtCO2': 'kapno pořád'}};Co, kapno? 8. Kapno pořád 8.
+2026-01-14 18:02:55;Titulky vytvořil JohnyX.;;
+2026-01-14 18:03:03;Titulky vytvořil JohnyX.;;
+2026-01-14 18:03:11;Titulky vytvořil JohnyX.;;
+2026-01-14 18:03:19;Titulky vytvořil JohnyX.;;
+2026-01-14 18:03:28;K vás připravím si defík.;;Připravi si defík.
+2026-01-14 18:03:36;Titulky vytvořil JohnyX.;;
+2026-01-14 18:03:44;Pojď. Kontrola rytmu. Sahina karnatona karatidy.;{'polozky': {'EKG': 'provedeno'}};Pojď. Kontrola rytmu. Sahni na karotidy.
+2026-01-14 18:03:52;Cítím, že se uvzace centrálně.;{'polozky': {'Centrální pulz (a. carotis)': 'Cítí se'}};Cítíme něco? Ok. Já cítím, cítím slabý pulzace centrálně.
+2026-01-14 18:04:00;Nejdřív sejdem slabý huluzace centrálně. Také máme rozk. Na perifece, furt dál necítím.;{'polozky': {'Periferní pulz (a. radialis)': 'Absent'}};Ok. Tak já mám ROSC. Na periferce, furt dál necítím.
+2026-01-14 18:04:08;Pán Cikým.;;
+2026-01-14 18:04:17;Pán se nám pere zventilátor a máme tam nějakou interferenci zventilátor a ne.;;Pán se nám pere s ventilátorem, máme tam nějakou interferenci s ventilátorem? Ne. Jo, centrálně cítím pulzace.
+2026-01-14 18:04:25;Jo, tady je to. Centrálně cítím plůžice. Tlak je lepší, úborný. Tak se saturací nám jde taky nahoře.;{'polozky': {'Centrální pulz (a. carotis)': 'cítím', 'Krevní tlak': 'lepší', 'SpO2': 'stoupá'}};Tlak je lepší, výborný. Tak se saturací nám jde taky nahoru.
+2026-01-14 18:04:33;Tak se saturací nám jde taky nahoru. Dobře, máme teda pánoc resuscitovanýho.;{'polozky': {'SpO2': 'zvyšuje se', 'KPR (Resuscitace)': 'provedeno'}};Dobře, máme teda pána zresuscitovanýho.
+2026-01-14 18:04:41;Zitovanýho. No tak ho vezeme. Pojedeme. Sme v Šerendu. Pojedeme tam.;;No, tak ho vezeme. Pojedeme, jsme v Sheerwoodu? Jdeme na Karlák.
+2026-01-14 18:04:49;Jdeme na karvák. Jdeme na spi. Tak jo. Jdeme na spi, jedeme se z resuscitovanou zástavou.;{'polozky': {'KPR (Resuscitace)': 'Resuscitovaná zástava'}};Jdem na SPIN. Tak jo. Jedem na SPIN, jedeme se zresuscitovanou zástavou.
+2026-01-14 18:04:57;Můžeme to zástavit? No hodně. On ho bude chytit nějakýkrát. Nebo musíme přijít nějakou příčinu.;;Na ARO? On ho bude chtít nějaký kardiog.
+2026-01-14 18:05:05;musíme předmět dvou příčinů, že se zrovna nějaká intoxikace nemá nic takového. Protože když prostě čtyři to, čtyři h, čtyři t,;;Nebo .. musíme přijít nějakou příčinu, možná nějaká intoxikace nebo něco takového. Protože když prostě 4H 4T...
+2026-01-14 18:05:14;4H, 4T. Když se podívám na zorníčky velikost, zorníček. ... jsou realití na svět. A velicost?;{'polozky': {'Zornice (Velikost/Symetrie)': ''}};Tak. Ještě se podívám na zorničky, velikost, zorniček. Ty jsme zjistili předtím. Jsou reagující na osvit
+2026-01-14 18:05:21;Ale co? Předávám. Jo, ho si musí nějak jako víc vysvětlit. Tak jo.;;
+2026-01-14 18:05:22;Také. Také.;;A velikost? Jo. Jo, ho si musím nějak jako víc vyšetřit, no. OK. Tak jo? Díky.

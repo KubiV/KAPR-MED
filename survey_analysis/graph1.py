@@ -10,7 +10,7 @@ OUTPUT_FILE = "likert_graf.png"
 DPI = 300
 
 # ========= STYL PRO POSTER =========
-rcParams["font.family"] = "sans-serif"
+rcParams["font.family"] = "Arial"
 rcParams["font.size"] = 14
 rcParams["axes.titlesize"] = 20
 rcParams["axes.labelsize"] = 16
@@ -18,6 +18,7 @@ rcParams["figure.figsize"] = (14, 9) # Trochu vyšší pro větší rozestupy
 rcParams["axes.spines.top"] = False
 rcParams["axes.spines.right"] = False
 rcParams["axes.spines.left"] = False # Skrytí linky levé osy, když u ní nejsou popisky
+rcParams["axes.spines.bottom"] = False # Skrytí linky osy X
 
 # ========= NAČTENÍ DAT =========
 try:

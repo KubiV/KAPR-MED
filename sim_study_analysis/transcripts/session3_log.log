@@ -1,0 +1,967 @@
+2026-01-14 16:22:35,761 - INFO - --- LOGOVÁNÍ NASTAVENO DO: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235/session_log.log ---
+2026-01-14 16:22:35,762 - INFO - ============================================================
+2026-01-14 16:22:35,762 - INFO - INICIALIZACE APLIKACE - PARAMETRY SPUŠTĚNÍ
+2026-01-14 16:22:35,762 - INFO - ============================================================
+2026-01-14 16:22:35,762 - INFO - --- AUDIO PARAMETRY ---
+2026-01-14 16:22:35,762 - INFO - RATE: 16000 Hz, CHUNK: 1024, CHANNELS: 1
+2026-01-14 16:22:35,762 - INFO - --- NASTAVENÍ AI MODELŮ ---
+2026-01-14 16:22:35,762 - INFO - STT Model: whisper-large-v3
+2026-01-14 16:22:35,762 - INFO - LLM Model: llama-3.3-70b-versatile
+2026-01-14 16:22:35,762 - INFO - --- CESTY ---
+2026-01-14 16:22:35,762 - INFO - BASE_DIR: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app
+2026-01-14 16:22:35,762 - INFO - --- API KLÍČE ---
+2026-01-14 16:22:35,762 - INFO - GROQ_API_KEY nastaveno: True
+2026-01-14 16:22:35,762 - INFO - GOOGLE_API_KEY nastaveno: True
+2026-01-14 16:22:35,763 - INFO - ============================================================
+2026-01-14 16:22:35,771 - INFO - Načtena kategorie DrABCDE ze souboru tables/DrABCDE.csv (35 položek).
+2026-01-14 16:22:35,773 - INFO - Načtena kategorie Medication ze souboru tables/Medication.csv (27 položek).
+2026-01-14 16:22:35,776 - INFO - Načtena kategorie Interventions ze souboru tables/Interventions.csv (12 položek).
+2026-01-14 16:22:35,778 - INFO - Načtena kategorie Physical Examination ze souboru tables/Physical Examination.csv (12 položek).
+2026-01-14 16:22:35,780 - INFO - Načtena kategorie History ze souboru tables/History.csv (11 položek).
+2026-01-14 16:22:35,782 - INFO - Načtena kategorie SBAR ze souboru tables/SBAR.csv (4 položek).
+2026-01-14 16:22:35,782 - INFO - Info: Vytvářím prázdnou tabulku pro kategorii Other.
+2026-01-14 16:22:35,787 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:22:35,787 - INFO - Session resetována. Nová složka: Session_20260114_162235
+2026-01-14 16:22:38,467 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "GET / HTTP/1.1" 200 -
+2026-01-14 16:22:38,471 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "GET /socket.io/?EIO=4&transport=websocket&sid=qfGi9S3aenkrExH3AAAU HTTP/1.1" 200 -
+2026-01-14 16:22:38,492 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "GET /static/manifest.json HTTP/1.1" 200 -
+2026-01-14 16:22:38,522 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "GET /socket.io/?EIO=4&transport=polling&t=Pkz6WWt HTTP/1.1" 200 -
+2026-01-14 16:22:38,533 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "POST /socket.io/?EIO=4&transport=polling&t=Pkz6WX2&sid=lQBjGvKQvl8EFC2EAAAW HTTP/1.1" 200 -
+2026-01-14 16:22:38,534 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "GET /socket.io/?EIO=4&transport=polling&t=Pkz6WX3&sid=lQBjGvKQvl8EFC2EAAAW HTTP/1.1" 200 -
+2026-01-14 16:22:38,547 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:38] "GET /socket.io/?EIO=4&transport=polling&t=Pkz6WX9&sid=lQBjGvKQvl8EFC2EAAAW HTTP/1.1" 200 -
+2026-01-14 16:22:39,482 - INFO - 127.0.0.1 - - [14/Jan/2026 16:22:39] "GET /sw.js HTTP/1.1" 200 -
+2026-01-14 16:23:23,371 - INFO - Otevírám audio stream na zařízení index: 0 (RØDE VideoMic GO II)
+2026-01-14 16:23:23,374 - INFO - Nahrávání spuštěno klientem.
+2026-01-14 16:23:23,538 - INFO - Audio stream inicializován
+2026-01-14 16:23:23,539 - INFO - Zahájeno nahrávání do souboru: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235/recording_162323.wav
+2026-01-14 16:23:23,539 - INFO - Zahajuji nahrávací smyčku...
+2026-01-14 16:23:33,606 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:23:33,606 - INFO - Finalizuji segment řeči...
+2026-01-14 16:23:34,099 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:23:34,102 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Titulky vytvořil JohnyX.
+2026-01-14 16:23:34,103 - INFO - Zpracovávám text: ' Titulky vytvořil JohnyX.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:23:34,315 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:23:34,319 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:23:41,738 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:23:41,740 - INFO - Finalizuji segment řeči...
+2026-01-14 16:23:42,242 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:23:42,244 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Koukáme na nebezpečí, vidíme nějaké nebezpečí. Dobře, jdeme dál.
+2026-01-14 16:23:42,244 - INFO - Zpracovávám text: ' Koukáme na nebezpečí, vidíme nějaké nebezpečí. Dobře, jdeme dál.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:23:42,464 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:23:42,466 - INFO - LLM extrahoval data: {'polozky': {'Nebezpečí': 'Ano'}}
+2026-01-14 16:23:42,471 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:23:42,475 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:23:49,865 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:23:49,865 - INFO - Finalizuji segment řeči...
+2026-01-14 16:23:50,279 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:23:50,281 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Normálně máme rukavice. Ano. Nasazujeme si všechny ponucky, nasazujeme si roušky, nasazujeme si rukavice.
+2026-01-14 16:23:50,282 - INFO - Zpracovávám text: ' Normálně máme rukavice. Ano. Nasazujeme si všechny ponucky, nasazujeme si roušky, nasazujeme si rukavice.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:23:50,582 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:23:50,588 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:23:57,987 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:23:57,988 - INFO - Finalizuji segment řeči...
+2026-01-14 16:23:58,572 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:23:58,575 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dobrý den, pane, slyšíte nás? Neslyší nás. Dobře. Tak, vítám vás. Slyšíte nás, prosím vás, pane?
+2026-01-14 16:23:58,575 - INFO - Zpracovávám text: ' Dobrý den, pane, slyšíte nás? Neslyší nás. Dobře. Tak, vítám vás. Slyšíte nás, prosím vás, pane?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:23:58,881 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:23:58,884 - INFO - LLM extrahoval data: {'polozky': {'AVPU': 'Nereaguje'}}
+2026-01-14 16:23:58,884 - INFO - Synonymum nahrazeno: AVPU -> AVPU
+2026-01-14 16:23:58,891 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:23:58,895 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:24:06,119 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:06,120 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:06,605 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:06,607 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  No, slyšíte nás, prosím vás pane? Reaguje na mě pan? Nereaguje. Jako zkošujeme lesčí výpočet. Pan Sténá, dobře.
+2026-01-14 16:24:06,607 - INFO - Zpracovávám text: ' No, slyšíte nás, prosím vás pane? Reaguje na mě pan? Nereaguje. Jako zkošujeme lesčí výpočet. Pan Sténá, dobře.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:06,914 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:06,915 - INFO - LLM extrahoval data: {'polozky': {'Kvalita vědomí (Orientace)': 'Nereaguje', 'AVPU': 'Nereaguje'}}
+2026-01-14 16:24:06,915 - INFO - Synonymum nahrazeno: AVPU -> AVPU
+2026-01-14 16:24:06,919 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:24:06,921 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:24:14,241 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:14,242 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:14,828 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:14,830 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pán Stejnák. Vidíme, že nám dýchá tu břišku, je to takové divné. Já bych si ho pro jistotu položila.
+2026-01-14 16:24:14,830 - INFO - Zpracovávám text: ' Pán Stejnák. Vidíme, že nám dýchá tu břišku, je to takové divné. Já bych si ho pro jistotu položila.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:15,116 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:15,123 - INFO - LLM extrahoval data: {'polozky': {'Hloubka dýchání': 'Abnormální', 'Symetrie dýchání': 'Asymetrické'}}
+2026-01-14 16:24:15,133 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:24:15,137 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:24:22,371 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:22,372 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:22,788 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:22,790 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  To znamená, v reálném životě posouváme pána, aby nesadil opřený ostrov při fixaci.
+2026-01-14 16:24:22,791 - INFO - Zpracovávám text: ' To znamená, v reálném životě posouváme pána, aby nesadil opřený ostrov při fixaci.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:23,096 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:23,099 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:24:30,498 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:30,504 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:31,038 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:31,041 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, stejně tak mu dám třič ten polštaž. Mám už hezky zaklon. Ať si nám hezky líká. Tak. Dobře.
+2026-01-14 16:24:31,042 - INFO - Zpracovávám text: ' Tak, stejně tak mu dám třič ten polštaž. Mám už hezky zaklon. Ať si nám hezky líká. Tak. Dobře.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:31,444 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:31,445 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:24:38,627 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:38,628 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:38,971 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:38,975 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak. Dobře. Tak, až to vyjeme. Tak. Opovídat s ním, moc nejde.
+2026-01-14 16:24:38,976 - INFO - Zpracovávám text: ' Tak. Dobře. Tak, až to vyjeme. Tak. Opovídat s ním, moc nejde.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:39,279 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:39,286 - INFO - LLM extrahoval data: {'polozky': {'Kvalita vědomí (Orientace)': 'Porucha vědomí'}}
+2026-01-14 16:24:39,294 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:24:39,299 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:24:46,750 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:46,753 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:47,321 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:47,324 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  když se ním moc nejde, tak Klaudy, co dajš vyšetřovat? Jo, změřím si satura. Změřím panovi saturaci, napojíme si ho na efekt. Tak napojím monitori.
+2026-01-14 16:24:47,325 - INFO - Zpracovávám text: ' když se ním moc nejde, tak Klaudy, co dajš vyšetřovat? Jo, změřím si satura. Změřím panovi saturaci, napojíme si ho na efekt. Tak napojím monitori.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:47,518 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:47,523 - INFO - LLM extrahoval data: {'polozky': {'SpO2': ''}}
+2026-01-14 16:24:47,523 - INFO - Synonymum nahrazeno: SpO2 -> SpO2
+2026-01-14 16:24:47,529 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:24:47,533 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:24:54,878 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:24:54,881 - INFO - Finalizuji segment řeči...
+2026-01-14 16:24:55,365 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:24:55,369 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak napojíme monitori, jdou postupně... Dárně, máme to lístá kurátko. Nasadili jsme mu manžetu. Nasadili jsme mu manžetu na tlak.
+2026-01-14 16:24:55,369 - INFO - Zpracovávám text: ' Tak napojíme monitori, jdou postupně... Dárně, máme to lístá kurátko. Nasadili jsme mu manžetu. Nasadili jsme mu manžetu na tlak.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:24:55,673 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:24:55,675 - INFO - LLM extrahoval data: {'polozky': {'Krevní tlak': ''}}
+2026-01-14 16:24:55,686 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:24:55,690 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:03,010 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:03,011 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:03,612 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:03,614 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  na vlak a námyslíme i na jeho. Aby prošli. Fajně. Pán je bezvědomý. Pčičiny bezvědomý. Oluha, Žuhel, to jako budeme řešit.
+2026-01-14 16:25:03,614 - INFO - Zpracovávám text: ' na vlak a námyslíme i na jeho. Aby prošli. Fajně. Pán je bezvědomý. Pčičiny bezvědomý. Oluha, Žuhel, to jako budeme řešit.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:03,919 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:03,923 - INFO - LLM extrahoval data: {'polozky': {'Kvalita vědomí (Orientace)': 'Bezvědomý'}}
+2026-01-14 16:25:03,935 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:25:03,939 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:11,137 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:11,138 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:11,546 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:11,549 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak to budeme řešit. Napojujeme na EKG, zapojí EKG. Super. Plus 54. Plus 74.
+2026-01-14 16:25:11,549 - INFO - Zpracovávám text: ' Tak to budeme řešit. Napojujeme na EKG, zapojí EKG. Super. Plus 54. Plus 74.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:11,854 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:11,856 - INFO - LLM extrahoval data: {'polozky': {'EKG': 'zapojeno', 'Srdeční frekvence': '74'}}
+2026-01-14 16:25:11,862 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:25:11,865 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:19,259 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:19,260 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:19,795 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:19,797 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Plak 70, jo. A slob satoré. Nic o něm nevíme. Není nikdo okolik, kdo by nám odpověděl, co mám.
+2026-01-14 16:25:19,797 - INFO - Zpracovávám text: ' Plak 70, jo. A slob satoré. Nic o něm nevíme. Není nikdo okolik, kdo by nám odpověděl, co mám.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:20,005 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:20,006 - INFO - LLM extrahoval data: {'polozky': {'Srdeční frekvence': '70'}}
+2026-01-14 16:25:20,015 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:25:20,019 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:27,389 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:27,391 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:28,043 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:28,044 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já bych chtěla odpovědět na co mám. No, dýcha 20, to je víc. Bradykardie... Jo já jdu poslouchat pána. Bradykardie je potencíální oblikce.
+2026-01-14 16:25:28,045 - INFO - Zpracovávám text: ' Já bych chtěla odpovědět na co mám. No, dýcha 20, to je víc. Bradykardie... Jo já jdu poslouchat pána. Bradykardie je potencíální oblikce.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:28,352 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:28,353 - INFO - LLM extrahoval data: {'polozky': {'Dechová frekvence': '20', 'Srdeční frekvence': 'Bradykardie'}}
+2026-01-14 16:25:28,365 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:25:28,369 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:35,519 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:35,522 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:35,977 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:35,978 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Je to pan ze Sherwoodů. Je to pan ze Sherwoodů. Prostě mohl se otránit něčím.
+2026-01-14 16:25:35,978 - INFO - Zpracovávám text: ' Je to pan ze Sherwoodů. Je to pan ze Sherwoodů. Prostě mohl se otránit něčím.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:36,171 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:36,172 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:25:43,645 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:43,646 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:44,223 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:44,224 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Už je od něj okolátkova, tragická. Pání, pan čisté skrypkové bilaterálny. Pán čisté skrypkové bilaterálny,
+2026-01-14 16:25:44,224 - INFO - Zpracovávám text: ' Už je od něj okolátkova, tragická. Pání, pan čisté skrypkové bilaterálny. Pán čisté skrypkové bilaterálny,' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:44,531 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:44,539 - INFO - LLM extrahoval data: {'polozky': {'Poslech – plíce': 'Čisté skrypkové bilaterální'}}
+2026-01-14 16:25:44,550 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:25:44,555 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:51,775 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:51,776 - INFO - Finalizuji segment řeči...
+2026-01-14 16:25:52,265 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:25:52,268 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pán Čistek, klipkujeme bilaterálně. Srdce. Zkusit se.
+2026-01-14 16:25:52,269 - INFO - Zpracovávám text: ' Pán Čistek, klipkujeme bilaterálně. Srdce. Zkusit se.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:25:52,572 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:25:52,578 - INFO - LLM extrahoval data: {'polozky': {'Hlava - Oči': 'Klipkujeme bilaterálně'}}
+2026-01-14 16:25:52,590 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:25:52,594 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:25:59,899 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:25:59,900 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:00,286 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:00,291 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Děkujeme.
+2026-01-14 16:26:00,292 - INFO - Zpracovávám text: ' Děkujeme.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:00,508 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:00,510 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:26:08,033 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:08,034 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:08,659 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:08,664 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  To je EKG, nám dává svobodný. Koukám na EKG. Já měřím panovité.
+2026-01-14 16:26:08,665 - INFO - Zpracovávám text: ' To je EKG, nám dává svobodný. Koukám na EKG. Já měřím panovité.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:08,967 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:08,969 - INFO - LLM extrahoval data: {'polozky': {'EKG': 'Svobodný', 'Srdeční frekvence': 'Panovité'}}
+2026-01-14 16:26:08,982 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:26:08,987 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:26:16,158 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:16,159 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:16,595 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:16,597 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já měřím pánovi teplotu. 36. A změřím i věkery.
+2026-01-14 16:26:16,598 - INFO - Zpracovávám text: ' Já měřím pánovi teplotu. 36. A změřím i věkery.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:16,905 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:16,908 - INFO - LLM extrahoval data: {'polozky': {'Tělesná teplota (TT)': '36'}}
+2026-01-14 16:26:16,921 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:26:16,925 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:26:24,282 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:24,282 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:24,830 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:24,832 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zatáčíme. A základní čtyři mějící zakrytí? Reagujte stejně.
+2026-01-14 16:26:24,832 - INFO - Zpracovávám text: ' Zatáčíme. A základní čtyři mějící zakrytí? Reagujte stejně.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:25,252 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:25,254 - INFO - LLM extrahoval data: {'polozky': {'Zajištění dýchacích cest (Basic)': 'Zatáčení'}}
+2026-01-14 16:26:25,268 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:26:25,273 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:26:32,413 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:32,414 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:32,879 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:32,881 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Reaguje si stejně. Pan Mikořad reaguje na bolesti? Ne. Tak nic o...
+2026-01-14 16:26:32,882 - INFO - Zpracovávám text: ' Reaguje si stejně. Pan Mikořad reaguje na bolesti? Ne. Tak nic o...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:33,291 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:33,293 - INFO - LLM extrahoval data: {'polozky': {'Bolest (VAS/NRS)': 'Neguje'}}
+2026-01-14 16:26:33,302 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:26:33,306 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:26:40,537 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:40,538 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:41,021 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:41,023 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pane, co vidím? Pane, to stále reagová na dostup. Dýchá? Jo, pan to tady dýchá, ale to stále reagová na dostup.
+2026-01-14 16:26:41,023 - INFO - Zpracovávám text: ' Pane, co vidím? Pane, to stále reagová na dostup. Dýchá? Jo, pan to tady dýchá, ale to stále reagová na dostup.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:41,438 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:41,440 - INFO - LLM extrahoval data: {'polozky': {'Průchodnost dýchacích cest': 'Ano', 'Symetrie dýchání': 'Neuvedeno', 'Kvalita vědomí (Orientace)': 'Reaguje'}}
+2026-01-14 16:26:41,454 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:26:41,458 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:26:48,661 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:48,663 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:49,168 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:49,169 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ale dýchá, ale musel reagovat na dosti kvůli. Nechceme ono reagovat, ale musíme výdat základ. Co vidím na EKG... Když mu toleruje. Jo. Klaudy, prosím tě, řeš ten rvej.
+2026-01-14 16:26:49,170 - INFO - Zpracovávám text: ' Ale dýchá, ale musel reagovat na dosti kvůli. Nechceme ono reagovat, ale musíme výdat základ. Co vidím na EKG... Když mu toleruje. Jo. Klaudy, prosím tě, řeš ten rvej.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:49,473 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:49,475 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:26:56,790 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:26:56,790 - INFO - Finalizuji segment řeči...
+2026-01-14 16:26:57,309 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:26:57,310 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Klaudy, prosím tě, řeš ten airway. Co vidíme na EKG, vidím elevace v AVR. Jo. A jde prostě všude možná ve 4, 5 měsíc. Dáme tam můj airway.
+2026-01-14 16:26:57,311 - INFO - Zpracovávám text: ' Klaudy, prosím tě, řeš ten airway. Co vidíme na EKG, vidím elevace v AVR. Jo. A jde prostě všude možná ve 4, 5 měsíc. Dáme tam můj airway.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:26:57,722 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:26:57,724 - INFO - LLM extrahoval data: {'polozky': {'Zajištění dýchacích cest (Basic)': 'Ano', 'EKG': 'Elevace v AVR'}}
+2026-01-14 16:26:57,739 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:26:57,744 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:27:04,921 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:04,921 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:05,370 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:05,373 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Je to takový hodně zvláštní. Jedna, dva, tři elevace AVR.
+2026-01-14 16:27:05,373 - INFO - Zpracovávám text: ' Je to takový hodně zvláštní. Jedna, dva, tři elevace AVR.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:05,667 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:05,669 - INFO - LLM extrahoval data: {'polozky': {'EKG': 'Elevace AVR'}}
+2026-01-14 16:27:05,684 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:27:05,689 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:27:13,050 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:13,051 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:13,493 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:13,501 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  V ABFu nejsou, ale v depresce tady taky spíš.
+2026-01-14 16:27:13,502 - INFO - Zpracovávám text: ' V ABFu nejsou, ale v depresce tady taky spíš.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:13,802 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:13,807 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:27:21,173 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:21,175 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:22,666 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:22,670 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, že nastávání je vrázně jednoduché. Čestně tak, a možná to dejme měřit kontinuálně. Tak to potřebujeme. Jas, jas, jas.
+2026-01-14 16:27:22,671 - INFO - Zpracovávám text: ' Tak, že nastávání je vrázně jednoduché. Čestně tak, a možná to dejme měřit kontinuálně. Tak to potřebujeme. Jas, jas, jas.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:22,849 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:22,851 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:27:29,307 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:29,309 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:29,975 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:29,977 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Fajn. 72 na 48. Fajn. Saturuje nám dobře.
+2026-01-14 16:27:29,977 - INFO - Zpracovávám text: ' Fajn. 72 na 48. Fajn. Saturuje nám dobře.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:30,298 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:30,306 - INFO - LLM extrahoval data: {'polozky': {'Krevní tlak': '72/48', 'SpO2': 'saturuje dobře'}}
+2026-01-14 16:27:30,307 - INFO - Synonymum nahrazeno: SpO2 -> SpO2
+2026-01-14 16:27:30,320 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:27:30,326 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:27:37,426 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:37,427 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:37,790 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:37,796 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já se dívám na pana, prohmatávám pánovi hlavu. Ještě kapila dní. Rukavice čisté? Rukavice čisté.
+2026-01-14 16:27:37,796 - INFO - Zpracovávám text: ' Já se dívám na pana, prohmatávám pánovi hlavu. Ještě kapila dní. Rukavice čisté? Rukavice čisté.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:37,975 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:37,977 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:27:45,555 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:45,556 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:46,068 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:46,069 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Rukavice čisté. Žádné krepitace. Výtoky z očí z noců. Valdi měřila si klimčuk? Jo, osm.
+2026-01-14 16:27:46,069 - INFO - Zpracovávám text: ' Rukavice čisté. Žádné krepitace. Výtoky z očí z noců. Valdi měřila si klimčuk? Jo, osm.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:46,377 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:46,380 - INFO - LLM extrahoval data: {'polozky': {'Krevní tlak': '120/80'}}
+2026-01-14 16:27:46,396 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:27:46,400 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:27:53,685 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:27:53,686 - INFO - Finalizuji segment řeči...
+2026-01-14 16:27:54,211 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:27:54,213 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dobře. Kapitulát měl dvě vteřiny? Tři vteřiny. Krk v pořádku? Nevidím žádné deformace, tráche a něco? Dobře.
+2026-01-14 16:27:54,213 - INFO - Zpracovávám text: ' Dobře. Kapitulát měl dvě vteřiny? Tři vteřiny. Krk v pořádku? Nevidím žádné deformace, tráche a něco? Dobře.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:27:54,523 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:27:54,526 - INFO - LLM extrahoval data: {'polozky': {'Krk': 'Bez deformací'}}
+2026-01-14 16:27:54,543 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:27:54,547 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:28:01,813 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:01,814 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:02,358 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:02,360 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dobře, prohmatávám panu Horní Končetiny. Nic nevinný na panu. Výborně. Horní Končetiny v pořádku, pan Maciano.
+2026-01-14 16:28:02,360 - INFO - Zpracovávám text: ' Dobře, prohmatávám panu Horní Končetiny. Nic nevinný na panu. Výborně. Horní Končetiny v pořádku, pan Maciano.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:02,769 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:02,775 - INFO - LLM extrahoval data: {'polozky': {'Končetiny (DK/HK)': 'V pořádku'}}
+2026-01-14 16:28:02,792 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:28:02,796 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:28:09,941 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:09,942 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:10,399 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:10,401 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  V pořádku, pan Macianos, protože už máme nízkou faturaci. A pozor, vidím, Klaudii, vidím změnu rytmu, vidím stipulaci komor. Paň, vidíme zpátky.
+2026-01-14 16:28:10,402 - INFO - Zpracovávám text: ' V pořádku, pan Macianos, protože už máme nízkou faturaci. A pozor, vidím, Klaudii, vidím změnu rytmu, vidím stipulaci komor. Paň, vidíme zpátky.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:10,708 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:10,711 - INFO - LLM extrahoval data: {'polozky': {'Poslech – srdce': 'Změna rytmu, stipulace komor'}}
+2026-01-14 16:28:10,728 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:28:10,732 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:28:18,064 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:18,068 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:18,538 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:18,543 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Vidíme spatřenou zástavu, začínáme s kompresory.
+2026-01-14 16:28:18,544 - INFO - Zpracovávám text: ' Vidíme spatřenou zástavu, začínáme s kompresory.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:18,849 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:18,853 - INFO - LLM extrahoval data: {'polozky': {'KPR (Resuscitace)': 'Zahájena'}}
+2026-01-14 16:28:18,870 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:28:18,874 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:28:26,198 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:26,200 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:26,989 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:26,991 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  ..
+2026-01-14 16:28:26,991 - INFO - Zpracovávám text: ' ..' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:27,297 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:27,297 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:28:34,323 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:34,324 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:34,827 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:34,829 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Člověk neví co je to. Člověk neví co je to. Neví, ale toč mi to. A Ivi? Pručníky.
+2026-01-14 16:28:34,829 - INFO - Zpracovávám text: ' Člověk neví co je to. Člověk neví co je to. Neví, ale toč mi to. A Ivi? Pručníky.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:35,012 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:35,014 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:28:42,451 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:42,456 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:43,033 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:43,033 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Průčině. Průčině, taky, dobré.
+2026-01-14 16:28:43,034 - INFO - Zpracovávám text: ' Průčině. Průčině, taky, dobré.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:43,215 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:43,217 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:28:50,577 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:50,579 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:50,908 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:50,909 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Minus, minus, minus, minus. To je super. Dobrý.
+2026-01-14 16:28:50,909 - INFO - Zpracovávám text: ' Minus, minus, minus, minus. To je super. Dobrý.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:51,118 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:51,121 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:28:58,707 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:28:58,707 - INFO - Finalizuji segment řeči...
+2026-01-14 16:28:59,468 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:28:59,471 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Spustím stopky. Tak spustí stopky prosím tě Olu, pak řeš dýchat těch cest. Dobré, pojď se mi pozeraj.
+2026-01-14 16:28:59,471 - INFO - Zpracovávám text: ' Spustím stopky. Tak spustí stopky prosím tě Olu, pak řeš dýchat těch cest. Dobré, pojď se mi pozeraj.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:28:59,658 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:28:59,665 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:29:06,831 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:06,831 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:07,392 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:07,394 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Máme pozor jak se to bude dělat. Tak, padněj. Přerušil kompresor kontrolerů. Nebo můžeme na mě duchat, ne? Protože máme zpatřenou zastavu.
+2026-01-14 16:29:07,394 - INFO - Zpracovávám text: ' Máme pozor jak se to bude dělat. Tak, padněj. Přerušil kompresor kontrolerů. Nebo můžeme na mě duchat, ne? Protože máme zpatřenou zastavu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:07,811 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:07,812 - INFO - LLM extrahoval data: {'polozky': {'Kvalita vědomí (Orientace)': 'Nepříznivá', 'Zajištění dýchacích cest (Basic)': 'Dýchání přes mě'}}
+2026-01-14 16:29:07,827 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:29:07,832 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:29:14,956 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:14,958 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:15,440 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:15,445 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Protože máme spotřenou zastavu. Spotřenou zastavu, přesně tak. Tak nabídneme. Podáváme výboj.
+2026-01-14 16:29:15,445 - INFO - Zpracovávám text: ' Protože máme spotřenou zastavu. Spotřenou zastavu, přesně tak. Tak nabídneme. Podáváme výboj.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:15,655 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:15,660 - INFO - LLM extrahoval data: {'polozky': {'Elektrická terapie': 'Výboj'}}
+2026-01-14 16:29:15,678 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:29:15,682 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:29:23,087 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:23,088 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:23,690 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:23,696 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Výboj podám. Výboj podám, pokračuj. Můžeme třikrát. Můžeme třikrát, tak můžeme výběr. Podávám výboj.
+2026-01-14 16:29:23,697 - INFO - Zpracovávám text: ' Výboj podám. Výboj podám, pokračuj. Můžeme třikrát. Můžeme třikrát, tak můžeme výběr. Podávám výboj.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:23,995 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:24,003 - INFO - LLM extrahoval data: {'polozky': {'Elektrická terapie': 'Výboj podán'}}
+2026-01-14 16:29:24,020 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:29:24,023 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:29:31,215 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:31,216 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:31,626 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:31,631 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Podávám výboj. Počet Mačka. Výboj podán. Výboj podán, výboj, konci, cover, počet. Jaký výboj mám?
+2026-01-14 16:29:31,631 - INFO - Zpracovávám text: ' Podávám výboj. Počet Mačka. Výboj podán. Výboj podán, výboj, konci, cover, počet. Jaký výboj mám?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:31,934 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:31,937 - INFO - LLM extrahoval data: {'polozky': {'Elektrická terapie': 'Výboj'}}
+2026-01-14 16:29:31,954 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:29:31,958 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:29:39,338 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:39,339 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:39,872 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:39,874 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Podávám vývoj. Vývoj podám. Nic. Vidíme v podálce koma, pokračuj. Kompresi.
+2026-01-14 16:29:39,874 - INFO - Zpracovávám text: ' Podávám vývoj. Vývoj podám. Nic. Vidíme v podálce koma, pokračuj. Kompresi.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:40,180 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:40,182 - INFO - LLM extrahoval data: {'polozky': {'KPR (Resuscitace)': 'Kompresi'}}
+2026-01-14 16:29:40,199 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:29:40,204 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:29:47,467 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:47,467 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:47,914 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:47,920 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Máme teď? Já si nevím, tak už... Už... Teď necítíme. Ne. Cože? Teď necítíme. To teď je...
+2026-01-14 16:29:47,920 - INFO - Zpracovávám text: ' Máme teď? Já si nevím, tak už... Už... Teď necítíme. Ne. Cože? Teď necítíme. To teď je...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:48,117 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:48,120 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:29:55,595 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:29:55,596 - INFO - Finalizuji segment řeči...
+2026-01-14 16:29:56,162 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:29:56,164 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Měl jsem čas a necítila jsem. Fajn. Kvády, které jste vystražili. Máme zavedenou žílu, víš tak? Nemáme.
+2026-01-14 16:29:56,165 - INFO - Zpracovávám text: ' Měl jsem čas a necítila jsem. Fajn. Kvády, které jste vystražili. Máme zavedenou žílu, víš tak? Nemáme.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:29:56,570 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:29:56,572 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:30:03,727 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:03,729 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:04,303 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:04,304 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžeš tak? Nemáme. Tak vymeníme se po tři, dva, jeden. Teď věřeš, že to je zoudýchací cesty a kompresor je. Jestli figurina má reagovat, tak to sem nechám.
+2026-01-14 16:30:04,305 - INFO - Zpracovávám text: ' Můžeš tak? Nemáme. Tak vymeníme se po tři, dva, jeden. Teď věřeš, že to je zoudýchací cesty a kompresor je. Jestli figurina má reagovat, tak to sem nechám.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:04,614 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:04,618 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:30:11,853 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:11,855 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:12,345 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:12,347 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ještě figurina má ráno, tak to třeba mít dofoknutá. Tak je to třeba mít dofoknutá.
+2026-01-14 16:30:12,348 - INFO - Zpracovávám text: ' Ještě figurina má ráno, tak to třeba mít dofoknutá. Tak je to třeba mít dofoknutá.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:12,653 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:12,655 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:30:19,979 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:19,982 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:20,484 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:20,485 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, zavadíme palivy žilu, podařilo se? Podařilo se, žilo je zavadět.
+2026-01-14 16:30:20,485 - INFO - Zpracovávám text: ' Tak, zavadíme palivy žilu, podařilo se? Podařilo se, žilo je zavadět.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:20,797 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:20,804 - INFO - LLM extrahoval data: {'polozky': {'Zajištění cévního vstupu': 'Úspěšné'}}
+2026-01-14 16:30:20,823 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:30:20,827 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:30:28,103 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:28,105 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:28,529 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:28,535 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže jak než byliš mě představit, to... Tak, tak. Tak. Ideálně bylo, že bychom něco přistupovali, že bychom můžeme
+2026-01-14 16:30:28,535 - INFO - Zpracovávám text: ' Takže jak než byliš mě představit, to... Tak, tak. Tak. Ideálně bylo, že bychom něco přistupovali, že bychom můžeme' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:28,731 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:28,735 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:30:36,237 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:36,240 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:36,777 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:36,781 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžeme přistupit do tým hlavnou zemlouk? Jo, nějakou hlavu. Já od někdo jen hlavu. A i Joelle si máme spíš než tam.
+2026-01-14 16:30:36,781 - INFO - Zpracovávám text: ' Můžeme přistupit do tým hlavnou zemlouk? Jo, nějakou hlavu. Já od někdo jen hlavu. A i Joelle si máme spíš než tam.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:37,082 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:37,085 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:30:44,362 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:44,364 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:44,641 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:44,644 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tady si máme spíš než tam. Tady posouvám i dělku o lůd.
+2026-01-14 16:30:44,644 - INFO - Zpracovávám text: ' Tady si máme spíš než tam. Tady posouvám i dělku o lůd.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:45,016 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:45,018 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:30:52,490 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:30:52,491 - INFO - Finalizuji segment řeči...
+2026-01-14 16:30:53,059 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:30:53,070 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Posouvám i dělku olu. Vlastně 30. Fajn, jak jsme na tom s časem? Skoro dvě minuty. Skoro dvě minuty, fajn, takže...
+2026-01-14 16:30:53,070 - INFO - Zpracovávám text: ' Posouvám i dělku olu. Vlastně 30. Fajn, jak jsme na tom s časem? Skoro dvě minuty. Skoro dvě minuty, fajn, takže...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:30:53,367 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:30:53,369 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:31:00,614 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:00,615 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:01,515 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:01,517 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Polový journalist
+2026-01-14 16:31:01,518 - INFO - Zpracovávám text: ' Polový journalist' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:01,750 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:01,754 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:31:08,747 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:08,749 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:09,141 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:09,144 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já budu to zkusit na radek ať to dopustím. Tak, dělám kontrolu rytmu. Je tady etno.
+2026-01-14 16:31:09,144 - INFO - Zpracovávám text: ' Já budu to zkusit na radek ať to dopustím. Tak, dělám kontrolu rytmu. Je tady etno.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:09,452 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:09,453 - INFO - LLM extrahoval data: {'polozky': {'EtCO2': 'přítomno'}}
+2026-01-14 16:31:09,471 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:31:09,475 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:31:16,872 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:16,875 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:17,286 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:17,288 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Zvím, fibrinovací kolor, tak, mačky nabijím. A tak už tam nechci být.
+2026-01-14 16:31:17,288 - INFO - Zpracovávám text: ' Zvím, fibrinovací kolor, tak, mačky nabijím. A tak už tam nechci být.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:17,595 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:17,597 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:31:25,005 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:25,012 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:26,048 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:26,048 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ať už tam necháte nic. Tak jak jsem řekla, máme jistotu? Jo, ale zvuků. Je to zvuků. Ne, ne, ne, to máte jistotu.
+2026-01-14 16:31:26,049 - INFO - Zpracovávám text: ' Ať už tam necháte nic. Tak jak jsem řekla, máme jistotu? Jo, ale zvuků. Je to zvuků. Ne, ne, ne, to máte jistotu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:26,456 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:26,460 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:31:33,129 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:33,131 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:33,680 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:33,683 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Promiň, promiň. Tak nabíjím, ruce pryč, podávám výboj, výboj podám, popresu, popresu. Jo a děláme zároveň na...
+2026-01-14 16:31:33,683 - INFO - Zpracovávám text: ' Promiň, promiň. Tak nabíjím, ruce pryč, podávám výboj, výboj podám, popresu, popresu. Jo a děláme zároveň na...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:34,086 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:34,088 - INFO - LLM extrahoval data: {'polozky': {'KPR (Resuscitace)': 'Ano', 'Elektrická terapie': 'Ano'}}
+2026-01-14 16:31:34,107 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:31:34,111 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:31:41,250 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:41,253 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:41,919 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:41,920 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tohle zavele nám. Povedlo se na letemé? Dobře. Nikde nám to, když to profil, povedlo se. Tak, podáli jsme výbor.
+2026-01-14 16:31:41,920 - INFO - Zpracovávám text: ' Tohle zavele nám. Povedlo se na letemé? Dobře. Nikde nám to, když to profil, povedlo se. Tak, podáli jsme výbor.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:42,128 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:42,134 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:31:49,380 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:49,381 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:49,872 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:49,876 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, podávali jsme výboj, to byl zatím první až po třetí výboj, kdy se budou podávat léky. Fajn. Děkujeme, že jste byli. Můžeme chodit na ventilátor?
+2026-01-14 16:31:49,876 - INFO - Zpracovávám text: ' Tak, podávali jsme výboj, to byl zatím první až po třetí výboj, kdy se budou podávat léky. Fajn. Děkujeme, že jste byli. Můžeme chodit na ventilátor?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:50,406 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:50,409 - INFO - LLM extrahoval data: {'polozky': {'Elektrická terapie': '1. - 3. výboj', 'Umělá plicní ventilace (UPV)': 'ano'}}
+2026-01-14 16:31:50,427 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:31:50,433 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:31:57,510 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:31:57,516 - INFO - Finalizuji segment řeči...
+2026-01-14 16:31:58,107 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:31:58,110 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Hrd na ventilátor. Jo, oby, oby. A teď se není půl litera. Půl litera, souhlasím. Tak, co? Chceš tří den?
+2026-01-14 16:31:58,110 - INFO - Zpracovávám text: ' Hrd na ventilátor. Jo, oby, oby. A teď se není půl litera. Půl litera, souhlasím. Tak, co? Chceš tří den?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:31:58,517 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:31:58,533 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:32:05,641 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:05,642 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:06,147 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:06,150 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Co? Chceš třídat? Raz, dva, tři. Já to trošku zníhám. Super, moc děkuju. Možná by bylo fajn si naši sablejky.
+2026-01-14 16:32:06,150 - INFO - Zpracovávám text: ' Co? Chceš třídat? Raz, dva, tři. Já to trošku zníhám. Super, moc děkuju. Možná by bylo fajn si naši sablejky.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:06,458 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:06,459 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:32:13,765 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:13,766 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:14,295 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:14,297 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Možná by bylo fajn si nachystat lajky. Jo, já jenom šukám, či mi nískou. Mám chystat, neboreš na to, Claudia? Jdeme. Máme 50 sekund do další kontroly rytmu. Dobré.
+2026-01-14 16:32:14,298 - INFO - Zpracovávám text: ' Možná by bylo fajn si nachystat lajky. Jo, já jenom šukám, či mi nískou. Mám chystat, neboreš na to, Claudia? Jdeme. Máme 50 sekund do další kontroly rytmu. Dobré.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:14,600 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:14,601 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:32:21,892 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:21,893 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:22,331 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:22,335 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžu kontroli rychlí. Dobré. Já vytl jsem? Jo máme vytl. Dobré, já bych potřebovala jednu.
+2026-01-14 16:32:22,335 - INFO - Zpracovávám text: ' Můžu kontroli rychlí. Dobré. Já vytl jsem? Jo máme vytl. Dobré, já bych potřebovala jednu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:22,525 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:22,530 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:32:30,016 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:30,019 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:30,474 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:30,476 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, když budou připraveny léky, můžeme si bavit o reverenzibilních těčinách za stavění.
+2026-01-14 16:32:30,477 - INFO - Zpracovávám text: ' Tak, když budou připraveny léky, můžeme si bavit o reverenzibilních těčinách za stavění.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:30,780 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:30,782 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:32:38,149 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:38,149 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:38,549 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:38,552 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  a 300g amiodonu a překlad. A přidravili jsme celé. Ano. Zatím do žily podáváme 52 litrů
+2026-01-14 16:32:38,552 - INFO - Zpracovávám text: ' a 300g amiodonu a překlad. A přidravili jsme celé. Ano. Zatím do žily podáváme 52 litrů' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:38,857 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:38,859 - INFO - LLM extrahoval data: {'polozky': {'Amiodaron': '300g', 'Zajištění cévního vstupu': 'ano', 'Objem podané tekutiny': '52 litrů'}}
+2026-01-14 16:32:38,859 - INFO - Synonymum nahrazeno: Amiodaron -> Amiodaron
+2026-01-14 16:32:38,861 - WARNING - Položka 'Objem podané tekutiny' nebyla nalezena. Přidávám ji do 'Other'.
+2026-01-14 16:32:38,878 - INFO - Tabulky a dashboard odeslány klientovi.
+2026-01-14 16:32:38,883 - INFO - Všechny tabulky aktualizovány v: /Users/jakubvavra/Documents/GitHub/Automonitoring-with-AI/app/sessions/Session_20260114_162235
+2026-01-14 16:32:46,271 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:46,272 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:46,765 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:46,766 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Abychom to podávali, aby se byl jemně kapat. Aby se nám zabralo. Nám to kapalo. Jenom nám je nabíjí všechno tady.
+2026-01-14 16:32:46,767 - INFO - Zpracovávám text: ' Abychom to podávali, aby se byl jemně kapat. Aby se nám zabralo. Nám to kapalo. Jenom nám je nabíjí všechno tady.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:47,071 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:47,074 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:32:54,399 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:32:54,401 - INFO - Finalizuji segment řeči...
+2026-01-14 16:32:54,800 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:32:54,803 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, máme 10 sekund do kontroly rytmu.
+2026-01-14 16:32:54,804 - INFO - Zpracovávám text: ' Tak, máme 10 sekund do kontroly rytmu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:32:55,108 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:32:55,114 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:02,531 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:02,533 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:02,944 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:02,947 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Rytmu. Chceš doprůměnit, Petra? Aha, možná. Dobře. Tak. Pět, čtyři, tři, dva. Jedna kontrola rytmu.
+2026-01-14 16:33:02,947 - INFO - Zpracovávám text: ' Rytmu. Chceš doprůměnit, Petra? Aha, možná. Dobře. Tak. Pět, čtyři, tři, dva. Jedna kontrola rytmu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:03,252 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 16:33:03,253 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:10,653 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:10,654 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:11,401 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:11,404 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Jedna kontrola rytmu, přerušují komprese. Skočíme. Vidíme fibrilaci, komorfaj, nabíjíme, nadšení.
+2026-01-14 16:33:11,404 - INFO - Zpracovávám text: ' Jedna kontrola rytmu, přerušují komprese. Skočíme. Vidíme fibrilaci, komorfaj, nabíjíme, nadšení.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:11,445 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:33:11,447 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99655, Requested 1397. Please try again in 15m8.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:33:11,447 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:18,787 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:18,788 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:19,238 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:19,241 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Nabíjíme, mačka pořád.
+2026-01-14 16:33:19,242 - INFO - Zpracovávám text: ' Nabíjíme, mačka pořád.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:19,281 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:33:19,282 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99646, Requested 1368. Please try again in 14m36.096s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:33:19,282 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:26,911 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:26,912 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:27,375 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:27,381 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Jo. Vývoj poráda? Tak. Pokračujeme v kompresi. Fajn. Léky na vene chystane, po dalším vývoji budeme obhodovat revirzí.
+2026-01-14 16:33:27,382 - INFO - Zpracovávám text: ' Jo. Vývoj poráda? Tak. Pokračujeme v kompresi. Fajn. Léky na vene chystane, po dalším vývoji budeme obhodovat revirzí.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:27,423 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:33:27,425 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99637, Requested 1404. Please try again in 14m59.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:33:27,425 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:35,039 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:35,041 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:35,627 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:35,637 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže budeme podávat. Podarujte mi to, co máme. Podarujte mi to, co máme. Podarujte mi to, co máme. Tak, už neztrpíte to od povolu.
+2026-01-14 16:33:35,639 - INFO - Zpracovávám text: ' Takže budeme podávat. Podarujte mi to, co máme. Podarujte mi to, co máme. Podarujte mi to, co máme. Tak, už neztrpíte to od povolu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:35,683 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:33:35,684 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99627, Requested 1404. Please try again in 14m50.784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:33:35,684 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:43,167 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:43,169 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:43,564 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:43,567 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Teče od někud. Od někud teče? Ten je vyvazný na oči teplotu. Ty jsi otevřený.
+2026-01-14 16:33:43,567 - INFO - Zpracovávám text: ' Teče od někud. Od někud teče? Ten je vyvazný na oči teplotu. Ty jsi otevřený.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:43,617 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:33:43,620 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99618, Requested 1390. Please try again in 14m30.912s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:33:43,620 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:51,297 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:51,298 - INFO - Finalizuji segment řeči...
+2026-01-14 16:33:51,706 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:33:51,708 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  36. 36.3. Fajn. Zazní, co jsme dělali? Jo, zazní, co jsme dělali. Ty zakorické dobře. Takže do hlavy nám neliknou.
+2026-01-14 16:33:51,709 - INFO - Zpracovávám text: ' 36. 36.3. Fajn. Zazní, co jsme dělali? Jo, zazní, co jsme dělali. Ty zakorické dobře. Takže do hlavy nám neliknou.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:33:51,745 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:33:51,745 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99608, Requested 1405. Please try again in 14m35.232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:33:51,746 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:33:59,426 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:33:59,429 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:00,056 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:00,059 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže to hlavě nám nelije. Co by teoreticky mohlo být toho, co jsme schopni vyřešit? Vidíme deviatý trachy. Ne. Nevidíme. Takže řekněme, že to nebylo.
+2026-01-14 16:34:00,059 - INFO - Zpracovávám text: ' Takže to hlavě nám nelije. Co by teoreticky mohlo být toho, co jsme schopni vyřešit? Vidíme deviatý trachy. Ne. Nevidíme. Takže řekněme, že to nebylo.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:00,100 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:00,101 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99599, Requested 1410. Please try again in 14m31.776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:00,101 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:07,544 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:07,545 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:08,195 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:08,197 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže tak, že to nebylo. Pojď podmění. Předrž. Kolik máme času? Minutu ještě.
+2026-01-14 16:34:08,198 - INFO - Zpracovávám text: ' Takže tak, že to nebylo. Pojď podmění. Předrž. Kolik máme času? Minutu ještě.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:08,233 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:08,234 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99589, Requested 1387. Please try again in 14m3.264s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:08,234 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:15,673 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:15,674 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:16,134 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:16,143 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Miloucí Ludifero. Takže, Plicní ebol je nevyřešitelný. Nevzniknou motoráky. Takže podle mě bylo čtyři tečky.
+2026-01-14 16:34:16,145 - INFO - Zpracovávám text: ' Miloucí Ludifero. Takže, Plicní ebol je nevyřešitelný. Nevzniknou motoráky. Takže podle mě bylo čtyři tečky.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:16,183 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:16,184 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99580, Requested 1395. Please try again in 14m2.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:16,184 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:23,799 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:23,801 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:24,381 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:24,384 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Můžeme být na čtyři tečky, bez nich můžeme to rádi. Stav ho na deserdeční. Můžeme. Můžeme, ale... Máme k dispozici utrazvuk? Ne máme. Ne, ne máme.
+2026-01-14 16:34:24,384 - INFO - Zpracovávám text: ' Můžeme být na čtyři tečky, bez nich můžeme to rádi. Stav ho na deserdeční. Můžeme. Můžeme, ale... Máme k dispozici utrazvuk? Ne máme. Ne, ne máme.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:24,419 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:24,420 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99571, Requested 1410. Please try again in 14m7.584s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:24,420 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:31,928 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:31,929 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:32,731 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:32,734 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Nebo ne. Nebo ne. Nebo ne. Jedině, že bychom si ho poslechli, ale stejně teď nemáme. Já si poslechla. Vidíme, že náplň krčník žijou zvýšenou? Nevím.
+2026-01-14 16:34:32,735 - INFO - Zpracovávám text: ' Nebo ne. Nebo ne. Nebo ne. Jedině, že bychom si ho poslechli, ale stejně teď nemáme. Já si poslechla. Vidíme, že náplň krčník žijou zvýšenou? Nevím.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:32,769 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:32,771 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99561, Requested 1414. Please try again in 14m2.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:32,771 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:40,058 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:40,061 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:40,472 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:40,474 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Je to způsobný křížový výšin? Nevím. Takže tohle to nemůžeme použít. Chodka pro ventilátor. Zná se mi ten telefon?
+2026-01-14 16:34:40,474 - INFO - Zpracovávám text: ' Je to způsobný křížový výšin? Nevím. Takže tohle to nemůžeme použít. Chodka pro ventilátor. Zná se mi ten telefon?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:40,514 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:40,515 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99552, Requested 1396. Please try again in 13m39.072s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:40,515 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:48,187 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:48,190 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:48,610 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:48,612 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Telefonu? Olu, telefon? Já to nečekám. Marina, zabereš vibrátor?
+2026-01-14 16:34:48,612 - INFO - Zpracovávám text: ' Telefonu? Olu, telefon? Já to nečekám. Marina, zabereš vibrátor?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:48,646 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:48,647 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99543, Requested 1381. Please try again in 13m18.336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:48,648 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:34:56,315 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:34:56,315 - INFO - Finalizuji segment řeči...
+2026-01-14 16:34:56,748 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:34:56,751 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže máte tady tímhle vibrátor, jo? Aha. A odbojíme si to? Jo, já to jenom oběhnu. Tak. Já se vytržím do kontroly. Tak, pět sekund do kontroly.
+2026-01-14 16:34:56,751 - INFO - Zpracovávám text: ' Takže máte tady tímhle vibrátor, jo? Aha. A odbojíme si to? Jo, já to jenom oběhnu. Tak. Já se vytržím do kontroly. Tak, pět sekund do kontroly.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:34:56,801 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:34:56,803 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99533, Requested 1412. Please try again in 13m36.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:34:56,803 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:04,440 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:04,441 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:04,898 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:04,899 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Pět sekund do kontroly rytmu. Tak po kontrolu. Čtyři, tři, dva, jedna. Kontrola rytmu.
+2026-01-14 16:35:04,900 - INFO - Zpracovávám text: ' Pět sekund do kontroly rytmu. Tak po kontrolu. Čtyři, tři, dva, jedna. Kontrola rytmu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:04,932 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:04,933 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99524, Requested 1392. Please try again in 13m11.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:04,933 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:12,565 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:12,566 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:12,933 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:12,940 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Vidím fibrilací komor. Tak nabijím. Tak mám nabito, ruce pryč. Podávám vývoj.
+2026-01-14 16:35:12,941 - INFO - Zpracovávám text: ' Vidím fibrilací komor. Tak nabijím. Tak mám nabito, ruce pryč. Podávám vývoj.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:12,998 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:13,001 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99514, Requested 1386. Please try again in 12m57.599999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:13,001 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:20,692 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:20,697 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:21,941 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:21,943 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  ... a na 3 kleči podávám.
+2026-01-14 16:35:21,943 - INFO - Zpracovávám text: ' ... a na 3 kleči podávám.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:22,000 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:22,008 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99504, Requested 1370. Please try again in 12m35.136s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:22,008 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:28,824 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:28,825 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:29,323 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:29,324 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Podávám 1mg adrenalinu, 300mg amioderonu a splachuju. Ty zákon. Tak. To je během druhé třetí. Ano, podávám. Podávám.
+2026-01-14 16:35:29,325 - INFO - Zpracovávám text: ' Podávám 1mg adrenalinu, 300mg amioderonu a splachuju. Ty zákon. Tak. To je během druhé třetí. Ano, podávám. Podávám.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:29,367 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:29,369 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99495, Requested 1404. Please try again in 12m56.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:29,369 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:36,950 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:36,951 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:37,364 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:37,368 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ano, podáváme. Tak. U další kontroly budeme podávat miligram A150 miligramů pod danou.
+2026-01-14 16:35:37,368 - INFO - Zpracovávám text: ' Ano, podáváme. Tak. U další kontroly budeme podávat miligram A150 miligramů pod danou.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:37,403 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:37,405 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99486, Requested 1386. Please try again in 12m33.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:37,406 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:45,077 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:45,078 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:46,744 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:46,747 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  a vypadá to jako kvůli miligramu. Až potom další. Dobrý. Tak jo.
+2026-01-14 16:35:46,747 - INFO - Zpracovávám text: ' a vypadá to jako kvůli miligramu. Až potom další. Dobrý. Tak jo.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:46,793 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:46,794 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99475, Requested 1380. Please try again in 12m18.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:46,794 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:35:53,206 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:35:53,214 - INFO - Finalizuji segment řeči...
+2026-01-14 16:35:53,857 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:35:53,860 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Celé. Tak, o, o, o, tečka, tenzák, nevíme. Toxiny. Toxiny můžou být, dáme mu ten. Jako... No.
+2026-01-14 16:35:53,860 - INFO - Zpracovávám text: ' Celé. Tak, o, o, o, tečka, tenzák, nevíme. Toxiny. Toxiny můžou být, dáme mu ten. Jako... No.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:35:53,898 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:35:53,900 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99467, Requested 1401. Please try again in 12m29.952s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:35:53,900 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:01,332 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:01,335 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:01,792 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:01,795 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Jako... je to... ano, ano, jako proč ne? Můžeme... neuzhodím to. Tak prosím tě, máme se pod návrh sem ve spray.
+2026-01-14 16:36:01,795 - INFO - Zpracovávám text: ' Jako... je to... ano, ano, jako proč ne? Můžeme... neuzhodím to. Tak prosím tě, máme se pod návrh sem ve spray.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:01,841 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:01,843 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 1395. Please try again in 12m16.992s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:01,843 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:09,456 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:09,460 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:09,944 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:09,947 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já jsem se podlala, co ne spray. Já jsem se podlala, co ne spray. Bude kontrola, budeš kontrola? Bude teď snobu kontrola? Jo, něco se mění.
+2026-01-14 16:36:09,947 - INFO - Zpracovávám text: ' Já jsem se podlala, co ne spray. Já jsem se podlala, co ne spray. Bude kontrola, budeš kontrola? Bude teď snobu kontrola? Jo, něco se mění.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:09,996 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:10,000 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99448, Requested 1407. Please try again in 12m18.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:10,000 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:17,586 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:17,587 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:18,081 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:18,083 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ale počkej, ale až v koncelé to bude. Aha. Zatím se nebráni, poprosím. Nebráni. To je jedno, až se hlášně něco děje.
+2026-01-14 16:36:18,084 - INFO - Zpracovávám text: ' Ale počkej, ale až v koncelé to bude. Aha. Zatím se nebráni, poprosím. Nebráni. To je jedno, až se hlášně něco děje.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:18,124 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:18,125 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99439, Requested 1406. Please try again in 12m10.079999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:18,125 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:25,712 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:25,714 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:26,121 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:26,124 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  To je jedno, až stále ještě jako teď sekund... Já píšem na to kap do dřívku, takže bysme to až...
+2026-01-14 16:36:26,124 - INFO - Zpracovávám text: ' To je jedno, až stále ještě jako teď sekund... Já píšem na to kap do dřívku, takže bysme to až...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:26,159 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:26,160 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99430, Requested 1391. Please try again in 11m49.344s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:26,160 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:33,841 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:33,841 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:34,267 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:34,270 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Takže bychom to až mohli udělat. Jestli píše kapino, tak budu zkusit. No tak, chceš to? Aha. Počkej, zkus.
+2026-01-14 16:36:34,270 - INFO - Zpracovávám text: ' Takže bychom to až mohli udělat. Jestli píše kapino, tak budu zkusit. No tak, chceš to? Aha. Počkej, zkus.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:34,303 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:34,303 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99420, Requested 1399. Please try again in 11m47.616s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:34,303 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:41,971 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:41,974 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:42,515 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:42,517 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Konečně. Konfluvá rytm, no. A je to píše na tackset? Píše to synos. Máme pulse?
+2026-01-14 16:36:42,518 - INFO - Zpracovávám text: ' Konečně. Konfluvá rytm, no. A je to píše na tackset? Píše to synos. Máme pulse?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:42,554 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:42,555 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99411, Requested 1391. Please try again in 11m32.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:42,556 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:50,093 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:50,095 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:50,551 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:50,553 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Máme puls? Jest. Tento je tvý. Máme puls. Dobře. Dobře. Tak. Pane! Slyšíme se?
+2026-01-14 16:36:50,553 - INFO - Zpracovávám text: ' Máme puls? Jest. Tento je tvý. Máme puls. Dobře. Dobře. Tak. Pane! Slyšíme se?' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:50,591 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:50,593 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99401, Requested 1389. Please try again in 11m22.56s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:50,593 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:36:58,227 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:36:58,229 - INFO - Finalizuji segment řeči...
+2026-01-14 16:36:58,697 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:36:58,699 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Slyšíme se. Brání se ajdolce? Nebrání se ajdolce. Na toho ztílí podnět? Nereaguje. Tak se stane.
+2026-01-14 16:36:58,700 - INFO - Zpracovávám text: ' Slyšíme se. Brání se ajdolce? Nebrání se ajdolce. Na toho ztílí podnět? Nereaguje. Tak se stane.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:36:58,747 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:36:58,749 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99392, Requested 1397. Please try again in 11m21.695999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:36:58,750 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:06,355 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:06,358 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:07,047 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:07,050 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak se stavíte. Hypoklikemii neměl, hypotermii neměl. Hypovolemii taky asi ne, nevíme.
+2026-01-14 16:37:07,050 - INFO - Zpracovávám text: ' Tak se stavíte. Hypoklikemii neměl, hypotermii neměl. Hypovolemii taky asi ne, nevíme.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:07,093 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:07,093 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99382, Requested 1389. Please try again in 11m6.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:07,094 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:14,481 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:14,485 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:14,984 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:14,987 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Nemohl? Ne, ne. Byl v tři vteřině. Já si taky myslím, nebo bylo to hnubito do xyny, cože? Bylo to 1%
+2026-01-14 16:37:14,987 - INFO - Zpracovávám text: ' Nemohl? Ne, ne. Byl v tři vteřině. Já si taky myslím, nebo bylo to hnubito do xyny, cože? Bylo to 1%' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:15,104 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:15,106 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99373, Requested 1398. Please try again in 11m6.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:15,106 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:22,611 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:22,612 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:23,127 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:23,129 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Byly to i na depresi? Elevace, depresa... Byly taky elevace v AVR a depresie jako difuzně. To by nejlepší, než výkon. Tak skupinkou souhlasím.
+2026-01-14 16:37:23,129 - INFO - Zpracovávám text: ' Byly to i na depresi? Elevace, depresa... Byly taky elevace v AVR a depresie jako difuzně. To by nejlepší, než výkon. Tak skupinkou souhlasím.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:23,171 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:23,175 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99364, Requested 1403. Please try again in 11m2.688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:23,176 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:30,736 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:30,738 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:31,267 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:31,269 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak máme rozk, takže postělá bych mu kyslý na vakcín. Tohle teď nežilo, tlakově na toho řadisko.
+2026-01-14 16:37:31,269 - INFO - Zpracovávám text: ' Tak máme rozk, takže postělá bych mu kyslý na vakcín. Tohle teď nežilo, tlakově na toho řadisko.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:31,308 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:31,309 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99354, Requested 1393. Please try again in 10m45.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:31,309 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:38,862 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:38,864 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:39,312 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:39,313 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Jak bylo bylo, když byste měli vyrvat léčovku, napnout kisku a pomalit ho? Ne, zatím se nebráň, já bych ho nechal taky.
+2026-01-14 16:37:39,314 - INFO - Zpracovávám text: ' Jak bylo bylo, když byste měli vyrvat léčovku, napnout kisku a pomalit ho? Ne, zatím se nebráň, já bych ho nechal taky.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:39,351 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:39,353 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99345, Requested 1399. Please try again in 10m42.816s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:39,353 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:46,988 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:46,989 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:47,455 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:47,457 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já bych to nechtěla taky. ... Sklípko načíst byt? Byla to jenom...
+2026-01-14 16:37:47,458 - INFO - Zpracovávám text: ' Já bych to nechtěla taky. ... Sklípko načíst byt? Byla to jenom...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:47,498 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:47,498 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99336, Requested 1382. Please try again in 10m20.352s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:47,498 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:37:55,114 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:37:55,114 - INFO - Finalizuji segment řeči...
+2026-01-14 16:37:55,493 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:37:55,494 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Vyhledá to jako poslouchaní srdce. Zvířat nejvíce. Znovu si točíme 20 slov.
+2026-01-14 16:37:55,494 - INFO - Zpracovávám text: ' Vyhledá to jako poslouchaní srdce. Zvířat nejvíce. Znovu si točíme 20 slov.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:37:55,543 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:37:55,544 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99326, Requested 1390. Please try again in 10m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:37:55,544 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:03,245 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:03,247 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:03,740 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:03,744 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Znovu si točíme do vlastní slovo, tak je to pořád stejný? Tak, já bych o toho... A, OK. AVR, elevace.
+2026-01-14 16:38:03,745 - INFO - Zpracovávám text: ' Znovu si točíme do vlastní slovo, tak je to pořád stejný? Tak, já bych o toho... A, OK. AVR, elevace.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:03,782 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:03,783 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99317, Requested 1395. Please try again in 10m15.168s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:03,783 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:11,372 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:11,373 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:11,989 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:11,991 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Je to taková elevace a všude je to jako divný. Může to být dvě atardity, ale může to být stevý. Dobře, slatuju na tom Bobo, já bych si mu dala kapetu.
+2026-01-14 16:38:11,992 - INFO - Zpracovávám text: ' Je to taková elevace a všude je to jako divný. Může to být dvě atardity, ale může to být stevý. Dobře, slatuju na tom Bobo, já bych si mu dala kapetu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:12,035 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:12,037 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99307, Requested 1410. Please try again in 10m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:12,038 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:19,497 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:19,499 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:20,029 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:20,031 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já bych si mu dala kapetu, já aspoň pohrom. 500 ml plazma. Jo, 500 ml, dobře, tak mu to dává kapacit. Rychleji, ale ne úplně proleji. Dáváme kupat 500 ml plazma,
+2026-01-14 16:38:20,032 - INFO - Zpracovávám text: ' Já bych si mu dala kapetu, já aspoň pohrom. 500 ml plazma. Jo, 500 ml, dobře, tak mu to dává kapacit. Rychleji, ale ne úplně proleji. Dáváme kupat 500 ml plazma,' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:20,075 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:20,076 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298, Requested 1422. Please try again in 10m22.079999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:20,076 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:27,626 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:27,628 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:28,069 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:28,071 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Dáváme kapacitu elektroplazmové, je to rychleji, ne úplně proudem. Dobře, co to je, nevím, co to je. Ale, ale, ale, já bych chtěla...
+2026-01-14 16:38:28,072 - INFO - Zpracovávám text: ' Dáváme kapacitu elektroplazmové, je to rychleji, ne úplně proudem. Dobře, co to je, nevím, co to je. Ale, ale, ale, já bych chtěla...' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:28,110 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:28,111 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99288, Requested 1408. Please try again in 10m1.344s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:28,111 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:35,753 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:35,756 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:36,212 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:36,214 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Ale, ale, ale, já bych, já bych... ... Glimtču, prosím, než teplo to ještě... Já bych se značila možný kvémotný,
+2026-01-14 16:38:36,215 - INFO - Zpracovávám text: ' Ale, ale, ale, já bych, já bych... ... Glimtču, prosím, než teplo to ještě... Já bych se značila možný kvémotný,' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:36,262 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:36,265 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99279, Requested 1399. Please try again in 9m45.791999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:36,265 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:43,881 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:43,884 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:44,442 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:44,445 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Já bych se nadívala možný pan odpověď, aby se mi na nož nalepla bádla. Aha. Kdyby něco. Kdyby se měl mén alebo oči, tak se měl mén alebo oči. A měl bych si nalepat na sebou, tak si měl mén alebo oči, tak bádla.
+2026-01-14 16:38:44,446 - INFO - Zpracovávám text: ' Já bych se nadívala možný pan odpověď, aby se mi na nož nalepla bádla. Aha. Kdyby něco. Kdyby se měl mén alebo oči, tak se měl mén alebo oči. A měl bych si nalepat na sebou, tak si měl mén alebo oči, tak bádla.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:44,478 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:44,479 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99270, Requested 1432. Please try again in 10m6.528s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:44,479 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:52,008 - WARNING - Dosažena maximální délka segmentu, finalizuji.
+2026-01-14 16:38:52,009 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:53,182 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:53,183 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tady vám nenadím. Dobrý koncept brzo mi přinášely jednu tápláku, nervous nechla chát, takže umoz Titka přinášela chtít
+2026-01-14 16:38:53,184 - INFO - Zpracovávám text: ' Tady vám nenadím. Dobrý koncept brzo mi přinášely jednu tápláku, nervous nechla chát, takže umoz Titka přinášela chtít' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:53,224 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:53,225 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99259, Requested 1401. Please try again in 9m30.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:53,225 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:38:57,415 - INFO - Finalizuji segment řeči...
+2026-01-14 16:38:57,416 - INFO - Nahrávání zastaveno klientem.
+2026-01-14 16:38:57,572 - INFO - Soubor s nahrávkou uzavřen.
+2026-01-14 16:38:57,573 - INFO - Audio resources uvolněny
+2026-01-14 16:38:57,859 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-01-14 16:38:57,862 - INFO - [GROQ (whisper-large-v3) PŘEPIS]  Tak, a jak bych ho vezla? Tohle nevyřešíme tady. Já už nevím, skupinu.
+2026-01-14 16:38:57,863 - INFO - Zpracovávám text: ' Tak, a jak bych ho vezla? Tohle nevyřešíme tady. Já už nevím, skupinu.' pomocí llama-3.3-70b-versatile
+2026-01-14 16:38:57,906 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-01-14 16:38:57,907 - ERROR - Chyba při komunikaci s GROQ: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k0y73k5aeyvsqrs018bkk0jv` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99254, Requested 1384. Please try again in 9m11.232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-01-14 16:38:57,907 - INFO - Žádná relevantní data k aktualizaci nebo chyba LLM.
+2026-01-14 16:39:00,178 - INFO - Požadavek na reset session.

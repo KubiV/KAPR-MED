@@ -1,0 +1,109 @@
+Čas;Přepsaný text;Extrahovaná data;JSON Text
+2026-01-14 15:34:15;Dobrý den, pane. Dobrý den.;;Dobrý den, pane. Dobrý den.
+2026-01-14 15:34:23;Dobrý den, halo, slyšíte nás? Pane? Halo, halo, slyšíte nás? Reaguju.;;Haló, slyšíte nás? Pane? Haló, haló, slyšíte nás? Reaguje? Bolí vás něco?
+2026-01-14 15:34:32;Reaguje? Bolí vás něco? Co se toho říká? Tak ty, co nemějí;;Tak ho asi položíme. Tak teď se na něj...
+2026-01-14 15:34:40;Tak teď se na něj dívám, vidím nějakou odřejinu. Nějakou pichy. Pát hnedičky. Dobře, tak.;{'polozky': {'Barva kůže': 'odřeny, pichy, hnědičky'}};Dívám se na něj, vidím nějakou odřeninu. Něco, nějaké vpichy?
+2026-01-14 15:34:48;Takže tak no.;;
+2026-01-14 15:34:56;Titulky vytvořil JohnyX.;;
+2026-01-14 15:35:04;Titulky vytvořil JohnyX.;;
+2026-01-14 15:35:12;Tady je můj témat. Tady je můj témat. Tady je můj témat.;;
+2026-01-14 15:35:20;Titulky vytvořil JohnyX.;;
+2026-01-14 15:35:29;Tě to dýchám. A dýchám symetricky.;{'polozky': {'Symetrie dýchání': 'Symetrické'}};hmm
+2026-01-14 15:35:37;A dýchá symetricky. Ok, tak dáme ten. Je tam... Je tady čitla na... Na saturaci.;{'polozky': {'Symetrie dýchání': 'Symetrické'}};Dýchá symetricky Tak dáme ten, emmmm Počkej tady je čidlo na... na saturaci
+2026-01-14 15:35:45;Na saturaci. Mně to už je 20, ale... Nechůj za minutu.;{'polozky': {'SpO2': '20'}};Mě to vyšlo 25. Dechou za minutu. 94. Tak mi dáme kysliček.
+2026-01-14 15:35:53;Můžeme?;;Můžeme.
+2026-01-14 15:36:01;55 tůjů, už kubra de Cartier.;;55 pulzů, bradykardie Dýchání jaký?
+2026-01-14 15:36:09;Sklípkový vyohrančený ozby.;;Sklípkový a dvě ohraničený ozvy.
+2026-01-14 15:36:17;Sklíkový biohrenčený odbyt. Kapilární návrh. Tři vteřiny. Tak dáváme kyslík, pustíme tak 8 litrů.;{'polozky': {'Kapilární návrat': '', 'Oxygenoterapie': '8 l/min'}};Sklípkový, dvě ohraničený ozvy. Kapilární návrat? Tři vteřiny. Tak dáváme kyslíku, pustíme tak 8 litrů.
+2026-01-14 15:36:25;Máme tak 8 litrů. Tady se mě kouzace cítí? Necítíme. Jaký má tlak?;;Periferní pulzace cítí? Necítíme. Jaký má tlak?
+2026-01-14 15:36:34;Tak natočím.;;Tak natočíme tlak.
+2026-01-14 15:36:42;Pane, slyšíte nás?;;Ano, to ne. Pane, slyšíte nás?
+2026-01-14 15:36:50;Slyšíte nás? Haló? Pane? Nízký. Nedotekovaný ten.;;Haló? Pane? Nízký. Nedotekovaný ten.
+2026-01-14 15:36:58;Tak zkusíme natočit ekváldy ještě. Já zjistím, že jim nejací.;;Tak zkusíme natočit EKG ještě. Já zajistím žílu asi, co?
+2026-01-14 15:37:06;Titulky vytvořil JohnyX.;;
+2026-01-14 15:37:14;Zajistujeme dva živý vstupy.;;Zajišťujeme dva žilní vstupy.
+2026-01-14 15:37:22;...;;Je hrozně úzký ten komplex celý.
+2026-01-14 15:37:30;Tak jo, ještě budu hlát. Tak, sahám na hlavu, nebolí vás něco?;;To je normální. Tak jo, já ještě prohmátnu. Tak, sahám na hlavu. Nebolí vás něco?
+2026-01-14 15:37:39;Tak, sáhám na hlavu, nebolí vás něco? Slyšíte nás pane? Já slyším.;;Slyšíte nás pane? Neslyší
+2026-01-14 15:37:47;Konec.;;Dáme mu něco do žíly. Dáme mu něco do žíly.
+2026-01-14 15:37:55;Já bych chtěla podat něco do židáho. Já teď je půjdu.;;
+2026-01-14 15:38:03;Pane, halo, slyšíte nás?;;Pane, haló, slyšíte nás? ...toho kyslíku
+2026-01-14 15:38:11;Zatím se předáváme do toho kyslíku. Tak dáme 10 litrů ten kyslík. Ahoj, máte vrátka. Trošku vyšeho kyslíku. Tenhle kyslík dáme do tenhle kyslíku.;{'polozky': {'Oxygenoterapie': '10 l'}};Tak dáme 10 litrů ten kysílk. Trošku zvyšujeme kyslík. Nemáme kisliček, dáme kisliček.
+2026-01-14 15:38:19;A západně a co dáváme? Fydiologické rozkaz. Já jmenuji to bolus.;;Necítím žádnou rezistenci nebo něco takového? A dáváme, co dáváme? Fyziologický roztok. Dáme nejdřív bolus a potom dáme kapat.
+2026-01-14 15:38:27;Můžeme říct bolus a potom dáme kapat? Taky. A když jíme to vláště, dále to... Díváme to ruce izokorický.;;A když zvýššíme ten tlak, tak dáme to. Má zornice, izokorický.
+2026-01-14 15:38:35;... a měřím teplotu... ... 36 a... ... 63;{'polozky': {'Tělesná teplota (TT)': '36'}};A měřím teplotu. Třicet šest?
+2026-01-14 15:38:44;6? 6 a 3. 36, 3. A 8 na kloubku. OK. Tak jo. Ký alkohol nevíte, tak jo, nevíte.;;Třicet šest tři. Gylkémie? Osmu a půl OK.
+2026-01-14 15:38:52;Tak jo. I alkoholový, to taky jo necítíme. Mír. Tak to je moc mít.;;Alkoholový nebo něco takového necítíme? Mírně Můžeme pro ně ještě něco udělat?
+2026-01-14 15:39:00;Tak tady mám si... Tak na chvíli jsem sehala. Tak já chramečku. Můžeme pro ně ještě něco udělat? Máme zajištěný;;Máme zejištěný. dejchá.
+2026-01-14 15:39:08;Máme zajištěný dejta. Přeměřujeme plak.;;Přeměřujeme tlak?
+2026-01-14 15:39:16;Můžeme přeměřit tla?;;Tady? Nahoře, nad tím. Tady, tady, tady. Aha, jo.
+2026-01-14 15:39:24;Hele máme nějakou tu... ...tej komorový je. Takže bych měla asi...;;Hele, máme nějakou tu... Taková je.
+2026-01-14 15:39:32;Titulky vytvořil JohnyX.;;
+2026-01-14 15:39:40;Děkuji vaše jednostka. Já mám to stáhnout dole. Přeji hlasově, co bych dělala. Dáváme go.;;Dáváme gel.
+2026-01-14 15:39:49;Tak, snímáme. Tohleto je komorovka, takže... Můžeme. Že dotýkáte si nikdo?;;Snímáme. Tohleto je komorovka, takže můžeme. Nedotýkáte se nikdo?
+2026-01-14 15:39:57;že dotýkáte se nikdo, tak podáváme výboj.;;tak podáváme výboj.
+2026-01-14 15:40:05;Tak jo, a začínáme mačkat, takže mám. Tak máš, Eli, ten.;;Tak jo, a začínáme mačkat. Takže mám. Tak máš Eli ten, vytáhneš...
+2026-01-14 15:40:13;Tak máš eletén, vytáhneš dvě pěti.;;
+2026-01-14 15:40:21;Děkujeme.;;
+2026-01-14 15:40:29;Děkujeme.;;
+2026-01-14 15:40:37;;;
+2026-01-14 15:40:45;Titulky vytvořil JohnyX.;;
+2026-01-14 15:40:54;Titulky vytvořil JohnyX.;;
+2026-01-14 15:41:02;Ale jde pro slib. Tak jenom koučky.;;Je to prasklý, nech to bejt
+2026-01-14 15:41:10;Pojďši kej. Taky mám začkat, ne?;;Jo. Držíš? Jo.
+2026-01-14 15:41:18;Tak jehož ještě každá. Tři, dva, tři, tři, tři, tři, tři, tři.;;Tak jo. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+2026-01-14 15:41:26;Tak to, šájte, když navíc ten adrenér.;;Tak to jde na ten adrenalin
+2026-01-14 15:41:34;...;;Ten je podle mě až potřebně potr. A nemáš ještě zkusit ten defík?
+2026-01-14 15:41:43;ty jo nakonec to p charismatico;;Ne, ne, ne. Jo celá amluka viď
+2026-01-14 15:41:50;Já si myslím, že ten je až potom. A nemáš ještě zkusit ten defeat? Jo.;;A s tím se poprvé podává i amiodaron ne? Ten je podle mě až po třetí minutě A máme asi ještě zkusit ten defík? Jo. Jo.
+2026-01-14 15:41:59;Tak já udělám ještě jednu, já nevím, kolik mám, já jsem se podmínila koukat na hodiny, ale tak zkusili bychom ty defi.;;To je ještě jeden defík. A já bych možná, tak já udělám ještě jednu, já nevím kolik mám, já jsem se podmínila koukat na hodiny, ale tak zkusili bychom ten defík.
+2026-01-14 15:42:07;On týde vý.;;Máš to tam u sebe, takže...
+2026-01-14 15:42:15;Takže budu však připraveny na zájmení. Váleží mě, jestli můžu.;;Takže já mám když tak připravený adrenalin Máme žilu. Jo Takže zkusíme znovu.
+2026-01-14 15:42:23;Takže zkusíme znovu defík. Takže dáváme gel, nabídíme.;;Takže zkusíme znovu defík. Takže dáváme gel, nabíjíme.
+2026-01-14 15:42:31;Podali jsme Lýbovi.;;Podali jsme výboj. A pokračujeme dále.
+2026-01-14 15:42:39;...;;To je další
+2026-01-14 15:42:47;Jo, dobře. Můžeme ještě jednotlivým vajbem, kterým dáme nějakou takovou stranu. Já bych to potřebovala.;;
+2026-01-14 15:42:56;Já vím, že po třech lípoch se dává ten adrenér. Já vím, že mám ten adrenér. S námi mám třech kucučík do špivu. Špiváka.;;Tak já podám ten adrenlin
+2026-01-14 15:43:04;Štupadáváme do výjezdky do výhoře.;;Podáváme 1 mg adrenalinu.
+2026-01-14 15:43:12;Nějakým dalekýmdem .. Jestli Mỹ imbičkawe imagí krpoucí uk� יי;;
+2026-01-14 15:43:20;Grandaurus H dictatorship. Prosí nám, kdo má objed fearsi Silvermane stones?;;Který si dáme? Amiodaron. Tři sta. Tři sta miligramů?
+2026-01-14 15:43:28;Moถ ankou reflectsorch Im nějak ability;;že jo?
+2026-01-14 15:43:36;Ne, tak je to třistá. Tak ještě jednou, pak musíme ještě jednou vytnout.;;Tak ještě jednu a pak zkusíme ještě jednu odjetnit. Tak ještě jednu a pak zkusíme ještě jednu.
+2026-01-14 15:43:44;A potom se... co? Máš to potom? Že dáme početníků.;;A potom... Co? No co to?
+2026-01-14 15:43:52;...;;Že dáme početní ten vývoj, tak to vyhledáte na nádavku. Jo. Je připravený.
+2026-01-14 15:44:00;Zkusíme ještě jednou.;;Zkusíme ještě jednou. Tak, nažeme, nabíjíme,
+2026-01-14 15:44:09;nabídíme, nikdo se nedotýkáme a dáváme výboj.;;nikdo se nedotýkáme a dáváme vývoj.
+2026-01-14 15:44:17;Titulky vytvořil JohnyX.;;
+2026-01-14 15:44:25;...;;podáváme 300 mg amiodaronu
+2026-01-14 15:44:33;No ale to dává ještě jedno. No ale to dává ten adrenál. Ten adrenál se pokračuje pořád. No ale to je jedno.;;no a po těch 4 cyklech se podává znova. Ten adrenalin, ten amiodaron? Po třech
+2026-01-14 15:44:41;...;;Už se to mám, že to vychází nějakým účinným středím. Podle mě uděláme tyhle čtyři 30 ku 2, a pak to dáme další.
+2026-01-14 15:44:49;Myslím, že tady je předsedka, která má hodnotu.;;Jo, tak to takhle střídámě.
+2026-01-14 15:44:58;fireworks;;Nic, jo? Ne.
+2026-01-14 15:45:05;Titulky vytvořil JohnyX.;;
+2026-01-14 15:45:14;Titulky vytvořil JohnyX.;;
+2026-01-14 15:45:22;Titulky vytvořil JohnyX.;;
+2026-01-14 15:45:30;Titulky vytvořil JohnyX.;;
+2026-01-14 15:45:39;Jsi mi PE incremental. Dneska se tady něco abys měit. Tak to je to.. Si myslíš. Tady je konec.;;Zkusíme zanalyzovat.
+2026-01-14 15:45:46;Nadejche. Nadejche. Tak nadejche. Tak nadejche. Tak nadejche.;;Hele sinus
+2026-01-14 15:45:54;Jo. Ty vole, ještě nezapadá. Nezapadá.;;
+2026-01-14 15:46:03;Pane, slyšíte nás? Pane? Ne, já to nic, tak zkušíme to.;;Ty vogo Pane slyšíte nás? Pane? Ee, nereaguje.
+2026-01-14 15:46:11;Tak zase někdy způsobíme to.;;
+2026-01-14 15:46:19;No a já bych se měli květně zlejela, no. Uvíme, co ten dla, když budu to dál.;;
+2026-01-14 15:46:27;No, jsem nízký. No tak zkusím mu dát ještě... Chceš mu dát nor? Nedávám tady nor, ale já bych mu dal spíš ještě nějakej...;{'polozky': {'Noradrenalin': ''}};můžeme ten tlak. nízkej. Hele zkusíme mu dát ještě... Chceš mu dát nor?
+2026-01-14 15:46:35;Já bych mu dala spíš ještě nějakou takovou, no ještě víc, nějaký bolus. Já bych prostě udělala takový to, jak to tím přetlakem naroješ do vnitř. Jo, přetlakovou manželou.;;Já bych mu spíš dala ještě tekutinu. Nějakej bolus. Já bych udělala, jak to přetlakem narveš dovnitř.
+2026-01-14 15:46:43;Manžetu, myslíte? No no, se to dá, že to jenom zmáčkáš a prostě se tam za toho hledáš podle mě. Že jako nepotřebuješ. Tak jo, tak tohle pak jdeme.;;Přetlakovou manžetu myslíte. No já myslela, jak to zmáčneš a dát dovnitř
+2026-01-14 15:46:51;Tak tohle pak jedeme. Dobře. Tady je Fida. Takhle tam před takovým momentem to...;;Jo tak tohle
+2026-01-14 15:46:59;před takovou hodinou to... A to jsi dala? No, v studio. Tak já jsem taky mravila,;;tady je fýzák. Přetlakovou manžetou
+2026-01-14 15:47:08;A že to tam může říkat i kvěma přístupama, když je to hodně málo.;;
+2026-01-14 15:47:15;Zkusíme přeměřit ten tlak, jestli by vám pomohlo. Zkouším teda slovofurní skoro saturní.;;zkusíme přeměřit ten tlak
+2026-01-14 15:47:24;Začněte na svamofilní skotu saturací. A kolik máme kyslí? 10. 10. Zkusíme 12 litrů kyslí. Možná to teoreticky můžeme;{'polozky': {'SpO2': '10', 'Oxygenoterapie': '12 l'}};Slyšíte nás? Má hodně nízkou tu saturaci? Kolik má kyslíku? 10. 10 až 12 litrů kyslíku
+2026-01-14 15:47:32;Možná to teoreticky můžeme úplně voholit, můžeme dál u něj maximálně, že to nemusí mít to zvlaky těžší. Já to necháku.;;
+2026-01-14 15:47:40;Já to na chvilku. On je i pomalej prostě. Takhle dělat nic nebo...;;je pomalej prostě
+2026-01-14 15:47:48;Tak hvězdně cítím trochu alkohol, bych mohl si dát nějakou trochu nebo něco. To nevím, jestli řešíme.;;tak co máme - je z něj trochu cítit alkohol, mohl si dát nějakou drogu nebo něco, ale to stejně nevyřešíme
+2026-01-14 15:47:56;No to nevím, jestli tady křešíme, takže živou máme, můžeme ještě něco jiného. Jako je divný, že na to, že má nízký tlak, má i brady kardy.;{'polozky': {'Krevní tlak': 'nízký', 'Srdeční frekvence': 'nízká'}};můžeme ještě něco jinýho?
+2026-01-14 15:48:04;A pak má i brady kardii. No to je divný, že je pomalé a nízko. A ani samomet nechce dechat. Když úplně na maximum dáme kyslí saturace,;{'polozky': {'Srdeční frekvence': 'Bradykardie', 'Dechová frekvence': 'Žádná'}};no je divný, na to, že má nízký tlak má i bradykardii má fakt nízkou tu saturaci. když úplně na maximum dáme kyslík - saturace?
+2026-01-14 15:48:13;...;;
+2026-01-14 15:48:21;Obě plíce dýchají symetricky. Dýchají, takže ten zepk nemá. Co můžeme mít ještě? 4H4T?;{'polozky': {'Symetrie dýchání': 'Symetrické'}};A ty plíce dýchají symetricky? Jo
+2026-01-14 15:48:29;Tenzak, hypotermie a kalémie, to teď nezjistíme. Tamponádu. Tamponádu, je asi nejpravdopodobnější.;;Co ještě můžeme. Čtyři H čtyři T hypotermie, eeee, kalemie, tu teď nezjistíme Tamponadu
+2026-01-14 15:48:37;To je asi nejpravděpodobně. Podle mě to má nějakou intoxikaci. To budou toxíny. Ale už má aspoň dechově. Tak já bych ho teď...;{'polozky': {'Nynější onemocnění (NO)': 'Intoxikace', 'Průchodnost dýchacích cest': 'Ano'}};Podle mě má nějakou intoxikaci prostě
+2026-01-14 15:48:42;Tak já bych ho teď převazla. No taky, tak bych to všude jistě převznal.;;A hele, už se nám aspoň dechově

@@ -1,0 +1,111 @@
+Čas;Přepsaný text;Extrahovaná data
+2026-01-14 14:50:55;Titulky vytvořil JohnyX.;
+2026-01-14 14:51:03;Titulky vytvořil JohnyX.;
+2026-01-14 14:51:11;Titulky vytvořil JohnyX.;
+2026-01-14 14:51:19;Titulky vytvořil JohnyX.;
+2026-01-14 14:51:27;Přistupujeme, koukáme se, jestli někde nějaký nebezpečí můžeme přijít.;{'polozky': {'Nebezpečí': 'Kontrola'}}
+2026-01-14 14:51:35;že někde nějaký nebezpečí můžeme přijít. Tak jsme v rukavicích, nandáváme si rukavice. Dobrý den pane, slyšíte mě? Jsme záhradná spousta. Pane?;
+2026-01-14 14:51:44;Pane, slyšíte mě? Zkouším bolestivý podměr. OK, reaguje. Má zavřený oči.;{'polozky': {'AVPU': 'Pain'}}
+2026-01-14 14:51:52;Má zavřený oči. Hele, dalo bych ho... Může teď kopřené ostrovce vypoložit? Pane, slyšíte mě? Zatřesu za ramena.;{'polozky': {'Hlava - Oči': 'Zavřené'}}
+2026-01-14 14:52:00;Zatřesu za ramena. Pane, halo, slyšíte mě? Nic. Za ty ramena, bolestivý podnět na ramena. OK, takže na bolestivý podnět reaguje, ale...;{'polozky': {'Bolest (VAS/NRS)': 'Bolest na ramena'}}
+2026-01-14 14:52:08;že na můj svět ne reaguje, ale jinak to vedli. Tak, je to úplná s těma těma.;
+2026-01-14 14:52:16;Tak když se koukám na hlavu, pohlad hlavy, nějaké traumahlavy vidím,;{'polozky': {'Nynější onemocnění (NO)': 'Trauma hlavy'}}
+2026-01-14 14:52:24;Nějaké traumahlavy vidím? Nic nevidím. Hele má tlak 74 na 50. Kolik má? 74 na 50. Dobře.;{'polozky': {'Krevní tlak': '74/50'}}
+2026-01-14 14:52:32;Dobře, nasazujeme elektrody, dáme se tu rádku.;{'polozky': {'EKG': 'Nasazení elektrod'}}
+2026-01-14 14:52:40;Chceš ho z toho stromu dát? Protože sedí. Určitě. Já bych ho asi položila.;
+2026-01-14 14:52:48;Tak to tady teďka za to. Tak koukám se, jestli...;
+2026-01-14 14:52:57;Koukám se, jestli... Já se tím zjistím, že půjde. Slyšela jsi mě? Já si ťákuji.;
+2026-01-14 14:53:05;Slyšel jsi mě? Mě slyšel? Eee, zjistil jsem. Ano, jasný. Poslouchám srdce, nevím jestli slyším na tvým úrovni, ale jsem na tvém slyšel.;
+2026-01-14 14:53:13;můžeme tady výborně do teda dvanou sesion.;
+2026-01-14 14:53:21;Zatím se vám představíme, že se vám představíme, že se vám představíme.;
+2026-01-14 14:53:29;Mám zavědano tady? OK, super. Tady bude centrálně? Jo, protože to tady nasečení.;
+2026-01-14 14:53:37;Takže pacientu peccentrálně. Tenhle pět, z toho ještě slabej. Z toho ještě udělám ty genetika, můžu poprosit?;
+2026-01-14 14:53:45;Můžu poprosit? Osm a půl. Osm a půl. Necháte mi zvukat? Jste pověděli, jak to je? Počkejte, že ještě. Poslouchám plíce.;{'polozky': {'Poslech – plíce': ''}}
+2026-01-14 14:53:54;Tak poslouchám plíce. Čistý skrypkový dýchání. Všude? Všude. Všude čistý skrypkový dýchání, dobře.;{'polozky': {'Poslech – plíce': 'Čistý skrypkový dýchání'}}
+2026-01-14 14:54:02;Dobře. Hrudník se mi zvedá symetricky. Dobře. Dýchací frekvence, tak jak to je nastavení? Můžu poprosit dvanáctku?;{'polozky': {'Symetrie dýchání': 'Symetrické', 'EKG': 'Požadována'}}
+2026-01-14 14:54:10;Můžu poprosit dvanáctku? Máme elektrody, tak... Máme elektrody? Eee... Mám rozpyknout nebo? Tak, jak to vypadá?;
+2026-01-14 14:54:18;Tak, jak to vyfará teda? Co teda se tady máme? OK, tohle je EKG, jo? OK, tohle je natáčenové.;{'polozky': {'EKG': 'Prováděno'}}
+2026-01-14 14:54:26;Máme tak jednou. Mítiš něco extra, co ti bude do očí? Ne, ne, ne, jsem tady nebojena. Tady je to nějaký, vidíš to?;
+2026-01-14 14:54:34;Takže jako vidíš to? Tohle není úplně... Chcem si ho položit, protože opět mám do této typologie. Chcem si ho položit.;
+2026-01-14 14:54:42;Neuděláme objekt do školy, položíme. 93, dáme kyslík. Dobře, dáme různý kovo masku.;{'polozky': {'SpO2': '93', 'Oxygenoterapie': 'dána'}}
+2026-01-14 14:54:50;Zavádím kistíkovou masku. Prutoxerum. Vykapat něco? Klaštou. Kolik má?;{'polozky': {'Oxygenoterapie': 'Zaváděna'}}
+2026-01-14 14:54:59;Kolik má? 45? Jo určitě, vykapa. Mně ještě chceme podat infuzi sloznové v dvěstěpade. Zatím.;
+2026-01-14 14:55:07;250 nechci žádný tistovku. Já si trošku bojím, ale ty... Dobře, tak dáváme 250 kapat infuzi. To děláme.;
+2026-01-14 14:55:15;To děláme. Střední prouz. Asi bych ho položila takhle, tak bych si to musela nějak odhledat. Pane, slyšíte mě? Zkouším balestí výpodně znova.;
+2026-01-14 14:55:23;Zkouším balistivý podně, znova hrubý kost. Nereaguje. Tep centrálně. Má chod. OK, 45 až 44.;{'polozky': {'Centrální pulz (a. carotis)': ''}}
+2026-01-14 14:55:31;OK, 45 a 44. Chci si ho dát do... ...počkej si zatnout. Tak.;
+2026-01-14 14:55:40;Tak, má periferní nejverifernitát. Můžeš prosím ještě jednou zpáčkat na ten tlak?;
+2026-01-14 14:55:47;Můžeš prosím ještě jednou odvážet na ten dvar? Ne, to tady. Tak tady. Já ještě tady.;
+2026-01-14 14:55:56;Můžu to přemýšlet? No, když tak něco cítím. Dobře, zahájíme resuscitaci, protože tlak máme. Pojď, pojď.;{'polozky': {'KPR (Resuscitace)': 'Zahájeno'}}
+2026-01-14 14:56:04;Ne, piči. Dobře, potřebuju monitorace, abych vám zjistila, jak jsme na tom. Zase jsme na lepení. Ehm, co máme? Dobře, tak se na bohno.;
+2026-01-14 14:56:12;Dobře, teď chceme buchnout. Chceme zjistit, jaký má reprůz. Teď máme daleko na reprůdy. Jo, máme daleko. Můžeme tři květ buchnout teďka.;
+2026-01-14 14:56:20;Můžeme tři ptá dvou. OK, dobře, tak jo. Budeme podávat mačky. Chceme podat, Libo, teda... 200. 250.;
+2026-01-14 14:56:28;Všechno udělat. Mám to nastavit? Tak jak je? Je to opravdu ideálně. Dobře.;
+2026-01-14 14:56:36;tak nastavujeme teda defibrilátor na 200 a chceme blokit třikrát zase.;{'polozky': {'Elektrická terapie': '200 J, 3 šoky'}}
+2026-01-14 14:56:44;Je to ochranovený. Už si boukle, řekni až pak boukneš, až pak podnikně počkej. Já to snížím teda na...;
+2026-01-14 14:56:52;Titulky vytvořil JohnyX.;
+2026-01-14 14:57:00;Kusy pryč, kyslí pryč.;{'polozky': {'Oxygenoterapie': 'off'}}
+2026-01-14 14:57:09;Prus je kryš, kyslý kryš. Tady tady. Udávám klipový. Klinitopřilož. Tak.;
+2026-01-14 14:57:17;Tak. Tak. Tak, jo, tak vybuj ho, Dan. To byl druhej, podávám třetí.;
+2026-01-14 14:57:25;Dávám třetí. Třetí výboj.;{'polozky': {'KPR (Resuscitace)': 'Třetí výboj'}}
+2026-01-14 14:57:33;Představují výboj. Tak můžeme pokračovat? Chceme pak ambuvak.;
+2026-01-14 14:57:41;A začátek času. Nevíme, jaký máme čas do těch vývojů. Ano, jenom mrknu.;
+2026-01-14 14:57:50;I hned mrknu. Padesát sedm teďka. Čtrnáct padesát sedm dvě minuty. Tak porážíme za dvě dny.;
+2026-01-14 14:57:57;Přepnu ten kyslíček teďka na ambovách, na masku. Tak polštař by byl pryč, dejme tomu, že by tam neměl,;{'polozky': {'Oxygenoterapie': 'na masku (ambu)', 'Umělá plicní ventilace (UPV)': 'použito'}}
+2026-01-14 14:58:06;Dejme tomu, že ho tam neměl, protože byl u stromu, takže s tím nepočítáme. Zachovat hlavu. Tak dvakrát, pojď. Dvakrát prodech a vůbec pokračujeme.;
+2026-01-14 14:58:14;Dvakrát prodech a vůbec jen pokračujeme. Máme tady někoho, kdo vedle? Tady někdo? Nějakej svědek? Nikoho nemáme? OK.;
+2026-01-14 14:58:22;Tak to máme, OK.;
+2026-01-14 14:58:30;Pojď teď dvakrát ten adrenalin až po nějakém tomu. To neníště teďka. Jo. Ty se snažím doplnit.;{'polozky': {'Adrenalin': '2 dávky'}}
+2026-01-14 14:58:38;Ty se snažím vypovědět, jaké peníze budeme podávat a nebezpečně.;
+2026-01-14 14:58:46;Pojď ještě jednou a pak si vystřídáme.;
+2026-01-14 14:58:55;Pojď ještě jednou a pak si vystřídáme. Teď jsme po první minutě. Za minutku uděláme ještě jednu analýzu rytmu a vedečně budeme zase boufat.;
+2026-01-14 14:59:03;a konečně budeme zase bouchbats. Ty vole, že... Ať kaže až po druhém beatboy spolu, až... Ten se dává do Tamaris a Miodarona.;{'polozky': {'Amiodaron': ''}}
+2026-01-14 14:59:11;Tak to je doznamená Amiodarona. A necháme si podrým nebo pod třetím. Teďka prodecháme a potom si to přidáme. Tak.;{'polozky': {'Amiodarone': ''}}
+2026-01-14 14:59:19;Tak, střídání, pokračujeme. Počkej, počkej, musím jít do analýzu, už je na čase. 59, už je na čase.;
+2026-01-14 14:59:27;Prostá nevěp, už je načase. Tak já ho přeji. Tak, zvlášť.;
+2026-01-14 14:59:35;Tak, zelení. Počkej, už? Už? Ok, jeden analýz rytmu. Máme připomený, že... Tohle je například.;
+2026-01-14 14:59:43;Takže, Helena, tři. Nebo chceš rovnou? No, jako můžem rovnou. Můžeš jen ty. Chceš to?;
+2026-01-14 14:59:51;Seš to o úvěru urbomenu tak. Dobře, tak já. Tak, konec. Dobře. Pět let kontrolu urbomenu tak. Nabím. Nabím. Tak.;
+2026-01-14 14:59:59;Mlidý. Tak. Kysel klír. Výboj. Tak, pokračujeme rezultatou.;
+2026-01-14 15:00:07;...;
+2026-01-14 15:00:16;Tak zuby, tak zuby. Můžu se teď vychovat? Ty nevyhledá teďka v neanedálném. Ale podrobně. Jo, ale podrobně nebo po třetím výběru.;
+2026-01-14 15:00:24;nebo po třetím dýbeli a neventilovat. Po třetím. Ale i po třetím. Prodechuj. Prodechuj. Jedna, dva, po tři. Ty tři dýbole už nebudou se počítat;
+2026-01-14 15:00:32;Ty tři výbory už na Webona se počítaj jako jeden, takže jsme teď to podíli. No jasný, teď je po třetí. Tak řekni a já to pak podám. Jo, přesně tak.;
+2026-01-14 15:00:40;Titulky vytvořil JohnyX.;
+2026-01-14 15:00:48;Tak, 1, 2, 3, 1, 2, pokračují resuscitaci, připravu si, pík mu si, připravu.;
+2026-01-14 15:00:56;Píchnu si, připravuji si. Píchnu si, připravuju si. 1 gram adrenalinu a vší z toho. Ano, dole. Tak, přesně tak.;{'polozky': {'Adrenalin': '1 gram'}}
+2026-01-14 15:01:04;Kdo jině chce, píchnu to bolusem a trošku to propáhu s bízákem. Připravuji si další vnitřní stříkačku a myl danou.;
+2026-01-14 15:01:13;Máme tříkačku a myl dávám 350. 350. Neupadlí mi taky, kvůli sem do žíly, trochla to nejšlo jenom ty záhny.;
+2026-01-14 15:01:22;tak a teď prosím tě prodechni, co dáš. Jo, řekni, mám dva dvětmi. Pojď. Jedna, dva, tři, dva.;
+2026-01-14 15:01:29;Jaké jsme minutě? Chci se vystřídat. Teďka asi... Víc do hloubky ještě, víc do hloubky a víc na střed. Udělej pak asi kontrolu.;
+2026-01-14 15:01:37;Udělej pak asi kontrolu a pak si můžeš vystřídat. No jako tak kontrolu a to. A... pepež. Bouknout asi.;
+2026-01-14 15:01:45;Když se koukám, má něco na břišeň? Nějaký úrazy?;
+2026-01-14 15:01:53;Nějaký úrazy? Úrazy na... Počkej, počkej, teďka budeme prodechovat. Teďka budeme prodechovat.;
+2026-01-14 15:02:01;Ok. Jedna, dva, vymíním se? Ano, ať. Raz, dva, tři.;
+2026-01-14 15:02:10;Tři. Nabíjem. Už jsme na první. No a tři. Tak.;
+2026-01-14 15:02:18;Tak. Jdeme za pryč, český pryč. Tak, ano, je západ.;
+2026-01-14 15:02:26;Tak, jedeme dál. Musíme teď ještě něco dělat? Pojďme to rychle zepíchnout.;
+2026-01-14 15:02:34;Můžeme tady chustepíchnout. Typovověme asi ne. Tipoxy ryšíme. Typerkeleme tyhle věci. Neuděláme teďka.;
+2026-01-14 15:02:42;Tak to neuděláme teďka. Co je to poslední? 30. Pojď, jedna, dva. Co se tady nakazuje? Hotovo, pojď. Jo. Můžeme vlastně?;
+2026-01-14 15:02:50;Mimozně. A že by už... Cítím centrálně. Cítím super.;
+2026-01-14 15:02:58;Pane, sedíme se. Periferně nic. Balestivý podnět na hrudní kost?;{'polozky': {'Mechanismus úrazu': 'Balistický podnět na hrudní kost', 'Periferní pulz (a. radialis)': 'žádný'}}
+2026-01-14 15:03:06;Ne? Prodejcháváme ještě víc. Super, nám se píše i setorace krása. Zase jednu maločebu. Kopnu se na...;
+2026-01-14 15:03:15;Kouknu se na zorníčky pána, zkontrolu zorníčky, jaké jsou? Isochorické reagující na světlo. Jedeme tady, abyste... Zase, znovu. Jmenuji 60 stepov kouknu.;{'polozky': {'Zornice (Velikost/Symetrie)': 'Isochorické', 'Fotoreakce': 'Reaguje na světlo'}}
+2026-01-14 15:03:23;Ima 60 trepovku, nepotřebujeme. Ne, ne, ne, poslední postrost pětde. Ne, ne, ne, postrost ABC. Jo, ještě jsem... Podpořád, podpořád.;
+2026-01-14 15:03:31;Já jsem pořád to pořád pořád pořád. Ok, jaký má frekvenci dechu? Tak jak dechám já. Ok, dobře, poslední je číslo svýrkový.;
+2026-01-14 15:03:39;Tak poslechnu si pacienta, co slyším na sledeční akci.;
+2026-01-14 15:03:47;Ok, ok, ok.;
+2026-01-14 15:03:55;Změříme si rozhlad. Tak, 17,81 stále prodechujeme.;{'polozky': {'Dechová frekvence': '17,81'}}
+2026-01-14 15:04:03;Tak má bilaterální dnířání stejně hluboký po ovou stranu. Dobře, zvedá se symetricky.;{'polozky': {'Symetrie dýchání': 'Symetrické', 'Hloubka dýchání': 'Stejně hluboká'}}
+2026-01-14 15:04:11;Zvedal se symetricky. Cčko, jsme. Už nám dokáhla ta infuzka. Ještě na dobrý. Co tam nedáváte?;{'polozky': {'Symetrie dýchání': 'Symetrické'}}
+2026-01-14 15:04:19;Dáváme termofoli, kterou zavádíme pod pána, kterýho si potřebujeme.;
+2026-01-14 15:04:28;Na kterého si potřebuji ještě 79. Tak to mám dvě leži. Dívně se na zádech.;
+2026-01-14 15:04:36;Dám vám ThermoPoly a překládáme na zpátek. Pokračujeme v AmbuVacu. Heart rate 56.;{'polozky': {'Srdeční frekvence': '56'}}
+2026-01-14 15:04:44;Heart rate 56. Jsem s tím spokojena. Nelíbí se mi moc ta... 72 na 41. Zrychlíme kapání infuze.;{'polozky': {'Srdeční frekvence': '56', 'Krevní tlak': '72/41'}}
+2026-01-14 15:04:52;Dělání infuze. Ok. Nápad. Až si teďka nic už neuděláme. Já bych se teďka chystála na transport, takže teď bych zatlubila a zavarmila.;
+2026-01-14 15:05:00;Já bych zatlubila a zavarmila a něco vykapat. Musíme zatlubit. Nevadí, my jsme byli jenom ve dvou. Stane se. Neměli jsme ruce jeho klubit.;
+2026-01-14 15:05:08;Neněli jsme ruce, jeho vůbec. Po vodě, po vodě. Hartality 54. Jsem s tím spokojná, nevím, jestli bysme saturace, takže teď bych jako... Ne, jsem ale jistá třátka, asi umím jednou.;{'polozky': {'Srdeční frekvence': '54'}}
+2026-01-14 15:05:16;Já jsem chtěla třeba kalcium hydrochlorid. Zatím jako přímě nevidím důvod na to prostě. Dobře, chceš hlenu, takhle a ještě hlenu.;
+2026-01-14 15:05:25;Takhle ještě nevím. Protože teďka v třeba minulu děláme nic. Teď jsme udělali všechno, co jsme mohli, vydělali jsme postrost, takže teď... OK, dala bych ho na lammu a dala bych ho za...;
+2026-01-14 15:05:33;a dala bych ho za... za to, za... no, zamonitrovala bych ho. Končíme? Dáváme LAMu,;
+2026-01-14 15:05:35;Dáváme lamu, pacienti třeba, že nechopšíme.;

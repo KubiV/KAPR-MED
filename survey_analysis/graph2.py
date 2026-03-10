@@ -18,7 +18,7 @@ DPI = 300
 COLUMN_NAME = "Vidíte praktický přínos takového systému ve své práci?"
 
 # ========= STYL (Dle vzoru Likert grafu) =========
-rcParams["font.family"] = "sans-serif"
+rcParams["font.family"] = "Arial"
 rcParams["font.size"] = 14
 rcParams["axes.titlesize"] = 22
 rcParams["figure.figsize"] = (10, 10) # Větší čtvercová velikost

@@ -1,0 +1,1052 @@
+[
+  {
+    "start": 0.0,
+    "end": 9.4,
+    "text": " Dobrý den, pane. Dobrý den.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:47:28.869422"
+  },
+  {
+    "start": 9.4,
+    "end": 15.2,
+    "text": " Haló, slyšíte nás? Pane? Haló, haló, slyšíte nás?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:47:38.269422"
+  },
+  {
+    "start": 15.2,
+    "end": 20.4,
+    "text": " Reaguje? Bolí vás něco?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:47:44.069422"
+  },
+  {
+    "start": 20.4,
+    "end": 25.7,
+    "text": " Tak ho asi položíme. Tak teď se na něj...",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:47:49.269422"
+  },
+  {
+    "start": 25.7,
+    "end": 28.7,
+    "text": " Dívám se na něj, vidím nějakou odřeninu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:47:54.569422"
+  },
+  {
+    "start": 28.7,
+    "end": 31.7,
+    "text": " Něco, nějaké vpichy?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:47:57.569422"
+  },
+  {
+    "start": 75.945,
+    "end": 77.945,
+    "text": " hmm",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:48:44.814422"
+  },
+  {
+    "start": 84.542,
+    "end": 86.542,
+    "text": " Dýchá symetricky",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:48:53.411422"
+  },
+  {
+    "start": 86.27,
+    "end": 88.27,
+    "text": " Tak dáme ten, emmmm",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:48:55.139422"
+  },
+  {
+    "start": 89.222,
+    "end": 91.222,
+    "text": " Počkej tady je čidlo na... na saturaci",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:48:58.091422"
+  },
+  {
+    "start": 93.7,
+    "end": 95.7,
+    "text": " Mě to vyšlo 25.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:02.569422"
+  },
+  {
+    "start": 95.7,
+    "end": 97.7,
+    "text": " Dechou za minutu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:04.569422"
+  },
+  {
+    "start": 97.7,
+    "end": 101.7,
+    "text": " 94. Tak mi dáme kysliček.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:06.569422"
+  },
+  {
+    "start": 101.7,
+    "end": 103.7,
+    "text": " Můžeme.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:10.569422"
+  },
+  {
+    "start": 111.7,
+    "end": 113.7,
+    "text": " 55 pulzů, bradykardie",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:20.569422"
+  },
+  {
+    "start": 113.7,
+    "end": 121.7,
+    "text": " Dýchání jaký?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:22.569422"
+  },
+  {
+    "start": 118.932,
+    "end": 120.932,
+    "text": " Sklípkový a dvě ohraničený ozvy.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:27.801422"
+  },
+  {
+    "start": 123.454,
+    "end": 125.454,
+    "text": " Sklípkový, dvě ohraničený ozvy.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:32.323422"
+  },
+  {
+    "start": 123.7,
+    "end": 125.7,
+    "text": " Kapilární návrat? Tři vteřiny.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:32.569422"
+  },
+  {
+    "start": 127.7,
+    "end": 129.7,
+    "text": " Tak dáváme kyslíku, pustíme tak 8 litrů.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:36.569422"
+  },
+  {
+    "start": 133.7,
+    "end": 135.7,
+    "text": " Periferní pulzace cítí?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:42.569422"
+  },
+  {
+    "start": 135.7,
+    "end": 137.7,
+    "text": " Necítíme.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:44.569422"
+  },
+  {
+    "start": 137.7,
+    "end": 139.7,
+    "text": " Jaký má tlak?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:46.569422"
+  },
+  {
+    "start": 139.7,
+    "end": 141.7,
+    "text": " Tak natočíme tlak.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:48.569422"
+  },
+  {
+    "start": 147.7,
+    "end": 149.7,
+    "text": " Ano, to ne.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:49:56.569422"
+  },
+  {
+    "start": 151.7,
+    "end": 155.34,
+    "text": " Pane, slyšíte nás?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:00.569422"
+  },
+  {
+    "start": 156.0,
+    "end": 156.5,
+    "text": " Haló?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:04.869422"
+  },
+  {
+    "start": 157.8,
+    "end": 158.48,
+    "text": " Pane?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:06.669422"
+  },
+  {
+    "start": 160.64,
+    "end": 161.48,
+    "text": " Nízký.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:09.509422"
+  },
+  {
+    "start": 162.38,
+    "end": 163.5,
+    "text": " Nedotekovaný ten.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:11.249422"
+  },
+  {
+    "start": 163.98,
+    "end": 165.96,
+    "text": " Tak zkusíme natočit EKG ještě.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:12.849422"
+  },
+  {
+    "start": 168.58,
+    "end": 170.66,
+    "text": " Já zajistím žílu asi, co?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:17.449422"
+  },
+  {
+    "start": 181.7,
+    "end": 183.7,
+    "text": " Zajišťujeme dva žilní vstupy.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:30.569422"
+  },
+  {
+    "start": 191.7,
+    "end": 195.7,
+    "text": " Je hrozně úzký ten komplex celý.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:40.569422"
+  },
+  {
+    "start": 195.7,
+    "end": 197.7,
+    "text": " To je normální.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:44.569422"
+  },
+  {
+    "start": 199.7,
+    "end": 201.7,
+    "text": " Tak jo, já ještě prohmátnu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:48.569422"
+  },
+  {
+    "start": 201.7,
+    "end": 205.7,
+    "text": " Tak, sahám na hlavu. Nebolí vás něco?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:50.569422"
+  },
+  {
+    "start": 207.7,
+    "end": 209.7,
+    "text": " Slyšíte nás pane?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:56.569422"
+  },
+  {
+    "start": 209.7,
+    "end": 211.7,
+    "text": " Neslyší",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:50:58.569422"
+  },
+  {
+    "start": 218.1,
+    "end": 228.104,
+    "text": " Dáme mu něco do žíly. Dáme mu něco do žíly.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:06.969422"
+  },
+  {
+    "start": 228.104,
+    "end": 232.104,
+    "text": " Pane, haló, slyšíte nás?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:16.973422"
+  },
+  {
+    "start": 232.104,
+    "end": 239.104,
+    "text": " ...toho kyslíku",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:20.973422"
+  },
+  {
+    "start": 239.104,
+    "end": 241.104,
+    "text": " Tak dáme 10 litrů ten kysílk.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:27.973422"
+  },
+  {
+    "start": 241.104,
+    "end": 243.104,
+    "text": " Trošku zvyšujeme kyslík.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:29.973422"
+  },
+  {
+    "start": 243.104,
+    "end": 245.104,
+    "text": " Nemáme kisliček, dáme kisliček.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:31.973422"
+  },
+  {
+    "start": 244.104,
+    "end": 244.724,
+    "text": " Necítím žádnou rezistenci nebo něco takového?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:32.973422"
+  },
+  {
+    "start": 245.104,
+    "end": 248.104,
+    "text": " A dáváme, co dáváme?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:33.973422"
+  },
+  {
+    "start": 248.104,
+    "end": 251.104,
+    "text": " Fyziologický roztok.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:36.973422"
+  },
+  {
+    "start": 251.104,
+    "end": 255.104,
+    "text": " Dáme nejdřív bolus a potom dáme kapat.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:39.973422"
+  },
+  {
+    "start": 255.104,
+    "end": 259.104,
+    "text": " A když zvýššíme ten tlak, tak dáme to.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:43.973422"
+  },
+  {
+    "start": 259.104,
+    "end": 261.104,
+    "text": " Má zornice, izokorický.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:47.973422"
+  },
+  {
+    "start": 265.104,
+    "end": 267.104,
+    "text": " A měřím teplotu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:53.973422"
+  },
+  {
+    "start": 267.104,
+    "end": 269.104,
+    "text": " Třicet šest?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:55.973422"
+  },
+  {
+    "start": 269.104,
+    "end": 271.104,
+    "text": " Třicet šest tři.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:57.973422"
+  },
+  {
+    "start": 271.104,
+    "end": 273.104,
+    "text": " Gylkémie?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:51:59.973422"
+  },
+  {
+    "start": 273.065,
+    "end": 275.065,
+    "text": " Osmu a půl",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:01.934422"
+  },
+  {
+    "start": 273.104,
+    "end": 275.104,
+    "text": " OK.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:01.973422"
+  },
+  {
+    "start": 277.104,
+    "end": 279.104,
+    "text": " Alkoholový nebo něco takového necítíme?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:05.973422"
+  },
+  {
+    "start": 279.104,
+    "end": 281.104,
+    "text": " Mírně",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:07.973422"
+  },
+  {
+    "start": 281.104,
+    "end": 291.104,
+    "text": " Můžeme pro ně ještě něco udělat?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:09.973422"
+  },
+  {
+    "start": 291.104,
+    "end": 296.104,
+    "text": " Máme zejištěný. dejchá.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:19.973422"
+  },
+  {
+    "start": 296.104,
+    "end": 301.104,
+    "text": " Přeměřujeme tlak?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:24.973422"
+  },
+  {
+    "start": 304.104,
+    "end": 305.104,
+    "text": " Tady?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:32.973422"
+  },
+  {
+    "start": 305.104,
+    "end": 306.104,
+    "text": " Nahoře, nad tím.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:33.973422"
+  },
+  {
+    "start": 306.104,
+    "end": 307.104,
+    "text": " Tady, tady, tady.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:34.973422"
+  },
+  {
+    "start": 307.104,
+    "end": 308.104,
+    "text": " Aha, jo.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:35.973422"
+  },
+  {
+    "start": 310.104,
+    "end": 312.104,
+    "text": " Hele, máme nějakou tu...",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:38.973422"
+  },
+  {
+    "start": 312.104,
+    "end": 314.104,
+    "text": " Taková je.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:40.973422"
+  },
+  {
+    "start": 329.104,
+    "end": 331.104,
+    "text": " Dáváme gel.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:52:57.973422"
+  },
+  {
+    "start": 337.104,
+    "end": 339.104,
+    "text": " Snímáme.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:05.973422"
+  },
+  {
+    "start": 339.104,
+    "end": 341.104,
+    "text": " Tohleto je komorovka, takže můžeme.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:07.973422"
+  },
+  {
+    "start": 341.104,
+    "end": 343.104,
+    "text": " Nedotýkáte se nikdo?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:09.973422"
+  },
+  {
+    "start": 343.104,
+    "end": 345.104,
+    "text": " tak podáváme výboj.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:11.973422"
+  },
+  {
+    "start": 353.104,
+    "end": 355.104,
+    "text": " Tak jo, a začínáme mačkat.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:21.973422"
+  },
+  {
+    "start": 355.104,
+    "end": 357.104,
+    "text": " Takže mám.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:23.973422"
+  },
+  {
+    "start": 357.104,
+    "end": 361.104,
+    "text": " Tak máš Eli ten, vytáhneš...",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:53:25.973422"
+  },
+  {
+    "start": 411.144,
+    "end": 413.144,
+    "text": " Je to prasklý, nech to bejt",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:20.013422"
+  },
+  {
+    "start": 415.12402,
+    "end": 416.12402,
+    "text": " Jo.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:23.993442"
+  },
+  {
+    "start": 418.12402,
+    "end": 422.12402,
+    "text": " Držíš?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:26.993442"
+  },
+  {
+    "start": 422.12402,
+    "end": 423.12402,
+    "text": " Jo.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:30.993442"
+  },
+  {
+    "start": 423.12402,
+    "end": 424.12402,
+    "text": " Tak jo.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:31.993442"
+  },
+  {
+    "start": 426.12402,
+    "end": 433.12402,
+    "text": " 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:34.993442"
+  },
+  {
+    "start": 433.12402,
+    "end": 438.008,
+    "text": " Tak to jde na ten adrenalin",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:41.993442"
+  },
+  {
+    "start": 443.208,
+    "end": 445.208,
+    "text": " Ten je podle mě až potřebně potr.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:52.077422"
+  },
+  {
+    "start": 445.208,
+    "end": 447.208,
+    "text": " A nemáš ještě zkusit ten defík?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:54.077422"
+  },
+  {
+    "start": 449.208,
+    "end": 451.208,
+    "text": " Ne, ne, ne.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:54:58.077422"
+  },
+  {
+    "start": 451.208,
+    "end": 453.208,
+    "text": " Jo celá amluka viď",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:00.077422"
+  },
+  {
+    "start": 457.748,
+    "end": 459.748,
+    "text": " A s tím se poprvé podává i amiodaron ne?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:06.617422"
+  },
+  {
+    "start": 458.793,
+    "end": 460.793,
+    "text": " Ten je podle mě až po třetí minutě",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:07.662422"
+  },
+  {
+    "start": 461.208,
+    "end": 463.208,
+    "text": " A máme asi ještě zkusit ten defík?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:10.077422"
+  },
+  {
+    "start": 462.689,
+    "end": 464.689,
+    "text": " Jo.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:11.558422"
+  },
+  {
+    "start": 463.208,
+    "end": 465.208,
+    "text": " Jo.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:12.077422"
+  },
+  {
+    "start": 465.208,
+    "end": 467.208,
+    "text": " To je ještě jeden defík.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:14.077422"
+  },
+  {
+    "start": 467.208,
+    "end": 472.208,
+    "text": " A já bych možná, tak já udělám ještě jednu, já nevím kolik mám, já jsem se podmínila koukat na hodiny, ale tak zkusili bychom ten defík.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:16.077422"
+  },
+  {
+    "start": 474.208,
+    "end": 476.208,
+    "text": " Máš to tam u sebe, takže...",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:23.077422"
+  },
+  {
+    "start": 480.208,
+    "end": 483.208,
+    "text": " Takže já mám když tak připravený adrenalin",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:29.077422"
+  },
+  {
+    "start": 485.208,
+    "end": 487.208,
+    "text": " Máme žilu. Jo",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:34.077422"
+  },
+  {
+    "start": 487.208,
+    "end": 489.208,
+    "text": " Takže zkusíme znovu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:36.077422"
+  },
+  {
+    "start": 489.208,
+    "end": 492.208,
+    "text": " Takže zkusíme znovu defík.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:38.077422"
+  },
+  {
+    "start": 493.208,
+    "end": 496.208,
+    "text": " Takže dáváme gel, nabíjíme.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:42.077422"
+  },
+  {
+    "start": 499.208,
+    "end": 501.208,
+    "text": " Podali jsme výboj.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:48.077422"
+  },
+  {
+    "start": 502.208,
+    "end": 504.208,
+    "text": " A pokračujeme dále.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:51.077422"
+  },
+  {
+    "start": 510.208,
+    "end": 512.208,
+    "text": " To je další",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:55:59.077422"
+  },
+  {
+    "start": 527.243,
+    "end": 529.243,
+    "text": " Tak já podám ten adrenlin",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:16.112422"
+  },
+  {
+    "start": 534.612,
+    "end": 536.612,
+    "text": " Podáváme 1 mg adrenalinu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:23.481422"
+  },
+  {
+    "start": 546.208,
+    "end": 550.208,
+    "text": " Který si dáme? Amiodaron.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:35.077422"
+  },
+  {
+    "start": 550.208,
+    "end": 554.208,
+    "text": " Tři sta. Tři sta miligramů?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:39.077422"
+  },
+  {
+    "start": 554.208,
+    "end": 558.208,
+    "text": " že jo?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:43.077422"
+  },
+  {
+    "start": 562.208,
+    "end": 566.208,
+    "text": " Tak ještě jednu a pak zkusíme ještě jednu odjetnit.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:51.077422"
+  },
+  {
+    "start": 566.208,
+    "end": 570.208,
+    "text": " Tak ještě jednu a pak zkusíme ještě jednu.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:56:55.077422"
+  },
+  {
+    "start": 572.208,
+    "end": 574.208,
+    "text": " A potom...",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:01.077422"
+  },
+  {
+    "start": 573.356,
+    "end": 575.356,
+    "text": " Co?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:02.225422"
+  },
+  {
+    "start": 576.208,
+    "end": 578.208,
+    "text": " No co to?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:05.077422"
+  },
+  {
+    "start": 578.208,
+    "end": 580.208,
+    "text": " Že dáme početní ten vývoj, tak to vyhledáte na nádavku.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:07.077422"
+  },
+  {
+    "start": 580.208,
+    "end": 582.208,
+    "text": " Jo. Je připravený.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:09.077422"
+  },
+  {
+    "start": 588.208,
+    "end": 590.208,
+    "text": " Zkusíme ještě jednou.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:17.077422"
+  },
+  {
+    "start": 592.208,
+    "end": 594.208,
+    "text": " Tak, nažeme, nabíjíme,",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:21.077422"
+  },
+  {
+    "start": 594.208,
+    "end": 596.208,
+    "text": " nikdo se nedotýkáme",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:23.077422"
+  },
+  {
+    "start": 596.208,
+    "end": 598.208,
+    "text": " a dáváme vývoj.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:25.077422"
+  },
+  {
+    "start": 610.793,
+    "end": 612.793,
+    "text": " podáváme 300 mg amiodaronu",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:39.662422"
+  },
+  {
+    "start": 621.988,
+    "end": 623.988,
+    "text": " no a po těch 4 cyklech se podává znova. Ten adrenalin, ten amiodaron? Po třech",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:50.857422"
+  },
+  {
+    "start": 630.208,
+    "end": 633.208,
+    "text": " Už se to mám, že to vychází nějakým účinným středím.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:57:59.077422"
+  },
+  {
+    "start": 633.208,
+    "end": 636.208,
+    "text": " Podle mě uděláme tyhle čtyři 30 ku 2, a pak to dáme další.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:58:02.077422"
+  },
+  {
+    "start": 636.208,
+    "end": 638.208,
+    "text": " Jo, tak to takhle střídámě.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:58:05.077422"
+  },
+  {
+    "start": 643.208,
+    "end": 644.208,
+    "text": " Nic, jo?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:58:12.077422"
+  },
+  {
+    "start": 644.208,
+    "end": 645.208,
+    "text": " Ne.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:58:13.077422"
+  },
+  {
+    "start": 685.312,
+    "end": 687.312,
+    "text": " Zkusíme zanalyzovat.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:58:54.181422"
+  },
+  {
+    "start": 691.907,
+    "end": 693.907,
+    "text": " Hele sinus",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:59:00.776422"
+  },
+  {
+    "start": 709.31,
+    "end": 711.31,
+    "text": " Ty vogo",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:59:18.179422"
+  },
+  {
+    "start": 711.312,
+    "end": 713.312,
+    "text": " Pane slyšíte nás? Pane? Ee, nereaguje.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:59:20.181422"
+  },
+  {
+    "start": 733.31,
+    "end": 735.31,
+    "text": " můžeme ten tlak. nízkej. Hele zkusíme mu dát ještě...",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:59:42.179422"
+  },
+  {
+    "start": 738.204,
+    "end": 740.204,
+    "text": " Chceš mu dát nor?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:59:47.073422"
+  },
+  {
+    "start": 742.942,
+    "end": 744.942,
+    "text": " Já bych mu spíš dala ještě tekutinu. Nějakej bolus. Já bych udělala, jak to přetlakem narveš dovnitř.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 12:59:51.811422"
+  },
+  {
+    "start": 753.135,
+    "end": 755.135,
+    "text": " Přetlakovou manžetu myslíte.",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:02.004422"
+  },
+  {
+    "start": 753.135,
+    "end": 755.135,
+    "text": " No já myslela, jak to zmáčneš a dát dovnitř",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:02.004422"
+  },
+  {
+    "start": 759.875,
+    "end": 761.875,
+    "text": " Jo tak tohle",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:08.744422"
+  },
+  {
+    "start": 766.766,
+    "end": 768.766,
+    "text": " tady je fýzák. Přetlakovou manžetou",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:15.635422"
+  },
+  {
+    "start": 786.118,
+    "end": 788.118,
+    "text": " zkusíme přeměřit ten tlak",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:34.987422"
+  },
+  {
+    "start": 792.809,
+    "end": 794.809,
+    "text": " Slyšíte nás? Má hodně nízkou tu saturaci? Kolik má kyslíku? 10. 10 až 12 litrů kyslíku",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:41.678422"
+  },
+  {
+    "start": 810.366,
+    "end": 812.366,
+    "text": " je pomalej prostě",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:00:59.235422"
+  },
+  {
+    "start": 819.201,
+    "end": 821.201,
+    "text": " tak co máme - je z něj trochu cítit alkohol, mohl si dát nějakou drogu nebo něco, ale to stejně nevyřešíme",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:08.070422"
+  },
+  {
+    "start": 828.222,
+    "end": 830.222,
+    "text": " můžeme ještě něco jinýho?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:17.091422"
+  },
+  {
+    "start": 831.363,
+    "end": 833.363,
+    "text": " no je divný, na to, že má nízký tlak má i bradykardii",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:20.232422"
+  },
+  {
+    "start": 835.86,
+    "end": 837.86,
+    "text": " má fakt nízkou tu saturaci. když úplně na maximum dáme kyslík - saturace?",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:24.729422"
+  },
+  {
+    "start": 849.198,
+    "end": 851.198,
+    "text": " A ty plíce dýchají symetricky? Jo",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:38.067422"
+  },
+  {
+    "start": 855.938,
+    "end": 857.938,
+    "text": " Co ještě můžeme. Čtyři H čtyři T",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:44.807422"
+  },
+  {
+    "start": 857.652,
+    "end": 859.652,
+    "text": " hypotermie, eeee, kalemie, tu teď nezjistíme",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:46.521422"
+  },
+  {
+    "start": 859.652,
+    "end": 861.652,
+    "text": " Tamponadu",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:48.521422"
+  },
+  {
+    "start": 866.836,
+    "end": 868.836,
+    "text": " Podle mě má nějakou intoxikaci prostě",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:55.705422"
+  },
+  {
+    "start": 870.633,
+    "end": 872.633,
+    "text": " A hele, už se nám aspoň dechově",
+    "ai_analysis": {},
+    "exact_world_time": "2026-02-15 13:01:59.502422"
+  }
+]
