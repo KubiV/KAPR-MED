@@ -1,6 +1,8 @@
-# 🏥 KAPR - KPR-Automatický Přepis v Reálném čase
+# 🏥 KAPR - KPR Automatický Přepis v Reálném čase
 
 Inteligentní monitorovací systém se zpracováním hlasu pomocí AI.
+
+[![Video jak funguje KAPR](https://img.youtube.com/vi/uVC-HnesU9I/0.jpg)](https://youtu.be/uVC-HnesU9I)
 
 Tento projekt si klade za cíl vytvořit systém pro automatizovaný záznam ústně sdělovaných klinických dat během resuscitace — tedy převést ústně řečené informace (rozhovor, rozhodnutí, podání léků, zásahy, časové okamžiky) do strukturované podoby vhodné pro analýzu či pozdější zpětné hodnocení. Jde o reakci na problém, že při akutním zásahu bývá zápis často ruční, nepřehledný nebo se může stát, že některé důležité detaily uniknou. Automatizace pomocí AI a rozpoznávání řeči má potenciál snížit administrativní zátěž, snížit chyby přepisu a umožnit rychlý, přesný a konzistentní záznam — což je přínosné pro zpětnou analýzu, výzkum i zlepšení kvality péče.
 
