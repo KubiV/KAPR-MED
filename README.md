@@ -2,22 +2,27 @@
 
 Inteligentní monitorovací systém se zpracováním hlasu pomocí AI.
 
-[![Video jak funguje KAPR](https://img.youtube.com/vi/uVC-HnesU9I/0.jpg)](https://youtu.be/uVC-HnesU9I)
-
 Tento projekt si klade za cíl vytvořit systém pro automatizovaný záznam ústně sdělovaných klinických dat během resuscitace — tedy převést ústně řečené informace (rozhovor, rozhodnutí, podání léků, zásahy, časové okamžiky) do strukturované podoby vhodné pro analýzu či pozdější zpětné hodnocení. Jde o reakci na problém, že při akutním zásahu bývá zápis často ruční, nepřehledný nebo se může stát, že některé důležité detaily uniknou. Automatizace pomocí AI a rozpoznávání řeči má potenciál snížit administrativní zátěž, snížit chyby přepisu a umožnit rychlý, přesný a konzistentní záznam — což je přínosné pro zpětnou analýzu, výzkum i zlepšení kvality péče.
 
 Současně je projekt koncipovaný jako modulární a flexibilní: existuje „plná“ (offline, s možností nahrávání audia a skládání dat lokálně) i “lite”-verze (webová, běžící kompletně na serverech, bez možnosti lokálního modelu či uložení audia), které se liší především způsobem zpracování a ukládání dat. Tímto způsobem umožňuje projekt jednodušší nasazení pro testování, simulace nebo demonstrace funkčnosti, zároveň ale dává možnost přejít k robustnějšímu, zabezpečenému řešení. Cílem je, aby výstupem byla co nejpřehlednější, strukturovaná data, připravená pro analýzu, případnou automatizovanou reportaci nebo integraci do klinických systémů.
+
+## 🎥 Demo video
+
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/uVC-HnesU9I)
+[![Video jak funguje KAPR](https://img.youtube.com/vi/uVC-HnesU9I/maxresdefault.jpg)](https://youtu.be/uVC-HnesU9I)
+
+▶️ **Podívej se na celé video na YouTube**
 
 ## 📊 Architektura systému
 
 ```
 🎤 Mikrofon
    ↓
-🔊 ASR (Vosk, Whisper, Groq)
+🔊 ASR (Vosk, Whisper)
    ↓
 📄 Text
    ↓
-🧠 LLM (Ollama: gemma3, deepseek-r1)
+🧠 LLM (Groq: gpt-oss, llama; Ollama: gemma3, deepseek-r1)
    ↓
 📦 JSON struktura
    ↓
