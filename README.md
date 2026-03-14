@@ -8,10 +8,10 @@ Současně je projekt koncipovaný jako modulární a flexibilní: existuje „p
 
 ## 🎥 Demo video
 
+▶️ **Podívej se na celé video na YouTube**
+
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/uVC-HnesU9I)
 [![Video jak funguje KAPR](https://img.youtube.com/vi/uVC-HnesU9I/maxresdefault.jpg)](https://youtu.be/uVC-HnesU9I)
-
-▶️ **Podívej se na celé video na YouTube**
 
 ## 📊 Architektura systému
 

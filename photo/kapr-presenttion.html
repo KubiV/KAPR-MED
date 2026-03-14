@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAPR-MED - Poster</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* PŮVODNÍ STYLY Z APLIKACE KAPR-MED */
+        body { padding: 40px; background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .container-fluid { max-width: 1600px; }
+        
+        .widget-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            border: none;
+            margin-bottom: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid #ccc;
+        }
+
+        .widget-header {
+            padding: 12px 20px;
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .widget-header h5 { margin: 0; font-size: 1.1rem; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+        .widget-body { padding: 20px; flex-grow: 1; }
+        
+        .chevron-icon { color: #adb5bd; }
+
+        .main-section-header {
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dee2e6;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #6c757d;
+        }
+        .main-section-header h4 { margin: 0; font-weight: 600; }
+
+        .card-DrABCDE { border-top-color: #dc3545; } .card-DrABCDE .widget-header h5 { color: #dc3545; }
+        .card-Medication { border-top-color: #198754; } .card-Medication .widget-header h5 { color: #198754; }
+        .card-Interventions { border-top-color: #0d6efd; } .card-Interventions .widget-header h5 { color: #0d6efd; }
+
+        .table-responsive { overflow: hidden; } /* Zablokování posuvníku pro poster */
+
+        .vitals-panel { background: white; border-radius: 12px; padding: 20px 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 10px; }
+        .vitals-value { font-size: 3rem; font-weight: 500; line-height: 1.2; }
+        .vitals-label { font-size: 1rem; color: #666; text-transform: uppercase; margin-bottom: 5px; }
+        .color-tf { color: #d50000; } 
+        .color-tk { color: #d50000; } 
+        .color-df { color: #007bff; } 
+        .color-spo2 { color: #007bff; } 
+
+        /* Upravený styl pro minimalistické naznačení pokračování tabulky */
+        .table-continuation th {
+            text-align: center !important;
+            color: #ced4da !important; /* Světlejší nenápadná šedá */
+            padding: 4px 12px !important;
+            border-bottom: none !important;
+            font-size: 1.4rem; /* Zvětšení ikonky teček */
+            line-height: 0.8;
+            background-color: transparent !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-start mb-4 pt-2 flex-wrap gap-3">
+            <div>
+                <h2 class="mb-0"><img src="logo.svg" alt="Logo" style="height: 1.5em; width: auto; display: inline-block; margin-right: 8px; vertical-align: middle;">KAPR<small class="text-muted fs-6" style="font-size: 0.3rem;"> </small></h2>
+            </div>
+        </div>
+
+        <div class="main-section-header text-secondary">
+            <h4><i class="bi bi-heart-pulse-fill"></i> Životní funkce</h4>
+            <i class="bi bi-chevron-down chevron-icon"></i>
+        </div>
+
+        <div class="vitals-panel">
+            <div class="row text-center gx-1">
+                <div class="col-lg-2 col-4 mb-2">
+                    <div class="vitals-label">TF</div>
+                    <div class="vitals-value color-tf">82</div>
+                </div>
+                <div class="col-lg-2 col-4 mb-2">
+                    <div class="vitals-label">TK</div>
+                    <div class="vitals-value color-tk">120/80</div>
+                </div>
+                <div class="col-lg-2 col-4 mb-2">
+                    <div class="vitals-label">SpO2</div>
+                    <div class="vitals-value color-spo2">98%</div>
+                </div>
+                <div class="col-lg-2 col-4 mb-2">
+                    <div class="vitals-label">DF</div>
+                    <div class="vitals-value color-df">14</div>
+                </div>
+                <div class="col-lg-2 col-4 mb-2">
+                    <div class="vitals-label">CRT</div>
+                    <div class="vitals-value">&lt;2s</div>
+                </div>
+                <div class="col-lg-2 col-4 mb-2">
+                    <div class="vitals-label">AVPU</div>
+                    <div class="vitals-value">A</div>
+                </div>
+            </div>
+            
+            <div class="mt-4 border-top pt-3">
+                <div class="text-start">
+                    <h6 class="text-secondary mb-2" style="font-size: 0.95rem; letter-spacing: 0.5px;">Poslední hodnoty:</h6>
+                    <div class="recent-vitals-list">
+                        <div>16:15:28 - Kapilární návrat (&lt;2s), Vědomí (AVPU: A)</div>
+                        <div>16:15:12 - SpO2 (98%), Dechová frekvence (14/min)</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="main-section-header text-secondary">
+            <h4><i class="bi bi-clipboard2-pulse"></i> Strukturovaný stav pacienta</h4>
+            <i class="bi bi-chevron-down chevron-icon"></i>
+        </div>
+        
+        <div class="row g-4 pb-5">
+            
+            <div class="col-md-4">
+                <div class="widget-card card-DrABCDE">
+                    <div class="widget-header">
+                        <h5>DrABCDE</h5>
+                        <i class="bi bi-chevron-down chevron-icon"></i>
+                    </div>
+                    <div class="widget-body p-0">
+                        <div class="table-responsive p-3">
+                            <table class="dataframe table table-striped table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">16:15</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Průchodnost dýchacích cest</td><td class="text-center">Volné</td></tr>
+                                    <tr><td>SpO2</td><td class="text-center color-spo2">98%</td></tr>
+                                    <tr><td>Srdeční frekvence</td><td class="text-center color-tf">82</td></tr>
+                                    <tr><td>Krevní tlak</td><td class="text-center color-tk">120/80</td></tr>
+                                    <tr><td>Kapilární návrat</td><td class="text-center ">&lt;2s</td></
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="widget-card card-Medication">
+                    <div class="widget-header">
+                        <h5>Léčiva</h5>
+                        <i class="bi bi-chevron-down chevron-icon"></i>
+                    </div>
+                    <div class="widget-body p-0">
+                        <div class="table-responsive p-3">
+                            <table class="dataframe table table-striped table-hover table-sm">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">16:15</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Adrenalin</td><td class="text-center"></td></tr>
+                                    <tr><td>Amiodaron</td><td class="text-center"></td></tr>
+                                    <tr><td>Kyslík (O2)</td><td class="text-center">Ano</td></tr>
+                                    <tr><td>Noradrenalin</td><td class="text-center"></td></tr>
+                                    <tr><td>Atropin</td><td class="text-center"></td></tr>
+                                    <tr><td>Adenosin</td><td class="text-center"></td></tr>
+                                    <tr><td>Midazolam</td><td class="text-center"></td></tr>
+                                </tbody>
+                            </table>                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="widget-card card-Interventions">
+                    <div class="widget-header">
+                        <h5>Intervence</h5>
+                        <i class="bi bi-chevron-down chevron-icon"></i>
+                    </div>
+                    <div class="widget-body p-0">
+                        <div class="table-responsive p-3">
+                            <table class="dataframe table table-striped table-hover table-sm">
+                                <tbody>
+                                    <tr><td>Zajištění dýchacích cest</td><td class="text-center"></td></tr>
+                                    <tr><td>Umělá plicní ventilace</td><td class="text-center"></td></tr>
+                                    <tr><td>Intubace</td><td class="text-center"></td></tr>
+                                    <tr><td>KPR</td><td class="text-center"></td></tr>
+                                    <tr><td>Periferní žilní přístup</td><td class="text-center"></td></tr>
+                                    <tr><td>Defibrilace</td><td class="text-center"></td></tr>
+                                    <tr><td>Intraoseální přístup</td><td class="text-center"></td></tr>
+                                    <tr><td>Imobilizace</td><td class="text-center"></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
