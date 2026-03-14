@@ -123,6 +123,15 @@ Byl vytvořen program pro zpětnou analýzu videa. Program dokáže vytvářet t
 
 ![Program pro titulkování](./photo/sim_study_program.png)
 
+1) Z logu se vytvoří tabulka - čas, zachycený přepis, extrahovaná data
+2) Tvorba refernčního přepisu přes aplikaci pro titulkování - ulehčení práce přes AI whisper - manuální kontrola a přepisy v aplikaci
+3) Zkombinování dat z logu a referenčního přepisu
+4) Kombinace do jedné tabulky z vícero seancí
+5) Očistění o nevadliní vstupy - kompletní nesmyslné přepisy ("Titulky vytvořil JohnyX."), odebrání časových úseků, kde došlo k očividné technické chybě (např. došel počet free tokenů pro API)
+6) V aplikaci se rozdělí manuálně když se přepsalo více položek naráz (aby se v analýze mohla podle počtu vyhodnotit chybovost), označí se chyba a typ chyby
+
+![Program pro vyhodnocování](./photo/sim_study_results_program.png)
+
 ## Pomocné skripty
 
 - csv_from_log.py - udělá tabulku z logu, kde je čas, text a extrahovaná data programem
@@ -130,6 +139,7 @@ Byl vytvořen program pro zpětnou analýzu videa. Program dokáže vytvářet t
 - json_item_reduction.py - slučování kažých n-tých titulků v jsonu pro snížení jejich počtu
 - wav_split.py - rozdělí wav soubor do více flac souborů, zachová délku původního souboru a vyplní tónem zybtek, kde není audio - kvůli snížení velikosti souborů rozdělením do více flac, ale při zachování času od začátku časové nahrávku kvůli AI přepisu
 - csv_json_combine.py - přidá položky z jsonu do csv tabulky a srovná podle času z csv tabulky
+- process_logs.py - do kombinované tabulky dle času přiřadí jestli z LOGu vyplývá, e byla přítomna technická chyba na straně API
 
 # Technické detaily
 
