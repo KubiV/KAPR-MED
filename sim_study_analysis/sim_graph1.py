@@ -38,7 +38,7 @@ for s in sorted(df_valid['Session'].unique()):
     else:
         labels.append(f'{label_base}\n(Subj. lepší\n komunikace)')
 
-# Výpočet pro sloupec "CELKOVĚ"
+# Výpočet celkového skóre (bez přidání do grafu)
 total_all = len(df_valid)
 ano_all = (df_valid['Vyhodnocení správně - ANO/NE'] == 'ANO').sum()
 typ1_all = (df_valid.iloc[:, 5] == 1.0).sum()
@@ -48,10 +48,11 @@ overall_type1 = typ1_all / total_all * 100
 # OPRAVA: Výpočet zbytku pro celkový součet
 overall_other = 100.0 - overall_rate - overall_type1
 
-success_rates.append(overall_rate)
-type1_rates.append(overall_type1)
-other_rates.append(overall_other)
-labels.append('CELKOVĚ')
+# Zakomentováno - místo sloupce budou zóny v pozadí
+# success_rates.append(overall_rate)
+# type1_rates.append(overall_type1)
+# other_rates.append(overall_other)
+# labels.append('CELKOVĚ')
 
 # ========= NASTAVENÍ STYLU =========
 rcParams["font.family"] = "Arial"
@@ -87,17 +88,19 @@ def add_labels_inside_bars(bars, rates, text_color):
             x = bar.get_x() + bar.get_width() / 2
             y = bar.get_y() + bar.get_height() / 2
             ax.text(x, y, f"{val:.1f} %", ha='center', va='center', 
-                    fontsize=12, color=text_color, fontweight='bold')
+                    fontsize=16, color=text_color, fontweight='bold')
 
 add_labels_inside_bars(bars_success, success_rates, 'white')
 add_labels_inside_bars(bars_type1, type1_rates, '#333333')
 add_labels_inside_bars(bars_type2, other_rates, 'white')
 
-average_error_type23 = other_rates[-1]
+# Zóny v pozadí znázorňující celkové skóre
+ax.axhspan(0, overall_rate, color=color_success, alpha=0.1, zorder=0)
+ax.axhspan(overall_rate, overall_rate + overall_type1, color=color_type1, alpha=0.1, zorder=0)
+ax.axhspan(overall_rate + overall_type1, 100, color=color_type2, alpha=0.1, zorder=0)
 
-# Čára a zóna v pozadí
+# Referenční čára pro úspěch
 ax.axhline(overall_rate, color=color_success, linestyle='--', linewidth=2.5, alpha=0.8, zorder=0)
-ax.axhspan(100 - average_error_type23, 100, color=color_type2, alpha=0.15, zorder=0)
 
 # Osa X
 ax.set_xticks(x_pos)
@@ -114,20 +117,20 @@ ax.set_yticklabels(['0 %', '25 %', '50 %', '75 %', '100 %'], color='#555555', fo
 ax.set_ylabel("Složení interakcí (%)", labelpad=15, fontweight='bold', color='#333333')
 ax.set_title("Úspěšnost a typy chyb programu KAPR ze simulační studie", pad=40, fontweight='bold', color='#222222')
 
-# ========= CELÁ LEGENDA V JEDNOM ŘÁDKU =========
+# ========= LEGENDA V JEDNOM ŘÁDKU =========
 leg_succ = mpatches.Patch(color=color_success, label='Úspěch (Správně)')
 leg_err1 = mpatches.Patch(color=color_type1, label='Fail-Safe (Výpadek)')
 leg_err2 = mpatches.Patch(color=color_type2, label='Chyba (Rizikové)')
-line_overall = mlines.Line2D([], [], color=color_success, linestyle='--', linewidth=2.5, label=f'Cíl: {overall_rate:.1f} %')
-# Použití mpatches.Patch pro 'Zónu', aby v legendě vypadala jako blok
-rect_error = mpatches.Patch(color=color_type2, alpha=0.15, label=f'Zóna chyb: {average_error_type23:.1f} %')
+zone_succ = mpatches.Patch(color=color_success, alpha=0.1, edgecolor=color_success, label=f'Průměr úspěchu: {overall_rate:.1f} %')
+zone_fail = mpatches.Patch(color=color_type1, alpha=0.1, edgecolor=color_type1, label=f'Průměr fail-safe: {overall_type1:.1f} %')
+zone_error = mpatches.Patch(color=color_type2, alpha=0.1, edgecolor=color_type2, label=f'Průměr chyb: {overall_other:.1f} %')
 
-# ncol=5 zajistí jeden řádek pro všechny prvky
-ax.legend(handles=[leg_succ, leg_err1, leg_err2, line_overall, rect_error], 
-          loc='lower center', bbox_to_anchor=(0.5, -0.28), ncol=5, frameon=False, fontsize=10)
+# Legenda v jednom řádku
+ax.legend(handles=[leg_succ, leg_err1, leg_err2, zone_succ, zone_fail, zone_error], 
+          loc='lower center', bbox_to_anchor=(0.5, -0.25), ncol=6, frameon=False, fontsize=9)
 
 ax.yaxis.grid(True, linestyle='-', color='#EEEEEE', alpha=0.8, zorder=0)
 
 plt.tight_layout()
-plt.savefig("graf_simulacni_studie.png", dpi=300, bbox_inches='tight')
+plt.savefig("graf_simulacni_studie.png", dpi=300, bbox_inches='tight', transparent=True)
 plt.show()

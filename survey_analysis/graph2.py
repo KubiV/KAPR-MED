@@ -79,7 +79,7 @@ wedges, texts, autotexts = ax.pie(
 for i, autotext in enumerate(autotexts):
     # Nastavení barvy textu podle podkladu (bílá/černá)
     autotext.set_color(current_text_colors[i])
-    autotext.set_fontsize(18) # Větší písmo pro procenta
+    autotext.set_fontsize(28) # Větší písmo pro procenta
     autotext.set_fontweight('bold')
 
 # 2. Stylování vnějších popisků (texts)
@@ -91,8 +91,11 @@ for text in texts:
 centre_circle = plt.Circle((0,0),0.70,fc='white')
 fig.gca().add_artist(centre_circle)
 
-ax.text(0, 0.05, "Celkem\nrespondentů", ha='center', va='bottom', fontsize=14, color='gray')
-ax.text(0, -0.05, f"{total_respondents}", ha='center', va='top', fontsize=28, fontweight='bold')
+fig.patch.set_alpha(0)  # Transparentní pozadí figure
+ax.patch.set_alpha(0)   # Transparentní pozadí plochy grafu (pod řádky)
+
+ax.text(0, 0.05, "Celkem\nrespondentů", ha='center', va='bottom', fontsize=16, color='gray')
+ax.text(0, -0.05, f"{total_respondents}", ha='center', va='top', fontsize=36, fontweight='bold')
 
 
 ax.set_title("Vnímání praktického přínosu systému", pad=20, fontweight='bold')
